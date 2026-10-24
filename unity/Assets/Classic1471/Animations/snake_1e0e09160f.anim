@@ -1,0 +1,1238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: snake
+  m_Legacy: 1
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakehead
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody03
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody04
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody05
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody06
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.500000238418579
+        value: {x: -3.328951265757496e-07, y: 0.0, z: -0.0, w: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody07
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999999523162842, y: -0.0, z: -0.0}
+        outSlope: {x: 4.999999523162842, y: -0.0, z: -0.0}
+      - time: 0.20000000298023224
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999999046325684, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.0, z: -0.0}
+      - time: 0.6000000238418579
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 4.999997138977051, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 0.800000011920929
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -4.999995708465576, y: -0.0, z: -0.0}
+        outSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.0
+        value: {x: -1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -4.999995231628418, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000006198883057, z: -0.0}
+      - time: 1.3666666746139526
+        value: {x: -1.0, y: 0.1666666567325592, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: -1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+        outSlope: {x: 5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -0.0, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: 5.000003814697266, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: -0.0, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.00001049041748, z: -0.0}
+      - time: 2.4000000953674316
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -9.999937057495117, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakehead
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 0.20000000298023224
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.0, y: -0.0, z: -0.0}
+      - time: 0.4000000059604645
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999999046325684, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.0, z: -0.0}
+      - time: 0.800000011920929
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 4.999997138977051, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.0
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -4.999995708465576, y: -0.0, z: -0.0}
+        outSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.2000000476837158
+        value: {x: -1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -4.999986171722412, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000006198883057, z: -0.0}
+      - time: 1.5666667222976685
+        value: {x: -1.0, y: 0.1666666567325592, z: 0.0}
+        inSlope: {x: -0.0, y: -4.99998664855957, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: -1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+        outSlope: {x: 5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 0.4000000059604645
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.0, y: -0.0, z: -0.0}
+      - time: 0.6000000238418579
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999995231628418, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.0
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 4.999997138977051, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.2000000476837158
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -4.99998664855957, y: -0.0, z: -0.0}
+        outSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: -0.9999998807907104, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000006198883057, z: -0.0}
+      - time: 1.7666666507720947
+        value: {x: -0.9999998807907104, y: 0.1666666567325592, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -0.9999998807907104, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000004291534424, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.5
+        value: {x: -0.9999998807907104, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 0.6000000238418579
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+      - time: 0.800000011920929
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999995231628418, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.2000000476837158
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 4.999988079071045, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+        outSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: -0.9999998807907104, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -5.000006198883057, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -0.9999998807907104, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: -5.000003814697266, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: -0.9999998807907104, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.00001049041748, z: -0.0}
+      - time: 2.4000000953674316
+        value: {x: -0.9999998807907104, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -9.999937057495117, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.5
+        value: {x: -0.9999998807907104, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody03
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 0.800000011920929
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.0
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999995231628418, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 5.000006198883057, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+        outSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: -1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000007629394531, z: -0.0}
+      - time: 2.5
+        value: {x: -1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody04
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 1.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.2000000476837158
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 4.999986171722412, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 5.000006198883057, z: -0.0}
+        outSlope: {x: -5.000003814697266, y: -0.0, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -5.000004291534424, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: -0.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000007629394531, z: -0.0}
+      - time: 2.5
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody05
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 1.2000000476837158
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 5.000003814697266, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: 5.000006198883057, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: 1.0, y: 2.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000007629394531, z: -0.0}
+      - time: 2.5
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+        outSlope: {x: -0.0, y: -10.000008583068848, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody06
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 1.399999976158142
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: 5.000004291534424, y: -0.0, z: -0.0}
+      - time: 1.600000023841858
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: 5.000003814697266, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 5.000004291534424, z: -0.0}
+      - time: 1.7999999523162842
+        value: {x: 1.0, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: 5.000003814697266, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: 1.0, y: 1.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -10.00001049041748, z: -0.0}
+      - time: 2.4000000953674316
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -9.999937057495117, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.5
+        value: {x: 1.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody07
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakehead
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakeBase02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody03
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody04
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody05
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody06
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.500000238418579
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: snakebody07
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 30.0
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: -0.0001926422119140625, y: 0.3027535676956177, z: -8.344650268554688e-07}
+    m_Extent: {x: 1.5, y: 1.6786879301071167, z: 0.5344319939613342}
+  m_MuscleClipSize: 0
+  m_MuscleClip:
+    serializedVersion: 2
+    m_DeltaPose:
+      m_RootX:
+        t:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        q:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+        s:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+      m_LookAtPosition:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      m_LookAtWeight:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 0.0
+      m_GoalArray:
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      m_LeftHandPose:
+        m_GrabX:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_DoFArray:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        m_Override: 0.0
+        m_CloseOpen: 0.0
+        m_InOut: 0.0
+        m_Grab: 0.0
+      m_RightHandPose:
+        m_GrabX:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_DoFArray:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        m_Override: 0.0
+        m_CloseOpen: 0.0
+        m_InOut: 0.0
+        m_Grab: 0.0
+      m_DoFArray:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      m_TDoFArray:
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+    m_StartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_LeftFootStartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_RightFootStartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_AverageSpeed:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    m_Clip:
+      data:
+        m_StreamedClip:
+          data: []
+          curveCount: 0
+        m_DenseClip:
+          m_FrameCount: 0
+          m_CurveCount: 0
+          m_SampleRate: 0.0
+          m_BeginTime: 0.0
+          m_SampleArray: []
+        m_ConstantClip:
+          data: []
+        m_Binding:
+          data:
+            m_ValueArray: []
+    m_StartTime: 0.0
+    m_StopTime: 1.0
+    m_OrientationOffsetY: 0.0
+    m_Level: 0.0
+    m_CycleOffset: 0.0
+    m_AverageAngularSpeed: 0.0
+    m_IndexArray:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    m_ValueArrayDelta: []
+    m_ValueArrayReferencePose: []
+    m_Mirror: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_Events: []

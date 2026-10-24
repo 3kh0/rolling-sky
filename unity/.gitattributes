@@ -1,0 +1,8 @@
+# Preserve recovered source/assets and byte-sensitive validation inputs.
+* -text
+
+# LevelLoader compares literal section markers after splitting only on LF.
+# Preserve the original map bytes in Windows checkouts too.
+Assets/Resources/buckets/*.txt text eol=lf
+Assets/Resources/Classic1471/Maps/*.txt text eol=lf
+Assets/Resources/Classic1561/Maps/*.txt text eol=lf

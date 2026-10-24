@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: guangquan2
+  m_Shader: {fileID: 4800000, guid: 7ab0f58202940c85d9a0b37235880e1e, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 437bfe7bfa2ded272612d51546e00052, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats: {}
+    m_Colors: {}

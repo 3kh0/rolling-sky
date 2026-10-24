@@ -1,0 +1,513 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &26
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 13}
+  m_Layer: 0
+  m_Name: 190_Level23SoldierRight
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &13
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 26}
+  m_LocalRotation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+  m_LocalPosition: {x: 0.0, y: 0.0, z: 0.0}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children:
+  - {fileID: 34}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &39
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 34}
+  m_Layer: 0
+  m_Name: nani
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &34
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 39}
+  m_LocalRotation: {x: -3.090862321641907e-08, y: 0.7071068286895752, z: -0.7071068286895752, w: -3.090862321641907e-08}
+  m_LocalPosition: {x: 0.0, y: 0.0, z: 0.0}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children:
+  - {fileID: 18}
+  m_Father: {fileID: 13}
+  m_RootOrder: 0
+--- !u!1 &30
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 18}
+  - 111: {fileID: 1}
+  m_Layer: 0
+  m_Name: part1
+  m_IsActive: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &18
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 30}
+  m_LocalRotation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+  m_LocalPosition: {x: 0.0, y: 0.0, z: 0.0}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children:
+  - {fileID: 36}
+  - {fileID: 38}
+  - {fileID: 23}
+  - {fileID: 27}
+  m_Father: {fileID: 34}
+  m_RootOrder: 0
+--- !u!111 &1
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 3
+  m_GameObject: {fileID: 30}
+  m_Enabled: 1
+  m_Animation: {fileID: 7400000, guid: 258f9916752ef06c9eee11013fb3f17b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 258f9916752ef06c9eee11013fb3f17b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 1
+--- !u!1 &29
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 36}
+  m_Layer: 0
+  m_Name: xiaobing00004
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &36
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 29}
+  m_LocalRotation: {x: 6.657902673623539e-08, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -2.0, y: 0.7670328617095947, z: 3.2019187301557395e-08}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children:
+  - {fileID: 24}
+  - {fileID: 35}
+  - {fileID: 25}
+  - {fileID: 11}
+  m_Father: {fileID: 18}
+  m_RootOrder: 0
+--- !u!1 &32
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 24}
+  - 33: {fileID: 37}
+  - 23: {fileID: 6}
+  m_Layer: 0
+  m_Name: xiaobing004
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &24
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 32}
+  m_LocalRotation: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -0.0, y: -0.7670328617095947, z: 9.29463297438815e-08}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 36}
+  m_RootOrder: 0
+--- !u!33 &37
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 32}
+  m_Mesh: {fileID: 4300000, guid: d6f63274eb434c12ce9d90270598f45c, type: 2}
+--- !u!23 &6
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 32}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_LightmapTilingOffsetDynamic: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fdae5aa0aee2164da48771b3e317697, type: 2}
+  m_SubsetIndices: []
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 35}
+  - 33: {fileID: 7}
+  - 23: {fileID: 8}
+  m_Layer: 0
+  m_Name: xiaobing006
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &35
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 5}
+  m_LocalRotation: {x: 1.15660455435318e-07, y: -3.7278720554922984e-08, z: -0.3067709505558014, w: 0.9517834186553955}
+  m_LocalPosition: {x: 0.015133055858314037, y: 0.11185912787914276, z: 0.16679558157920837}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 36}
+  m_RootOrder: 1
+--- !u!33 &7
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 5}
+  m_Mesh: {fileID: 4300000, guid: b2f0eaa8ad429bd5729dcce7f79f58de, type: 2}
+--- !u!23 &8
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 5}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_LightmapTilingOffsetDynamic: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fdae5aa0aee2164da48771b3e317697, type: 2}
+  m_SubsetIndices: []
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &20
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 25}
+  - 33: {fileID: 3}
+  - 23: {fileID: 33}
+  m_Layer: 0
+  m_Name: xiaobing00006 1
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &25
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 20}
+  m_LocalRotation: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: 0.3750729262828827, y: 0.5328626036643982, z: 9.094946814441375e-15}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 36}
+  m_RootOrder: 2
+--- !u!33 &3
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 20}
+  m_Mesh: {fileID: 4300000, guid: 5073fe724466917dbb41320a8d026f74, type: 2}
+--- !u!23 &33
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 20}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_LightmapTilingOffsetDynamic: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fdae5aa0aee2164da48771b3e317697, type: 2}
+  m_SubsetIndices: []
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 11}
+  - 33: {fileID: 21}
+  - 23: {fileID: 15}
+  m_Layer: 0
+  m_Name: xiaobing00007
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &11
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 9}
+  m_LocalRotation: {x: 0.0, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -0.38213789463043213, y: 0.5363323092460632, z: 9.094946814441375e-15}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 36}
+  m_RootOrder: 3
+--- !u!33 &21
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 9}
+  m_Mesh: {fileID: 4300000, guid: 81a03341f653ff1d18700f11e315d2b2, type: 2}
+--- !u!23 &15
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 9}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_LightmapTilingOffsetDynamic: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fdae5aa0aee2164da48771b3e317697, type: 2}
+  m_SubsetIndices: []
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &22
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 38}
+  m_Layer: 0
+  m_Name: xiaobing00005
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &38
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 22}
+  m_LocalRotation: {x: 6.657902673623539e-08, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -1.6105588674545288, y: 0.18737812340259552, z: -0.09068801999092102}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 18}
+  m_RootOrder: 1
+--- !u!1 &4
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 23}
+  - 137: {fileID: 31}
+  m_Layer: 0
+  m_Name: xiaobing005
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &23
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 4}
+  m_LocalRotation: {x: 6.657902673623539e-08, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -1.0088776350021362, y: 0.0, z: 0.0}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 18}
+  m_RootOrder: 2
+--- !u!137 &31
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 2
+  m_GameObject: {fileID: 4}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_LightmapTilingOffsetDynamic: {x: 1.0, y: 1.0, z: 0.0, w: 0.0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fdae5aa0aee2164da48771b3e317697, type: 2}
+  m_SubsetIndices: []
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: 1c433eee8b2d1f9225bafc21b891e3eb, type: 2}
+  m_Bones:
+  - {fileID: 27}
+  - {fileID: 38}
+  - {fileID: 36}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 36}
+  m_AABB:
+    m_Center: {x: -0.056639671325683594, y: -0.15639007091522217, z: -0.006777822971343994}
+    m_Extent: {x: 0.669650673866272, y: 0.7515177130699158, z: 0.3899005651473999}
+  m_DirtyAABB: 0
+--- !u!1 &2
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 27}
+  m_Layer: 0
+  m_Name: xiaobing00006
+  m_IsActive: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &27
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 2}
+  m_LocalRotation: {x: 6.657902673623539e-08, y: -0.0, z: -0.0, w: 1.0}
+  m_LocalPosition: {x: -2.4105589389801025, y: 0.18737812340259552, z: -0.09068801999092102}
+  m_LocalScale: {x: 1.0, y: 1.0, z: 1.0}
+  m_Children: []
+  m_Father: {fileID: 18}
+  m_RootOrder: 3
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 26}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

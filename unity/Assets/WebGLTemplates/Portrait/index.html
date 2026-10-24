@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- Legacy SDKs remain network-isolated; this is not SDK removal. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' data: blob:; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <link rel="icon" href="data:," />
+    <title>Rolling Sky</title>
+    <link rel="stylesheet" href="player.css" />
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script src="music.js"></script>
+    <script src="player.js" defer></script>
+  </head>
+  <body>
+    <main id="player">
+      <div id="gameContainer" data-build-url="%UNITY_WEBGL_BUILD_URL%" aria-label="Rolling Sky game"></div>
+      <button id="enableSound" type="button" hidden>Tap to enable sound</button>
+      <noscript>Enable JavaScript to play Rolling Sky.</noscript>
+    </main>
+  </body>
+</html>

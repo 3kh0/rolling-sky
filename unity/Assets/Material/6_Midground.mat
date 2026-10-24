@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 6_Midground
+  m_Shader: {fileID: 4800000, guid: 107d70334f5471c4e81d4f8bd3166f00, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AltTex:
+        m_Texture: {fileID: 2800000, guid: e2b2504cac5ddf942a039c6921d090f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c58d4078b76519249a7e7729c9c812ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 1
+    - _Ammount: 1
+    - _FogEnd: 30
+    - _FogStart: 10
+    - _Gloss: 0
+    - _Limit: 0
+    m_Colors:
+    - _Color: {r: 0.29411766, g: 0.57254905, b: 0.64705884, a: 1}
+    - _ColorAlt: {r: 0.07058824, g: 0.8509804, b: 0.8784314, a: 1}
+    - _ColorB: {r: 0.07058824, g: 0.8509804, b: 0.8784314, a: 1}
+    - _ColorD: {r: 0.5, g: 0, b: 0, a: 1}
+    - _ColorDa: {r: 0, g: 0, b: 0.22, a: 1}
+    - _ColorF: {r: 0.07058824, g: 0.8509804, b: 0.8784314, a: 1}
+    - _ColorG: {r: 0.29411766, g: 0.57254905, b: 0.64705884, a: 1}
+    - _ColorR: {r: 0.07058824, g: 0.8509804, b: 0.8784314, a: 1}
+    - _ColorS: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorSa: {r: 0, g: 0, b: 0.185, a: 1}
+    - _ColrB: {r: 0.29411766, g: 0.57254905, b: 0.64705884, a: 1}
+    - _ColrG: {r: 1, g: 0.47058824, b: 0.47058824, a: 1}
+    - _ColrR: {r: 0.07058824, g: 0.69803923, b: 0.69803923, a: 1}

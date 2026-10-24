@@ -1,0 +1,25 @@
+public enum MaterialName
+{
+	General = 0,
+	Fragile = 1,
+	FragileActive = 2,
+	Mover = 3,
+	MoverAuto = 4,
+	Enemy = 5,
+	Ball = 6,
+	BallQuad = 7,
+	BallTrail = 8,
+	BallInner = 9,
+	Pickup = 10,
+	Laser = 11,
+	LaserSafe = 12,
+	Portal = 13,
+	Finish = 14,
+	Midground = 15,
+	Background = 16,
+	HudForeground = 17,
+	HudBackground = 18,
+	InGameHud = 19,
+	MenuOverlay = 20,
+	NextWorldReveal = 21
+}

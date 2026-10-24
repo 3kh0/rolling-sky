@@ -1,0 +1,294 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!90 &9000000
+Avatar:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Level11_Tree02Avatar
+  m_AvatarSize: 716
+  m_Avatar:
+    serializedVersion: 3
+    m_AvatarSkeleton:
+      data:
+        m_Node:
+        - m_ParentId: -1
+          m_AxesId: -1
+        - m_ParentId: 0
+          m_AxesId: -1
+        - m_ParentId: 0
+          m_AxesId: -1
+        m_ID:
+        - 0
+        - 1325287337
+        - 2812441042
+        m_AxesArray: []
+    m_AvatarSkeletonPose:
+      data:
+        m_X:
+        - t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        - t:
+            x: -0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 8.146034247147327e-08
+            y: 0.0
+            z: -0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        - t:
+            x: -0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 2.1855694143368964e-08
+            y: 0.0
+            z: -0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+    m_DefaultPose:
+      data:
+        m_X:
+        - t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        - t:
+            x: -0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 8.146034247147327e-08
+            y: 0.0
+            z: -0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        - t:
+            x: -0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 2.1855694143368964e-08
+            y: 0.0
+            z: -0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+    m_SkeletonNameIDArray:
+    - 0
+    - 1325287337
+    - 2812441042
+    m_Human:
+      data:
+        m_RootX:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_Skeleton:
+          data:
+            m_Node: []
+            m_ID: []
+            m_AxesArray: []
+        m_SkeletonPose:
+          data:
+            m_X: []
+        m_LeftHand:
+          data:
+            m_HandBoneIndex:
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+        m_RightHand:
+          data:
+            m_HandBoneIndex:
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+            - -1
+        m_Handles: []
+        m_ColliderArray: []
+        m_HumanBoneIndex:
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        m_HumanBoneMass:
+        - 0.1454545557498932
+        - 0.12121213227510452
+        - 0.12121213227510452
+        - 0.04848485440015793
+        - 0.04848485440015793
+        - 0.00969697069376707
+        - 0.00969697069376707
+        - 0.03030303306877613
+        - 0.2909091114997864
+        - 0.012121213600039482
+        - 0.04848485440015793
+        - 0.006060606800019741
+        - 0.006060606800019741
+        - 0.024242427200078964
+        - 0.024242427200078964
+        - 0.01818181946873665
+        - 0.01818181946873665
+        - 0.006060606800019741
+        - 0.006060606800019741
+        - 0.0024242426734417677
+        - 0.0024242426734417677
+        - 0.0
+        - 0.0
+        - 0.0
+        m_ColliderIndex:
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        - -1
+        m_Scale: 1.0
+        m_ArmTwist: 0.5
+        m_ForeArmTwist: 0.5
+        m_UpperLegTwist: 0.5
+        m_LegTwist: 0.5
+        m_ArmStretch: 0.05000000074505806
+        m_LegStretch: 0.05000000074505806
+        m_FeetSpacing: 0.0
+        m_HasLeftHand: 0
+        m_HasRightHand: 0
+        m_HasTDoF: 0
+    m_HumanSkeletonIndexArray: []
+    m_HumanSkeletonReverseIndexArray: []
+    m_RootMotionBoneIndex: -1
+    m_RootMotionBoneX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_RootMotionSkeleton:
+      data:
+        m_Node: []
+        m_ID: []
+        m_AxesArray: []
+    m_RootMotionSkeletonPose:
+      data:
+        m_X: []
+    m_RootMotionSkeletonIndexArray: []
+  m_TOS:
+  - first: 0
+    second: ''
+  - first: 1325287337
+    second: Level11_Tree02_trunk
+  - first: 2812441042
+    second: Level11_Tree02_arm

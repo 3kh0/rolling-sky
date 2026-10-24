@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: 13_Crown
+  m_Shader: {fileID: 4800000, guid: ab2adefd39d004544b157df84d013c9e, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _ReflectTex
+      second:
+        m_Texture: {fileID: 8900000, guid: 6d3e6f561d6b0aa13105f5a83ab1537d, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    - first:
+        name: _RefractTex
+      second:
+        m_Texture: {fileID: 8900000, guid: 6b9a17fc978a962e619c25cbc384d051, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats:
+    - first:
+        name: _AlphaMin
+      second: 0.75
+    - first:
+        name: _Density
+      second: 0.0
+    - first:
+        name: _Diffuse
+      second: 0.0
+    - first:
+        name: _Gloss
+      second: 0.05000000074505806
+    - first:
+        name: _Length
+      second: 8.0
+    - first:
+        name: _Opacity
+      second: 0.9392857551574707
+    - first:
+        name: _Refraction
+      second: 0.2678571343421936
+    - first:
+        name: _Shine
+      second: 0.5535714030265808
+    - first:
+        name: _Shininess
+      second: 0.5
+    - first:
+        name: _Specular
+      second: 1.5
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1.0, g: 1.0, b: 0.8705882430076599, a: 1.0}
+    - first:
+        name: _ColorB
+      second: {r: 0.0, g: 0.0, b: 0.0, a: 1.0}
+    - first:
+        name: _ColorD
+      second: {r: 1.0, g: 0.8078431487083435, b: 0.0117647061124444, a: 1.0}
+    - first:
+        name: _ColorR
+      second: {r: 1.0, g: 0.8078431487083435, b: 0.0117647061124444, a: 1.0}
+    - first:
+        name: _ColorS
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first:
+        name: _ReflectColor
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 0.5}
+    - first:
+        name: _SpecColor
+      second: {r: 1.0, g: 0.3970588445663452, b: 0.3970588445663452, a: 1.0}

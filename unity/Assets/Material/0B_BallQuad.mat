@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 0B_BallQuad
+  m_Shader: {fileID: 4800000, guid: 63b092957128e554bb3fe455be9768d4, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 1147e64b0fb2eea4c9596f57e91e0e72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0.75
+    - _Ammount: 0
+    - _Bounds: 1
+    - _ColorEWeight: 1
+    - _Cutoff: 0.5
+    - _Density: 0.07410447
+    - _EdgeAlpha: 0
+    - _FrezFalloff: 1.0447761
+    - _FrezPow: 0
+    - _Glos: 0
+    - _Gloss: 0.10714285
+    - _GlossAlpha: 5
+    - _Metalics: 1
+    - _PowerD: 1
+    - _RefScale: 1
+    - _Reflection: 0.880597
+    - _Shininess: 0.12560894
+    - _alphAmnt: 0.5
+    - _alphMax: 1
+    - _alphMin: 0.07692308
+    - _diffPowr: 1
+    - _edgeAmnt: 0
+    - _emitAmnt: 1
+    - _fresAmnt: 1.3097016
+    - _fresDark: 0.35820895
+    - _glos: 0.23853944
+    - _node_157: 0
+    - _node_7: 0
+    - _reflAmnt: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0.7794118, b: 1, a: 1}
+    - _ColorA: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorAmbi: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorB: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorD: {r: 1, g: 0.18431373, b: 0.015686275, a: 1}
+    - _ColorDa: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
+    - _ColorE: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorEAlt: {r: 0.1882353, g: 0.9372549, b: 0.972549, a: 0}
+    - _ColorF: {r: 0.90588236, g: 0.4862745, b: 0.44705883, a: 1}
+    - _ColorG: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorR: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorS: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorSa: {r: 0.47843137, g: 0.26666668, b: 0.26666668, a: 1}
+    - _ColorSpec: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorSpecAmbi: {r: 0, g: 0, b: 0, a: 1}
+    - _DiffColr: {r: 1, g: 1, b: 1, a: 0}
+    - _EmmiColr: {r: 0.5, g: 0, b: 0.1, a: 0}
+    - _ReflectColor: {r: 0.4044118, g: 0.24978375, b: 0.2913734, a: 0.5019608}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _diffAmbiColr: {r: 0, g: 0, b: 0, a: 1}
+    - _diffColr: {r: 1, g: 0.18431373, b: 0.015686275, a: 1}
+    - _edgeMult: {r: 0.42647058, g: 0.4304259, b: 1, a: 1}
+    - _emitColr: {r: 0, g: 0, b: 0, a: 1}
+    - _reflColr: {r: 0.9137932, g: 0.375, b: 1, a: 1}
+    - _spec: {r: 1, g: 1, b: 1, a: 1}
+    - _specAmbiColr: {r: 0.47843137, g: 0.26666668, b: 0.26666668, a: 1}
+    - _specColr: {r: 1, g: 1, b: 1, a: 1}

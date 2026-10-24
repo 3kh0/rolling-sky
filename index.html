@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' data: blob:; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <!--^^ this unironically blocks the ads and stupid shit lol-->
+    <link rel="icon" href="data:," />
+    <title>Rolling Sky</title>
+    <link rel="stylesheet" href="web/p.css" />
+    <script src="web/Build/UnityLoader.js" defer></script>
+    <script src="web/m.js" defer></script>
+    <script src="web/p.js" defer></script>
+  </head>
+  <body>
+    <main id="player">
+      <div id="gameContainer" data-build-url="web/Build/WebPlayer.json" aria-label="game"></div>
+      <button id="enableSound" type="button" hidden>tap to enable sound</button>
+      <noscript>enable javascript</noscript>
+    </main>
+  </body>
+</html>
