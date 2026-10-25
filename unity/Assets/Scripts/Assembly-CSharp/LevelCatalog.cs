@@ -1,7 +1,6 @@
 using System;
 
-// Runtime numbers are save slots and menu positions, not the donor's release IDs.
-// In particular, keep the accepted first eight slots unchanged.
+// Runtime numbers are stable save/asset slots, not menu positions or release IDs.
 public static class LevelCatalog
 {
 	public sealed class Level
@@ -11,7 +10,6 @@ public static class LevelCatalog
 		public string ResourceRoot { get; private set; }
 		public string Title { get; private set; }
 		public int MaxGems { get; private set; }
-		public int? UnlockParentWorldNumber { get; private set; }
 		public bool IsExpansion { get { return WorldNumber >= 9; } }
 		// Donor IDs, not menu positions. Keep the explicit catalogue entries below
 		// compatible with export_expansion_maps.py's constructor parser.
@@ -25,14 +23,13 @@ public static class LevelCatalog
 			}
 		}
 
-		public Level(int worldNumber, int sourceNumber, string title, int maxGems, int? unlockParentWorldNumber = null)
+		public Level(int worldNumber, int sourceNumber, string title, int maxGems)
 		{
 			WorldNumber = worldNumber;
 			SourceNumber = sourceNumber;
 			ResourceRoot = sourceNumber <= 20 ? "Classic1471" : sourceNumber <= 25 ? "Classic1561" : "Classic1782";
 			Title = title;
 			MaxGems = maxGems;
-			UnlockParentWorldNumber = unlockParentWorldNumber;
 		}
 	}
 
@@ -59,10 +56,10 @@ public static class LevelCatalog
 		new Level(17, 21, "Cube", 10),
 		new Level(18, 23, "Poker", 10),
 		new Level(19, 25, "Reggae", 10),
-		new Level(20, 13, "Illusion", 20, 1),
-		new Level(21, 16, "Monody", 10, 2),
-		new Level(22, 22, "Matrix", 10, 17),
-		new Level(23, 24, "Joker", 10, 18),
+		new Level(20, 13, "Illusion", 20),
+		new Level(21, 16, "Monody", 10),
+		new Level(22, 22, "Matrix", 10),
+		new Level(23, 24, "JOKER", 10),
 		// Native resource IDs differ from the historical main/bonus numbering.
 		new Level(24, 27, "Mental Rave", 10),
 		new Level(25, 28, "Street Basketball", 10),
@@ -76,6 +73,19 @@ public static class LevelCatalog
 		new Level(33, 41, "The Eye of Horus", 10)
 	};
 
+	// https://rolling-sky.fandom.com/wiki/Level (revision 148880), easy to hard.
+	// Use our classic variants: Cloud B, Massif B, Illusion B, Forest B,
+	// Hoop Dream A (not the 2026 extended B), and Monody A.
+	private static readonly int[] menuOrder =
+	{
+		29, 27, 28, 1, 33, 20, // 1 star
+		2, 31, 24, 26, 23, // 2 stars
+		21, 3, 12, 4, 15, 22, // 3 stars
+		5, 6, 7, 8, 19, 25, // 4 stars
+		32, 11, 10, 18, 13, 9, 14, 30, 17, // 5 stars
+		16 // 6 stars
+	};
+
 	public static Level Get(int worldNumber)
 	{
 		if (worldNumber < 1 || worldNumber > Count)
@@ -83,20 +93,19 @@ public static class LevelCatalog
 		return levels[worldNumber - 1];
 	}
 
-	public static bool IsUnlocked(int worldNumber)
+	public static Level AtMenuIndex(int index)
 	{
-		int? parent = Get(worldNumber).UnlockParentWorldNumber;
-		return !parent.HasValue || ProgressManager.IsWorldComplete(parent.Value - 1);
+		return Get(menuOrder[index]);
 	}
 
-	public static int NextUnlockedWorld(int worldNumber)
+	public static int MenuIndexOf(int worldNumber)
 	{
 		Get(worldNumber);
-		for (int offset = 1; offset <= Count; offset++)
-		{
-			int next = (worldNumber - 1 + offset) % Count + 1;
-			if (IsUnlocked(next)) return next;
-		}
-		throw new InvalidOperationException("The catalogue has no unlocked level.");
+		return Array.IndexOf(menuOrder, worldNumber);
+	}
+
+	public static int NextWorld(int worldNumber)
+	{
+		return AtMenuIndex((MenuIndexOf(worldNumber) + 1) % Count).WorldNumber;
 	}
 }

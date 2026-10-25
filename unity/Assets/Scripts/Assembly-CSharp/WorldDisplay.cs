@@ -46,42 +46,19 @@ public class WorldDisplay : MonoBehaviour
 		targetMaterial.mainTexture = mainTexture;
 	}
 
-	public void Configure(string name, Color lightColor, Color lightAltColor, Color midColor, Color midAltColor, Color darkColor, int progressPercent, int gemsEarned, int gemsMax, bool startLocked, bool isEndless)
+	public void Configure(string name, Color lightColor, Color lightAltColor, Color midColor, Color midAltColor, Color darkColor, int progressPercent, int gemsEarned, int gemsMax, bool isEndless)
 	{
 		worldPercent.color = lightAltColor;
 		worldGems.color = midAltColor;
 		int crownWorldNumber;
 		if (int.TryParse(name, out crownWorldNumber) && crownWorldNumber >= 1 && crownWorldNumber <= LevelCatalog.Count)
-			ClassicCrownHud.Configure(worldGems, crownWorldNumber, ProgressManager.GetCrowns(crownWorldNumber - 1), !startLocked && !isEndless);
+			ClassicCrownHud.Configure(worldGems, crownWorldNumber, ProgressManager.GetCrowns(crownWorldNumber - 1), !isEndless);
 		string text = name.ToUpperInvariant();
 		if (!ClassicWorldTitle.Configure(worldTitleQuad, worldPercent, name, lightAltColor))
 			LoadTextureNativePNG(string.Format("WorldTitle{0}", name), worldTitleQuad.GetComponent<Renderer>().material);
-		if (startLocked)
-		{
-			TransformUtils.Show(padlock);
-			SetOverlay(0.5f);
-		}
-		else
-		{
-			TransformUtils.Hide(padlock);
-			SetOverlay(0f);
-		}
-		string text2 = ((!startLocked && !isEndless) ? (progressPercent + "%") : null);
-		if (startLocked)
-		{
-			int worldNumber;
-			if (int.TryParse(name, out worldNumber))
-			{
-				int? parent = LevelCatalog.Get(worldNumber).UnlockParentWorldNumber;
-				if (parent.HasValue)
-				{
-					text2 = "BEAT " + LevelCatalog.Get(parent.Value).Title.ToUpperInvariant();
-					float size = 3f / text2.Length;
-					worldPercent.characterSize *= size;
-					worldPercentOutline.characterSize *= size;
-				}
-			}
-		}
+		TransformUtils.Hide(padlock);
+		SetOverlay(0f);
+		string text2 = !isEndless ? (progressPercent + "%") : null;
 		worldPercent.text = text2;
 		worldPercentOutline.text = text2;
 		if (isEndless)

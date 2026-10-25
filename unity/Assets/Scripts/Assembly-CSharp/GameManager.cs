@@ -2044,14 +2044,12 @@ public class GameManager : MonoBehaviour
 		{
 			return 1;
 		}
-		if (!LevelCatalog.IsUnlocked(newWorldNum))
-			return LevelCatalog.Get(newWorldNum).UnlockParentWorldNumber.Value;
 		return newWorldNum;
 	}
 
 	public static int GetNextWorldNum()
 	{
-		return LevelCatalog.NextUnlockedWorld(WorldNum);
+		return LevelCatalog.NextWorld(WorldNum);
 	}
 
 	public static int GetNextWorldIndex()

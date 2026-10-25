@@ -16,6 +16,7 @@ public static class ClassicContentValidation
 	public static void Validate()
 	{
 		Require(Application.unityVersion == "2017.4.40f1", "Wrong editor version");
+		ValidateMenu();
 		for (int difficulty = 0; difficulty < 26; difficulty++)
 			Require(new SegmentID(SegmentType.Level, difficulty).DifficultyChar == ((char)('A' + difficulty)).ToString(),
 				"Changed original segment label " + difficulty);
@@ -61,6 +62,7 @@ public static class ClassicContentValidation
 		}
 		int[] lengths = { 1095, 1150, 914 };
 		int[] samples = { 5306112, 5649408, 4387968 };
+		int[] nextWorlds = { 7, 8, 19 };
 		int originalWorld = GameManager.WorldNum;
 		try
 		{
@@ -70,7 +72,7 @@ public static class ClassicContentValidation
 				LevelDesigner.Reset();
 				Require(LevelDesigner.WorldLength == lengths[world - 6], "Wrong world goal " + world);
 				Require(!LevelDesigner.WorldIsEndless, "Classic world incorrectly became endless");
-				Require(GameManager.GetNextWorldNum() == world + 1, "Wrong next-world boundary");
+				Require(GameManager.GetNextWorldNum() == nextWorlds[world - 6], "Wrong next-world boundary");
 				string path = "Assets/Resources/Classic1471/Audio/Music" + world + ".wav";
 				AudioClip clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
 				Require(clip != null && clip.frequency == 44100 && clip.channels == 2 && clip.samples == samples[world - 6],
@@ -87,6 +89,38 @@ public static class ClassicContentValidation
 		}
 		Debug.Log("PASS: original five map buckets unchanged; all added maps loaded in source cell/row order; " +
 			checkedCells + " normalized cells checked; reverse segment start, three accepted goals, next-world continuation, and three accepted stereo soundtracks verified.");
+	}
+
+	public static void ValidateMenu()
+	{
+		// https://rolling-sky.fandom.com/wiki/Level
+		// we use names so the saves cant overlap
+		string[] titles = ("Cloud|Hoop Dream|The Winter|Massif|The Eye of Horus|Illusion|" +
+			"Sky|Laser|Mental Rave|Fairy Tale|JOKER|Monody|Forest|Ghost Dance|Desert|Kung Fu|Matrix|" +
+			"Volcano|City|Sci-Tech|Tetris|Reggae|Street Basketball|Egypt|Halloween|Castle in the Sky|" +
+			"Poker|Deep Space|E-labyrinth|Christmas|Neon|Cube|1UP").Split('|');
+		int[] sources = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 17, 19, 21,
+			23, 25, 13, 16, 22, 24, 27, 28, 29, 33, 35, 36, 37, 38, 40, 41 };
+		Require(LevelCatalog.Count == titles.Length && LevelCatalog.Count == sources.Length, "Wrong catalogue size");
+		HashSet<int> worlds = new HashSet<int>();
+		int originalWorld = GameManager.WorldNum;
+		try
+		{
+			for (int index = 0; index < titles.Length; index++)
+			{
+				LevelCatalog.Level level = LevelCatalog.AtMenuIndex(index);
+				Require(level.Title == titles[index], "Wrong name/order at menu position " + index);
+				Require(worlds.Add(level.WorldNumber) && LevelCatalog.MenuIndexOf(level.WorldNumber) == index,
+					"Missing or repeated menu world " + level.Title);
+				Require(LevelCatalog.Get(index + 1).SourceNumber == sources[index], "Moved save/asset slot " + (index + 1));
+				GameManager.SetWorldNum(level.WorldNumber);
+				Require(GameManager.WorldNum == level.WorldNumber, "Level still locked: " + level.Title);
+				Require(LevelCatalog.Get(GameManager.GetNextWorldNum()).Title == titles[(index + 1) % titles.Length],
+					"Wrong next level after " + level.Title);
+			}
+		}
+		finally { GameManager.SetWorldNum(originalWorld); }
+		Debug.Log("PASS: all 33 levels selectable without completion prerequisites; real names and wiki menu/next-level order verified; save/asset slots preserved.");
 	}
 
 	private static List<int> Flatten(LevelLoader.SegmentBucket bucket)

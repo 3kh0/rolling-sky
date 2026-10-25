@@ -9,7 +9,7 @@ public static class ClassicWorldTitle
 	public static bool Configure(Transform quad, TextMesh fontSource, string world, Color color)
 	{
 		int number;
-		string title = int.TryParse(world, out number) && number >= 6 && number <= LevelCatalog.Count
+		string title = int.TryParse(world, out number) && number >= 1 && number <= LevelCatalog.Count
 			? LevelCatalog.Get(number).Title.ToUpperInvariant() : null;
 		Transform child = quad.Find(childName);
 		quad.GetComponent<Renderer>().enabled = title == null;

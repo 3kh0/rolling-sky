@@ -79,16 +79,6 @@ public class MenuManager : MonoBehaviour
 
 		public Color DarkColor { get; private set; }
 
-		public bool Unlocked { get { return LevelCatalog.IsUnlocked(Number); } }
-
-		public bool Locked
-		{
-			get
-			{
-				return !Unlocked;
-			}
-		}
-
 		public bool Endless { get; private set; }
 
 		public World(WorldDisplay masterWorldDisplay, bool isEndless)
@@ -99,23 +89,21 @@ public class MenuManager : MonoBehaviour
 			nameStart = Transform.name;
 			nameStart = nameStart.Substring(0, nameStart.Length - 1);
 			Index = 0;
-			Number = Index + 1;
+			Number = LevelCatalog.AtMenuIndex(Index).WorldNumber;
+			Script.SetTexture(MaterialManager.WorldMenuTextures[Number - 1]);
 			Endless = isEndless;
 			ConfigureWorld();
 		}
 
-		public World(int worldIndex, Texture worldTexture, bool isEndless)
+		public World(int worldIndex, bool isEndless)
 		{
 			Index = worldIndex;
-			Number = Index + 1;
+			Number = LevelCatalog.AtMenuIndex(Index).WorldNumber;
 			string newName = nameStart + Number;
 			Transform = TransformUtils.Duplicate(masterTransform, newName);
 			Script = Transform.GetComponent<WorldDisplay>();
 			TransformUtils.MoveX(Transform, 7f * (float)Index, true);
-			if (worldTexture != null)
-			{
-				Script.SetTexture(worldTexture);
-			}
+			Script.SetTexture(MaterialManager.WorldMenuTextures[Number - 1]);
 			Endless = isEndless;
 			ConfigureWorld();
 		}
@@ -130,9 +118,9 @@ public class MenuManager : MonoBehaviour
 			DarkColor = MaterialManager.GetGuiDarkColor(Number);
 			normalDepth = Transform.localPosition.z;
 			SetDepth(1f, Index == 0);
-			int progress = ProgressManager.GetProgress(Index);
-			int gems = ProgressManager.GetGems(Index);
-			Script.Configure(Name, LightColor, LightAltColor, MidColor, MidAltColor, DarkColor, progress, gems, LevelCatalog.Get(Number).MaxGems, Locked, Endless);
+			int progress = ProgressManager.GetProgress(Number - 1);
+			int gems = ProgressManager.GetGems(Number - 1);
+			Script.Configure(Name, LightColor, LightAltColor, MidColor, MidAltColor, DarkColor, progress, gems, LevelCatalog.Get(Number).MaxGems, Endless);
 		}
 
 		public void Select()
@@ -144,7 +132,6 @@ public class MenuManager : MonoBehaviour
 
 		public void Load()
 		{
-			if (Locked) return;
 			GameManager.SetWorldNum(Number);
 			Application.LoadLevel(1);
 		}
@@ -631,7 +618,7 @@ public class MenuManager : MonoBehaviour
 	{
 		get
 		{
-			return currentWorldIndex + 1;
+			return LevelCatalog.AtMenuIndex(currentWorldIndex).WorldNumber;
 		}
 	}
 
@@ -639,7 +626,7 @@ public class MenuManager : MonoBehaviour
 	{
 		get
 		{
-			return lastWorldIndex + 1;
+			return LevelCatalog.AtMenuIndex(lastWorldIndex).WorldNumber;
 		}
 	}
 
@@ -684,7 +671,7 @@ public class MenuManager : MonoBehaviour
 		ServerConfigs.Refresh();
 		GameManager.PreStart();
 		startingLoad = !alreadyLoaded;
-		int startingColorNum = (startingLoad ? 1 : GameManager.WorldNum);
+		int startingColorNum = (startingLoad ? LevelCatalog.AtMenuIndex(0).WorldNumber : GameManager.WorldNum);
 		// Prepare the selected soundtrack during menu construction, not after
 		// the last loading stage. MusicPlayer waits for the actual audio data.
 		MusicPlayer.Initialize(0.5f);
@@ -824,7 +811,7 @@ public class MenuManager : MonoBehaviour
 			progressPips = new Pip[componentsInChildren.Length];
 			for (int i = 0; i < componentsInChildren.Length; i++)
 			{
-				progressPips[i] = new Pip(componentsInChildren[i], i + 1);
+				progressPips[i] = new Pip(componentsInChildren[i], LevelCatalog.AtMenuIndex(i).WorldNumber);
 			}
 			worldSwiper = new GameObject("World Display Slider").transform;
 			worldSwiper.parent = worldMaster.transform.parent;
@@ -836,7 +823,7 @@ public class MenuManager : MonoBehaviour
 			worlds[0] = new World(worldMaster, false);
 			for (int j = 1; j < num; j++)
 			{
-				worlds[j] = new World(j, MaterialManager.WorldMenuTextures[j], false);
+				worlds[j] = new World(j, false);
 			}
 			float num2 = Screen.width;
 			float min = num2 / 2f - 196f;
@@ -849,7 +836,7 @@ public class MenuManager : MonoBehaviour
 			}
 			else
 			{
-				currentWorldIndex = GameManager.WorldIndex;
+				currentWorldIndex = LevelCatalog.MenuIndexOf(GameManager.WorldNum);
 				lastWorldIndex = currentWorldIndex - 1;
 				float newX = -1f * ((float)currentWorldIndex * 7f);
 				TransformUtils.SetX(worldSwiper, newX, true);
@@ -875,13 +862,13 @@ public class MenuManager : MonoBehaviour
 			VideoRewardsManager.Initialize();
 			break;
 		case LoadingStage.Extending:
-			MidgroundManager.InitializeForWorld(currentWorldIndex);
+			MidgroundManager.InitializeForWorld(currentWorldNumber - 1);
 			break;
 		case LoadingStage.Grooving:
 			MusicPlayer.Initialize(0.5f);
 			if (UserSettings.IsMusicOn())
 			{
-				MusicPlayer.FadeInto(currentWorldIndex, 3f);
+				MusicPlayer.FadeInto(currentWorldNumber - 1, 3f);
 			}
 			else
 			{
@@ -1294,7 +1281,7 @@ public class MenuManager : MonoBehaviour
 				if (UserSettings.IsMusicOn())
 				{
 					MusicPlayer.Unmute();
-					MusicPlayer.FadeIn(0, 3f);
+					MusicPlayer.FadeIn(currentWorldNumber - 1, 3f);
 				}
 				else
 				{
@@ -1725,9 +1712,9 @@ public class MenuManager : MonoBehaviour
 			}
 			worldSwipeTimer = worldSwipeTime;
 			SetupWorldSwipeRange();
-			MaterialManager.StartMenuRecolorTo(num);
+			MaterialManager.StartMenuRecolorTo(currentWorldNumber - 1);
 			StartBackgroundTransition(lastWorldIndex, currentWorldIndex);
-			MusicPlayer.FadeIntoManualStart(num);
+			MusicPlayer.FadeIntoManualStart(currentWorldNumber - 1);
 		}
 		else if (!moveRight)
 		{
@@ -1841,20 +1828,19 @@ public class MenuManager : MonoBehaviour
 
 	private void SelectCurrentWorld()
 	{
-		if (worlds[currentWorldIndex].Unlocked)
-		{
-			worlds[currentWorldIndex].Select();
-			selectedWorldNumber = currentWorldIndex;
-			worldSelectionTimer = 1f;
-			inputState = InputState.Paused;
-			MusicPlayer.FadeOut(1f);
-		}
+		worlds[currentWorldIndex].Select();
+		selectedWorldNumber = currentWorldIndex;
+		worldSelectionTimer = 1f;
+		inputState = InputState.Paused;
+		MusicPlayer.FadeOut(1f);
 	}
 
 	private void StartBackgroundTransition(int firstWorldIndex, int secondWorldIndex)
 	{
-		MaterialManager.StartLerping(firstWorldIndex, secondWorldIndex);
-		MidgroundManager.StartGeneratingForWorld(secondWorldIndex);
+		int first = LevelCatalog.AtMenuIndex(firstWorldIndex).WorldNumber - 1;
+		int second = LevelCatalog.AtMenuIndex(secondWorldIndex).WorldNumber - 1;
+		MaterialManager.StartLerping(first, second);
+		MidgroundManager.StartGeneratingForWorld(second);
 	}
 
 	private void UpdateBackgroundTransition(float transitionPercent, int worldAlphaIndex, int worldColorIndex, bool transitionStarting)
@@ -1891,7 +1877,7 @@ public class MenuManager : MonoBehaviour
 
 	private void EndBackgroundTransition()
 	{
-		TryResetShaders(currentWorldIndex);
+		TryResetShaders(currentWorldNumber - 1);
 	}
 
 	private void TryResetShaders(int? endingTextureIndex)
@@ -1921,7 +1907,7 @@ public class MenuManager : MonoBehaviour
 		for (int i = 0; i < progressPips.Length; i++)
 		{
 			progressPips[i].SetCenterTo(0f);
-			progressPips[i].SetProgressTo(ProgressManager.GetProgressFloat(i));
+			progressPips[i].SetProgressTo(ProgressManager.GetProgressFloat(LevelCatalog.AtMenuIndex(i).WorldNumber - 1));
 		}
 		updatingProgressPips = true;
 	}
