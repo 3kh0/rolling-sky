@@ -12,6 +12,10 @@ public partial class TileAnimator : MonoBehaviour
 
 		public Direction animDir;
 
+		// Native 1.7.9.2 AnimatedTile.mRecordCount; each Add creates a fresh
+		// instance, so independent Circus phases also reset on pooled row reuse.
+		public int circusRecordCount;
+
 		public AnimatedTile(MathUtils.IntTrio tileIndex, Tile.AnimType tileAnimType, MathUtils.Tri tileUsesAlternateAnim, Direction tileAnimDirection)
 		{
 			index = tileIndex;

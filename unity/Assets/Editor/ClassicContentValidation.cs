@@ -62,7 +62,7 @@ public static class ClassicContentValidation
 		}
 		int[] lengths = { 1095, 1150, 914 };
 		int[] samples = { 5306112, 5649408, 4387968 };
-		int[] nextWorlds = { 7, 8, 19 };
+		int[] nextWorlds = { 7, 8, 39 };
 		int originalWorld = GameManager.WorldNum;
 		try
 		{
@@ -87,20 +87,100 @@ public static class ClassicContentValidation
 			GameManager.SetWorldNum(originalWorld);
 			LevelDesigner.Reset();
 		}
+		ValidateAddedWorlds();
+		ValidateAddedHazards();
 		Debug.Log("PASS: original five map buckets unchanged; all added maps loaded in source cell/row order; " +
 			checkedCells + " normalized cells checked; reverse segment start, three accepted goals, next-world continuation, and three accepted stereo soundtracks verified.");
+	}
+
+	private static void ValidateAddedWorlds()
+	{
+		// Exact native goals and decoded sample dimensions, not duration
+		// estimates. 8Bits is mono; Midnight Carnival is 48 kHz.
+		int[] worlds = { 34, 35, 36, 37, 38, 39, 40, 41 };
+		int[] goals = { 780, 946, 1150, 1142, 1105, 1180, 764, 490 };
+		int[] rates = { 44100, 44100, 44100, 48000, 44100, 44100, 44100, 44100 };
+		int[] channels = { 2, 1, 2, 2, 2, 2, 2, 2 };
+		int[] samples = { 4384512, 5113728, 5672448, 6044544, 5647104, 5647104, 4035456, 5294592 };
+		int originalWorld = GameManager.WorldNum;
+		try
+		{
+			for (int i = 0; i < worlds.Length; i++)
+			{
+				GameManager.SetWorldNum(worlds[i]);
+				LevelDesigner.Reset();
+				LevelCatalog.Level level = LevelCatalog.Get(worlds[i]);
+				Require(LevelDesigner.WorldLength == goals[i] && !LevelDesigner.WorldIsEndless,
+					"Wrong original goal: " + level.Title);
+				Require(level.MaxGems == (worlds[i] == 41 ? 20 : 10) && level.MaxCrowns == (worlds[i] == 41 ? 0 : 3),
+					"Wrong pickup goals: " + level.Title);
+				Require(ClassicCrownRandom.Enabled == (worlds[i] == 34 || worlds[i] == 35),
+					"Wrong original crown mode: " + level.Title);
+				string path = "Assets/Resources/" + level.ResourceRoot + "/Audio/Music" + level.SourceNumber + ".wav";
+				ExpansionPrefabImport.CheckAudio(new ClassicPrefabImport.AudioRecord {
+					path = path, frequency = rates[i], channels = channels[i], frames = samples[i]
+				});
+				AudioImporter importer = (AudioImporter)AssetImporter.GetAtPath(path);
+				Require(!importer.forceToMono && importer.defaultSampleSettings.sampleRateSetting == AudioSampleRateSetting.PreserveSampleRate,
+					"Soundtrack was downmixed or resampled: " + level.Title);
+			}
+		}
+		finally { GameManager.SetWorldNum(originalWorld); LevelDesigner.Reset(); }
+		Debug.Log("PASS: eight additional native goals, gem/crown modes and original mono/stereo/sample-rate soundtrack dimensions verified.");
+	}
+
+	private static void ValidateAddedHazards()
+	{
+		int[] worlds = { 37, 39, 41 };
+		Tile.DangerType[][] dangers = {
+			new Tile.DangerType[] { Tile.DangerType.EnemyLv30Frankenstein, Tile.DangerType.EnemyLv30SpiderDie,
+				Tile.DangerType.EnemyLv30SpiderLife, Tile.DangerType.EnemyLv30Door },
+			new Tile.DangerType[] { Tile.DangerType.EnemyLv42PendulumLeft, Tile.DangerType.EnemyLv42Column,
+				Tile.DangerType.EnemyLv42Door, Tile.DangerType.BeanLv42ClownDown },
+			new Tile.DangerType[] { Tile.DangerType.Enemy_807_Level69_mofang, Tile.DangerType.Enemy_808_Level69_yanjing,
+				Tile.DangerType.Enemy_809_Level69_banyuanL, Tile.DangerType.Enemy_810_Level69_banyuanR }
+		};
+		bool[][] groundedKills = { new bool[] { true, true, false, false },
+			new bool[] { true, true, false, false }, new bool[] { true, true, true, true } };
+		bool[][] jumpingKills = { new bool[] { true, false, true, false },
+			new bool[] { true, false, true, false }, new bool[] { true, false, false, false } };
+		int originalWorld = GameManager.WorldNum;
+		GameObject root = new GameObject("Native hazard validation");
+		try
+		{
+			Tile tile = root.AddComponent<Tile>();
+			for (int world = 0; world < worlds.Length; world++)
+			{
+				GameManager.SetWorldNum(worlds[world]);
+				for (int i = 0; i < dangers[world].Length; i++)
+				{
+					tile.ResetVariables();
+					tile.SetAsDangerous(null, null, dangers[world][i]);
+					Tile.DangerType used;
+					Require(tile.ShouldKillBall(false, Vector3.zero, out used) == groundedKills[world][i] &&
+						tile.ShouldKillBall(true, Vector3.zero, out used) == jumpingKills[world][i],
+						"Native grounded/airborne collision changed: " + dangers[world][i]);
+				}
+				tile.HideRoot(true);
+				tile.SetAsDangerous(null, null, dangers[world][0]);
+				Tile.DangerType hiddenDanger;
+				Require(!tile.ShouldKillBall(false, Vector3.zero, out hiddenDanger), "Hidden hazard killed the ball");
+			}
+		}
+		finally { UnityEngine.Object.DestroyImmediate(root); GameManager.SetWorldNum(originalWorld); }
+		Debug.Log("PASS: native Midnight/Circus/Sunny grounded, airborne and hidden hazard collision contracts verified.");
 	}
 
 	public static void ValidateMenu()
 	{
 		// https://rolling-sky.fandom.com/wiki/Level
 		// we use names so the saves cant overlap
-		string[] titles = ("Cloud|Hoop Dream|The Winter|Massif|The Eye of Horus|Illusion|" +
-			"Sky|Laser|Mental Rave|Fairy Tale|JOKER|Monody|Forest|Ghost Dance|Desert|Kung Fu|Matrix|" +
-			"Volcano|City|Sci-Tech|Tetris|Reggae|Street Basketball|Egypt|Halloween|Castle in the Sky|" +
-			"Poker|Deep Space|E-labyrinth|Christmas|Neon|Cube|1UP").Split('|');
+		string[] titles = ("Sunny|Cloud|Hoop Dream|The Winter|Massif|The Eye of Horus|Illusion|" +
+			"Sky|Laser|Mental Rave|Fairy Tale|8Bits|JOKER|Dazzle|Monody|Forest|Ghost Dance|Desert|Candy|Kung Fu|Matrix|" +
+			"Volcano|Ignite|City|Sci-Tech|Tetris|Circus|Reggae|Relics|Street Basketball|Egypt|Halloween|Castle in the Sky|" +
+			"Poker|Deep Space|Midnight Carnival|E-labyrinth|Christmas|Neon|Cube|1UP").Split('|');
 		int[] sources = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 17, 19, 21,
-			23, 25, 13, 16, 22, 24, 27, 28, 29, 33, 35, 36, 37, 38, 40, 41 };
+			23, 25, 13, 16, 22, 24, 27, 28, 29, 33, 35, 36, 37, 38, 40, 41, 18, 20, 26, 30, 32, 42, 39, 70 };
 		Require(LevelCatalog.Count == titles.Length && LevelCatalog.Count == sources.Length, "Wrong catalogue size");
 		HashSet<int> worlds = new HashSet<int>();
 		int originalWorld = GameManager.WorldNum;
@@ -120,7 +200,7 @@ public static class ClassicContentValidation
 			}
 		}
 		finally { GameManager.SetWorldNum(originalWorld); }
-		Debug.Log("PASS: all 33 levels selectable without completion prerequisites; real names and wiki menu/next-level order verified; save/asset slots preserved.");
+		Debug.Log("PASS: all 41 levels selectable without completion prerequisites; real names and wiki menu/next-level order verified; save/asset slots preserved.");
 	}
 
 	private static List<int> Flatten(LevelLoader.SegmentBucket bucket)

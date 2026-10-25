@@ -204,7 +204,15 @@ public partial class Tile : MonoBehaviour
 		EnemyLv40Column1, EnemyLv40Column2, EnemyLv40Eye, EnemyLv40BackTriangle, EnemyLv40Triangle, EnemyLv40Snake,
 		EnemyLv40LeftWall, EnemyLv40RightWall, EnemyLv40_5TileLeft, EnemyLv40_5TileRight,
 		EnemyLv40_4TileLeft, EnemyLv40_4TileRight, EnemyLv40_3TileLeft, EnemyLv40_3TileRight, EnemyLv40_2TileLeft, EnemyLv40_2TileRight,
-		BeanLv40ShowButton, BeanLv40HideButton, EnemyLv40_CrossLeft, EnemyLv40_CrossRight
+		BeanLv40ShowButton, BeanLv40HideButton, EnemyLv40_CrossLeft, EnemyLv40_CrossRight,
+		EnemyLv30Frankenstein, EnemyLv30Corpse, EnemyLv30WitchRight, EnemyLv30SpiderDie,
+		EnemyLv30SpiderLife, EnemyLv30Pumpkin, EnemyLv30Tombstone, EnemyLv30Vampire,
+		EnemyLv30Pumpkin2, EnemyLv30Door, EnemyLv30Vampire2, EnemyLv30WitchLeft, BeanLv30Cobweb,
+		EnemyLv42ThreeGlass, EnemyLv42Column, EnemyLv42Rise, EnemyLv42FieryRings,
+		EnemyLv42PendulumLeft, EnemyLv42PendulumRight, EnemyLv42MonocycleRight, EnemyLv42MonocycleLeft,
+		EnemyLv42ClownUp, BeanLv42ClownDown, EnemyLv42TrojanLeft, EnemyLv42TrojanRight,
+		EnemyLv42Door, SimulationAirKillBall, EnemyLv42Circle,
+		Enemy_807_Level69_mofang, Enemy_808_Level69_yanjing, Enemy_809_Level69_banyuanL, Enemy_810_Level69_banyuanR
 	}
 
 	public enum AnimType
@@ -380,7 +388,15 @@ public partial class Tile : MonoBehaviour
 		EnemyLv40LeftWall, EnemyLv40RightWall, EnemyLv40_5TileLeft, EnemyLv40_5TileRight,
 		EnemyLv40_4TileLeft, EnemyLv40_4TileRight, EnemyLv40_3TileLeft, EnemyLv40_3TileRight, EnemyLv40_2TileLeft, EnemyLv40_2TileRight,
 		BeanLv40ShowButton, BeanLv40HideButton, EnemyLv40_CrossLeft, EnemyLv40_CrossRight,
-		GroundTileLeft, GroundTileRight, GroundTileBefore, GroundTileAfter
+		GroundTileLeft, GroundTileRight, GroundTileBefore, GroundTileAfter,
+		EnemyLv30Frankenstein, EnemyLv30Corpse, EnemyLv30WitchRight, EnemyLv30SpiderDie,
+		EnemyLv30SpiderLife, EnemyLv30Pumpkin, EnemyLv30Tombstone, EnemyLv30Vampire,
+		EnemyLv30Pumpkin2, EnemyLv30Door, EnemyLv30Vampire2, EnemyLv30WitchLeft, BeanLv30Cobweb,
+		EnemyLv42ThreeGlass, EnemyLv42Column, EnemyLv42Rise, EnemyLv42FieryRings,
+		EnemyLv42PendulumLeft, EnemyLv42PendulumRight, EnemyLv42MonocycleRight, EnemyLv42MonocycleLeft,
+		EnemyLv42ClownUp, BeanLv42ClownDown, EnemyLv42TrojanLeft, EnemyLv42TrojanRight,
+		EnemyLv42Door, EnemyLv42Circle,
+		Enemy_807_Level69_mofang, Enemy_808_Level69_yanjing, Enemy_809_Level69_banyuanL, Enemy_810_Level69_banyuanR
 	}
 
 	public enum Edge

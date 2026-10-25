@@ -10,6 +10,75 @@ public partial class Tile
 		BindExpansionRig();
 		switch (animType)
 		{
+		// Native 3.2.5 footprints (Tile.CreateAnimator, 0x5703e0).
+		case AnimType.Enemy_807_Level69_mofang:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			break;
+		case AnimType.Enemy_808_Level69_yanjing:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z + 1);
+			break;
+		case AnimType.Enemy_809_Level69_banyuanL:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z + 1);
+			SetAppointTileDanger(Index.y, Index.z + 2);
+			break;
+		case AnimType.Enemy_810_Level69_banyuanR:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z - 1);
+			SetAppointTileDanger(Index.y, Index.z - 2);
+			break;
+		// Signed Mono 1.7.9.2 Tile.CreateAnimator:6585-6631,6709-6733,6826-6861.
+		case AnimType.EnemyLv42Column:
+		case AnimType.EnemyLv42Rise:
+		case AnimType.EnemyLv42ClownUp:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			break;
+		case AnimType.EnemyLv42Door:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			AnimParticleSystem.gameObject.SetActive(false);
+			SetAppointTileDanger(Index.y, Index.z - 1, DangerType.EnemyLv32LightLeft);
+			SetAppointTileDanger(Index.y, Index.z - 2, DangerType.EnemyLv32LightLeft);
+			SetAppointTileDanger(Index.y, Index.z + 1, DangerType.EnemyLv32LightLeft);
+			SetAppointTileDanger(Index.y, Index.z + 2, DangerType.EnemyLv32LightLeft);
+			break;
+		case AnimType.EnemyLv42ThreeGlass:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z - 1);
+			SetAppointTileDanger(Index.y, Index.z + 1);
+			SetAppointTileDanger(Index.y + 2, Index.z);
+			break;
+		case AnimType.EnemyLv42FieryRings:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y + 1, Index.z - 1, DangerType.TallTree);
+			SetAppointTileDanger(Index.y + 1, Index.z + 1, DangerType.TallTree);
+			break;
+		case AnimType.EnemyLv42PendulumLeft:
+		case AnimType.EnemyLv42TrojanLeft:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z - 1);
+			break;
+		case AnimType.EnemyLv42PendulumRight:
+		case AnimType.EnemyLv42TrojanRight:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z + 1);
+			break;
+		case AnimType.EnemyLv42MonocycleLeft:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z - 2, DangerType.EnemyLv26Dici);
+			break;
+		case AnimType.EnemyLv42MonocycleRight:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z + 2, DangerType.EnemyLv26Dici);
+			break;
+		case AnimType.BeanLv42ClownDown:
+			AnimTransform = TransformUtils.Find("anim", AdditionTransform);
+			AnimTransform.eulerAngles = new Vector3(90f, 180f, 0f);
+			AltAnimTransform = TransformUtils.Find("altAnim", AdditionTransform);
+			break;
+		case AnimType.EnemyLv42Circle:
+			AnimTransform = TransformUtils.Find("anim", AdditionTransform);
+			break;
 		case AnimType.EnemyLv28Tyre:
 
 			AdditionTransform.eulerAngles = Vector3.zero;
@@ -23,6 +92,7 @@ public partial class Tile
 		case AnimType.EnemyLv28Wall2:
 		case AnimType.EnemyLv28Doors:
 		case AnimType.EnemyLv28Doors2:
+		case AnimType.EnemyLv30Vampire:
 		case AnimType.EnemyLv32Door:
 
 			AdditionTransform.eulerAngles = Vector3.zero;
@@ -137,6 +207,25 @@ public partial class Tile
 
 			AdditionTransform.eulerAngles = new Vector3(90f, 180f, 0f);
 			break;
+		case AnimType.EnemyLv30Door:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y, Index.z + 2, DangerType.TallTree);
+			SetAppointTileDanger(Index.y, Index.z - 2, DangerType.TallTree);
+			break;
+		case AnimType.EnemyLv30Frankenstein:
+		case AnimType.EnemyLv30Tombstone:
+		case AnimType.EnemyLv30Pumpkin2:
+			AdditionTransform.eulerAngles = Vector3.zero;
+			SetAppointTileDanger(Index.y - 1, Index.z);
+			break;
+		case AnimType.EnemyLv30Corpse:
+		case AnimType.EnemyLv30WitchRight:
+		case AnimType.EnemyLv30WitchLeft:
+		case AnimType.EnemyLv30SpiderDie:
+		case AnimType.EnemyLv30SpiderLife:
+		case AnimType.EnemyLv30Pumpkin:
+		case AnimType.EnemyLv30Vampire2:
+		case AnimType.BeanLv30Cobweb:
 		case AnimType.EnemyLv32LightLeft:
 		case AnimType.EnemyLv32LightRight:
 		case AnimType.EnemyLv34BigCane:

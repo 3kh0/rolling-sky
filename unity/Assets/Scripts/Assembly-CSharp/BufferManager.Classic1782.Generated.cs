@@ -14,15 +14,19 @@ public partial class BufferManager
 		{ "Box_Two_RtoL_5f33596efa", "Box_Two_RtoL" },
 		{ "Box_one_LtoR_88b034ac1b", "Box_one_LtoR" },
 		{ "Box_one_RtoL_c3d724dedf", "Box_one_RtoL" },
+		{ "DownPartOne_cc928bc0fe", "DownPartOne" },
 		{ "Take 001_090e8ba1f0", "Take 001" },
 		{ "Take 001_2118cbc039", "Take 001" },
 		{ "Take 001_343cd9e577", "Take 001" },
 		{ "Take 001_867436c0e2", "Take 001" },
 		{ "Take 001_b97c9fd47d", "Take 001" },
 		{ "Take 001_e8bdbc5785", "Take 001" },
+		{ "anim01_3cf5ecedaa", "anim01" },
+		{ "anim01_6ef3f0a378", "anim01" },
 		{ "anim1_018777ed37", "anim1" },
 		{ "anim1_02882ecfe1", "anim1" },
 		{ "anim1_0bedb6b3ed", "anim1" },
+		{ "anim1_0c060a424b", "anim1" },
 		{ "anim1_0cdf7fa2a2", "anim1" },
 		{ "anim1_0d0583983e", "anim1" },
 		{ "anim1_0d6090bff7", "anim1" },
@@ -35,6 +39,7 @@ public partial class BufferManager
 		{ "anim1_23def40564", "anim1" },
 		{ "anim1_2637f3b7ab", "anim1" },
 		{ "anim1_289a3b5450", "anim1" },
+		{ "anim1_2a88719f4c", "anim1" },
 		{ "anim1_2db6eda57d", "anim1" },
 		{ "anim1_2ec8b3e706", "anim1" },
 		{ "anim1_34805c1c28", "anim1" },
@@ -42,7 +47,9 @@ public partial class BufferManager
 		{ "anim1_3bf2574473", "anim1" },
 		{ "anim1_4005d28a93", "anim1" },
 		{ "anim1_40e2488d56", "anim1" },
+		{ "anim1_414bcd6c55", "anim1" },
 		{ "anim1_441b2ac0e9", "anim1" },
+		{ "anim1_45d7584182", "anim1" },
 		{ "anim1_479ec831e4", "anim1" },
 		{ "anim1_4a1986167a", "anim1" },
 		{ "anim1_4bf1b39830", "anim1" },
@@ -57,9 +64,12 @@ public partial class BufferManager
 		{ "anim1_6a24c1a5bc", "anim1" },
 		{ "anim1_6a91114a5e", "anim1" },
 		{ "anim1_6b8fc5eed7", "anim1" },
+		{ "anim1_6e4429eb69", "anim1" },
 		{ "anim1_6f9a4ce3b0", "anim1" },
 		{ "anim1_715ce6d6ba", "anim1" },
 		{ "anim1_71cf8f4363", "anim1" },
+		{ "anim1_734f9f1fc0", "anim1" },
+		{ "anim1_7a071467a1", "anim1" },
 		{ "anim1_7f03d82776", "anim1" },
 		{ "anim1_824650d3ab", "anim1" },
 		{ "anim1_82eaa56814", "anim1" },
@@ -67,12 +77,14 @@ public partial class BufferManager
 		{ "anim1_8b36016430", "anim1" },
 		{ "anim1_8d120722b8", "anim1" },
 		{ "anim1_8e2dd1e7ff", "anim1" },
+		{ "anim1_8e85d3579a", "anim1" },
 		{ "anim1_8f4de594a4", "anim1" },
 		{ "anim1_9199ef0a2b", "anim1" },
 		{ "anim1_936014570b", "anim1" },
 		{ "anim1_9490411736", "anim1" },
 		{ "anim1_94e5d2b53a", "anim1" },
 		{ "anim1_95051990f9", "anim1" },
+		{ "anim1_95e604588f", "anim1" },
 		{ "anim1_9aef9d8969", "anim1" },
 		{ "anim1_9c2666cca1", "anim1" },
 		{ "anim1_9df440020e", "anim1" },
@@ -90,13 +102,17 @@ public partial class BufferManager
 		{ "anim1_c20791a5a0", "anim1" },
 		{ "anim1_caab657b73", "anim1" },
 		{ "anim1_d03909f0f1", "anim1" },
+		{ "anim1_d05f793047", "anim1" },
 		{ "anim1_d22c54cbf4", "anim1" },
+		{ "anim1_d6205b680d", "anim1" },
 		{ "anim1_d864c8e166", "anim1" },
 		{ "anim1_d87441fc1b", "anim1" },
 		{ "anim1_db9011197b", "anim1" },
 		{ "anim1_e244722d29", "anim1" },
+		{ "anim1_e2e3ef7b25", "anim1" },
 		{ "anim1_e3a74e7bfe", "anim1" },
 		{ "anim1_e886018656", "anim1" },
+		{ "anim1_ee37764bef", "anim1" },
 		{ "anim1_eff48b4329", "anim1" },
 		{ "anim1_f0360a6d02", "anim1" },
 		{ "anim1_f083ba4e95", "anim1" },
@@ -107,70 +123,95 @@ public partial class BufferManager
 		{ "anim1_ffc6477fa8", "anim1" },
 		{ "anim2_db89c373b7", "anim2" },
 		{ "anim_88feeaf6ba", "anim" },
+		{ "bee_4d6d167196", "bee" },
+		{ "gamepad_955b754921", "gamepad" },
+		{ "move_57163279c0", "move" },
+		{ "move_7eb71a9096", "move" },
+		{ "move_8f8789425e", "move" },
+		{ "move_c1835e1c51", "move" },
 		{ "plane_23bd37f3d6", "plane" },
 		{ "snake_0eae263368", "snake" },
 		{ "snake_402c82dc5f", "snake" },
 		{ "snake_d2eecf9ca2", "snake" },
 		{ "up_1930447d76", "up" },
+		{ "verticalCannon_8d2812c7fa", "verticalCannon" },
 	};
 
 	private static void RegisterExpansion1782(List<GeoBuffer> buffers)
 	{
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX, "Classic1782/Prefabs/01_X", 100, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX1, "Classic1782/Prefabs/02_X1", 20, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX2a, "Classic1782/Prefabs/03_X2a", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX2b, "Classic1782/Prefabs/04_X2b", 12, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX3, "Classic1782/Prefabs/05_X3", 5, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX4, "Classic1782/Prefabs/06_X4", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT, "Classic1782/Prefabs/07_T", 80, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT1a, "Classic1782/Prefabs/08_T1a", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT1b, "Classic1782/Prefabs/09_T1b", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT2, "Classic1782/Prefabs/10_T2", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileL, "Classic1782/Prefabs/11_L", 45, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileL1, "Classic1782/Prefabs/12_L1", 30, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileI, "Classic1782/Prefabs/13_I", 90, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileD, "Classic1782/Prefabs/14_D", 70, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileO, "Classic1782/Prefabs/15_O", 120, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX, "Classic1782/Prefabs/01_X", 100, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX1, "Classic1782/Prefabs/02_X1", 20, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX2a, "Classic1782/Prefabs/03_X2a", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX2b, "Classic1782/Prefabs/04_X2b", 12, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX3, "Classic1782/Prefabs/05_X3", 5, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileX4, "Classic1782/Prefabs/06_X4", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT, "Classic1782/Prefabs/07_T", 80, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT1a, "Classic1782/Prefabs/08_T1a", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT1b, "Classic1782/Prefabs/09_T1b", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileT2, "Classic1782/Prefabs/10_T2", 15, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileL, "Classic1782/Prefabs/11_L", 45, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileL1, "Classic1782/Prefabs/12_L1", 30, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileI, "Classic1782/Prefabs/13_I", 90, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileD, "Classic1782/Prefabs/14_D", 70, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileO, "Classic1782/Prefabs/15_O", 120, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
 		RegisterExpansionPrefab(buffers, PrefabType.Ground, PrefabName.Classic1782TileOD, "Classic1782/Prefabs/16_OD", 250, 28, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782Normal, "Classic1782/Prefabs/07_jump", 60, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782MoveJumpLeft, "Classic1782/Prefabs/07_jump 1", 5, 30, 31, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782MoveJumpRight, "Classic1782/Prefabs/07_jump 1", 3, 30, 31, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782Normal, "Classic1782/Prefabs/07_jump", 60, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782MoveJumpLeft, "Classic1782/Prefabs/07_jump 1", 5, 30, 31, 33, 35, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782MoveJumpRight, "Classic1782/Prefabs/07_jump 1", 4, 30, 31, 33, 35, 37, 38);
 		RegisterExpansionPrefab(buffers, PrefabType.Jump, PrefabName.Classic1782BeanLv34Jump1Tile, "Classic1782/Prefabs/301_Level34Jump1Tile", 26, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782PickupBig, "Classic1782/Prefabs/01_pickup", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782PickupStar, "Classic1782/Prefabs/02_star", 2, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782pickupCrown, "Classic1782/Prefabs/04_crown", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Riser, "Classic1782/Prefabs/01_enemyRiser", 57, 29);
+		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782PickupBig, "Classic1782/Prefabs/01_pickup", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782PickupStar, "Classic1782/Prefabs/02_star", 2, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Pickup, PrefabName.Classic1782pickupCrown, "Classic1782/Prefabs/04_crown", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Riser, "Classic1782/Prefabs/01_enemyRiser", 57, 29, 35);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Floater, "Classic1782/Prefabs/07_enemyFloater", 4, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782LV9_Floater, "Classic1782/Prefabs/69_enemyStar", 20, 29);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Crusher, "Classic1782/Prefabs/02_enemyCrusher", 15, 29);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Crusher, "Classic1782/Prefabs/02_enemyCrusher", 15, 29, 34);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Pounder, "Classic1782/Prefabs/04_enemyHammer", 10, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782BinaryMini, "Classic1782/Prefabs/06_enemyBinaryMini", 7, 29);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782TreePalmAlt, "Classic1782/Prefabs/12a_enemyTreePalmAlt", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782TreePalmAlt, "Classic1782/Prefabs/12a_enemyTreePalmAlt", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Turret, "Classic1782/Prefabs/24_Turret", 32, 31);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Switcher, "Classic1782/Prefabs/18_enemyPillar", 6, 29);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Them14TreeSmall2, "Classic1782/Prefabs/45_Them14TreeSmall2", 20, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv8TreeTall, "Classic1782/Prefabs/39_Lv8TreeTall", 15, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv8TreeSmall2, "Classic1782/Prefabs/37_Lv8TreeSmall2", 20, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Them14TreeSmall2, "Classic1782/Prefabs/45_Them14TreeSmall2", 20, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Them14Shinto, "Classic1782/Prefabs/47_Them14Shinto", 3, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782OneBlockOffToInD, "Classic1782/Prefabs/43_Lv8InvisibieOffToInD", 30, 34);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Pillar, "Classic1782/Prefabs/18_enemyPillar", 2, 29);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PillarLaser, "Classic1782/Prefabs/19_enemyPillarLaser", 2, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PyramidSmall, "Classic1782/Prefabs/13_enemyPyramidSmall", 27, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PyramidMid, "Classic1782/Prefabs/14_enemyPyramidMid", 5, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Laser, "Classic1782/Prefabs/16_enemyLaser", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Spotlight, "Classic1782/Prefabs/17_enemySpotlight", 28, 28, 29, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyFloaterAirFallGround, "Classic1782/Prefabs/53_Lv9FloaterAirFallGround", 18, 26, 31);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PillarLaser, "Classic1782/Prefabs/19_enemyPillarLaser", 10, 26, 34, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv9PillarLaser, "Classic1782/Prefabs/70_Lv9enemyPillarLaser", 4, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PyramidSmall, "Classic1782/Prefabs/13_enemyPyramidSmall", 27, 30, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PyramidMid, "Classic1782/Prefabs/14_enemyPyramidMid", 5, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Laser, "Classic1782/Prefabs/16_enemyLaser", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Spotlight, "Classic1782/Prefabs/17_enemySpotlight", 28, 28, 29, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyFloaterAirFallGround, "Classic1782/Prefabs/53_Lv9FloaterAirFallGround", 30, 26, 31, 35, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv10TakeBack, "Classic1782/Prefabs/73_Level10_TakeBack", 13, 35);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv9Pillar, "Classic1782/Prefabs/56_Lv9Switcher", 39, 32);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemySnakerCoiled01, "Classic1782/Prefabs/62_Lv9SnakeCoiled01", 1, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemySnakerLeftMove, "Classic1782/Prefabs/64_Lv9SnakeLeftMove", 2, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemySnakerRightMove, "Classic1782/Prefabs/65_Lv9SnakeRightMove", 1, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv10Pillar, "Classic1782/Prefabs/74_Level10_Switcher", 12, 28, 30);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyVerticalCannon, "Classic1782/Prefabs/68_LV9VerticalCannon", 18, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv10Pillar, "Classic1782/Prefabs/74_Level10_Switcher", 51, 28, 30, 35, 37, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyBatSwarm, "Classic1782/Prefabs/105_Level11BatSwarm", 4, 37);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv14UFO, "Classic1782/Prefabs/109_Level14UFO", 8, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile1, "Classic1782/Prefabs/142_Level19_Extend1", 1, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile2, "Classic1782/Prefabs/143_Level19_Extend2", 1, 31);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782ChristmasManRoller, "Classic1782/Prefabs/124_level15Roller", 20, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782GiftBallnoon, "Classic1782/Prefabs/128_Level15GiftBallnoon", 8, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Fireworks, "Classic1782/Prefabs/129_Level15Fireworks", 8, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782Lv15Slasher, "Classic1782/Prefabs/132_Level15Slasher", 2, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile1, "Classic1782/Prefabs/142_Level19_Extend1", 3, 31, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile2, "Classic1782/Prefabs/143_Level19_Extend2", 1, 31, 38);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile3, "Classic1782/Prefabs/144_Level19_Extend3", 1, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile4, "Classic1782/Prefabs/145_Level19_Extend4", 1, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782SuperJumper, "Classic1782/Prefabs/153_level19SuperJumper", 11, 25, 27, 28, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyPlane, "Classic1782/Prefabs/155_Level19Plane", 8, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy3, "Classic1782/Prefabs/156_Level19Destroy3", 25, 28, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLevel23TileDown, "Classic1782/Prefabs/166_Level23TileDown", 49, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemySuccessiveJump, "Classic1782/Prefabs/178_Level23SuccessiveJump", 3, 25, 27);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile4, "Classic1782/Prefabs/145_Level19_Extend4", 1, 31, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy1Left, "Classic1782/Prefabs/148_level19Destroy1Left", 5, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy1Right, "Classic1782/Prefabs/149_level19Destroy1Right", 3, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy2Left, "Classic1782/Prefabs/150_level19Destroy2Left", 4, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy2Right, "Classic1782/Prefabs/151_level19Destroy2Right", 3, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyBee, "Classic1782/Prefabs/152_level19Bee", 15, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782SuperJumper, "Classic1782/Prefabs/153_level19SuperJumper", 15, 25, 27, 28, 31, 32, 33, 35, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyGamePad, "Classic1782/Prefabs/154_Level19GamePad", 2, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyPlane, "Classic1782/Prefabs/155_Level19Plane", 8, 31, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy3, "Classic1782/Prefabs/156_Level19Destroy3", 67, 28, 30, 35, 37, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLevel23TileDown, "Classic1782/Prefabs/166_Level23TileDown", 49, 31, 37, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemySuccessiveJump, "Classic1782/Prefabs/178_Level23SuccessiveJump", 3, 25, 27, 37);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PickDownLv25Cube, "Classic1782/Prefabs/191_Level25PickDownLv25Cube1", 1, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782PickDownLv25Cube1, "Classic1782/Prefabs/192_Level25PickDownLv25Cube2", 1, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv25Brigde, "Classic1782/Prefabs/194_Level25Brigde", 1, 24);
@@ -191,18 +232,18 @@ public partial class BufferManager
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782SuperJumperFictitious, "Classic1782/Prefabs/216_SuperJumperFictitious", 2, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv25Gyroscope, "Classic1782/Prefabs/217_Level2525Gyroscope", 2, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv25Spring, "Classic1782/Prefabs/218_Level25Spring", 4, 24);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Door, "Classic1782/Prefabs/222_Level26Door", 6, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Pillars1, "Classic1782/Prefabs/226_Level26pillars1", 12, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26God1, "Classic1782/Prefabs/224_Level26God1", 2, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Castle, "Classic1782/Prefabs/223_Level26Castle", 2, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Pillars2, "Classic1782/Prefabs/227_Level26pillars2", 2, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Dici, "Classic1782/Prefabs/228_Level26Dici", 26, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26God2, "Classic1782/Prefabs/225_Level26God2", 3, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26DaDiShuLife, "Classic1782/Prefabs/230_Level26dadishulife", 6, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26DaDiShuDie, "Classic1782/Prefabs/231_Level26dadishudie", 10, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Owl, "Classic1782/Prefabs/232_Level26Owl", 5, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Tree, "Classic1782/Prefabs/233_Level26tree", 6, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Snow, "Classic1782/Prefabs/234_Level26Snow", 1, 26);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Door, "Classic1782/Prefabs/222_Level26Door", 6, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Pillars1, "Classic1782/Prefabs/226_Level26pillars1", 20, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26God1, "Classic1782/Prefabs/224_Level26God1", 3, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Castle, "Classic1782/Prefabs/223_Level26Castle", 2, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Pillars2, "Classic1782/Prefabs/227_Level26pillars2", 4, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Dici, "Classic1782/Prefabs/228_Level26Dici", 26, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26God2, "Classic1782/Prefabs/225_Level26God2", 5, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26DaDiShuLife, "Classic1782/Prefabs/230_Level26dadishulife", 6, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26DaDiShuDie, "Classic1782/Prefabs/231_Level26dadishudie", 18, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Owl, "Classic1782/Prefabs/232_Level26Owl", 14, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Tree, "Classic1782/Prefabs/233_Level26tree", 10, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv26Snow, "Classic1782/Prefabs/234_Level26Snow", 12, 26, 36);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Wall, "Classic1782/Prefabs/235_Level28_wall", 11, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Wall2, "Classic1782/Prefabs/236_Level28_wall2", 4, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782BeanLv28BasketballStandsLeft, "Classic1782/Prefabs/237_Level28_BasketballStandsLeft", 3, 25, 27);
@@ -217,33 +258,46 @@ public partial class BufferManager
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Doors, "Classic1782/Prefabs/244_Level28_doors", 5, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Doors2, "Classic1782/Prefabs/245_Level28_doors2", 5, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv28GunLun, "Classic1782/Prefabs/248_Level28GunLun", 15, 25, 27);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveAfterTile, "Classic1782/Prefabs/264_Level30_MoveAfterTile", 13, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveBeforeTile, "Classic1782/Prefabs/263_Level30_MoveBeforeTile", 7, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32VerticalLever, "Classic1782/Prefabs/277_Level32_Lever", 16, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32Door, "Classic1782/Prefabs/275_Level32_Door", 7, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32AirWheel, "Classic1782/Prefabs/276_Level32_AirWheel", 8, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LightLeft, "Classic1782/Prefabs/272_Level32_LightLeft", 16, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LightRight, "Classic1782/Prefabs/273_Level32_LightRight", 16, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32HorizontalLever, "Classic1782/Prefabs/277_Level32_Lever", 7, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32ColumnSlider, "Classic1782/Prefabs/284_Level32Riser", 34, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LongColumnSlider, "Classic1782/Prefabs/283_Level32_SliderLongColumn", 56, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32GunLun, "Classic1782/Prefabs/281_Level32GunLun", 13, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32Cannon, "Classic1782/Prefabs/282_Level32Cannon", 17, 31);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Frankenstein, "Classic1782/Prefabs/252_Level30_Frankenstein", 5, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Corpse, "Classic1782/Prefabs/251_Level30_Corpse", 3, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30WitchRight, "Classic1782/Prefabs/257_Level30_WitchRight", 1, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SpiderDie, "Classic1782/Prefabs/260_Level30_SpiderDie", 9, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SpiderLife, "Classic1782/Prefabs/260_Level30_SpiderLife", 22, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Pumpkin, "Classic1782/Prefabs/253_Level30_Pumpkin", 8, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Tombstone, "Classic1782/Prefabs/256_Level30_Tombstone", 7, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Vampire, "Classic1782/Prefabs/258_Level30_Vampire", 2, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Pumpkin2, "Classic1782/Prefabs/254_Level30_Pumpkin2", 9, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Door, "Classic1782/Prefabs/255_Level30_Door", 2, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Vampire2, "Classic1782/Prefabs/259_Level30_Vampire2", 7, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveAfterTile, "Classic1782/Prefabs/264_Level30_MoveAfterTile", 20, 28, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveBeforeTile, "Classic1782/Prefabs/263_Level30_MoveBeforeTile", 9, 28, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30WitchLeft, "Classic1782/Prefabs/257_Level30_WitchLeft", 3, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SkeletonHand, "Classic1782/Prefabs/269_Level30_hand", 8, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32VerticalLever, "Classic1782/Prefabs/277_Level32_Lever", 16, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32Door, "Classic1782/Prefabs/275_Level32_Door", 7, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32AirWheel, "Classic1782/Prefabs/276_Level32_AirWheel", 8, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LightLeft, "Classic1782/Prefabs/272_Level32_LightLeft", 23, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LightRight, "Classic1782/Prefabs/273_Level32_LightRight", 20, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32HorizontalLever, "Classic1782/Prefabs/277_Level32_Lever", 12, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32ColumnSlider, "Classic1782/Prefabs/284_Level32Riser", 41, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32LongColumnSlider, "Classic1782/Prefabs/283_Level32_SliderLongColumn", 56, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32GunLun, "Classic1782/Prefabs/281_Level32GunLun", 13, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv32Cannon, "Classic1782/Prefabs/282_Level32Cannon", 17, 31, 38);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv34ColumnSlider, "Classic1782/Prefabs/299_Level34_Column", 39, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv34Tree2, "Classic1782/Prefabs/292_Level34_Tree2", 14, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv34BigCane, "Classic1782/Prefabs/302_Level34_BigCane", 17, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv34Tree1, "Classic1782/Prefabs/291_Level34_Tree1", 10, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Forward1Tile, "Classic1782/Prefabs/306_Level37_Forward", 83, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Frisbee, "Classic1782/Prefabs/306_Level37_Frisbee", 15, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Pan, "Classic1782/Prefabs/306_Level37_pan", 13, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Sound, "Classic1782/Prefabs/307_Level37_Sound", 9, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37RobotLeft, "Classic1782/Prefabs/308_Level37_Robot_Left", 8, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37RobotRight, "Classic1782/Prefabs/308_Level37_Robot_Right", 8, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Door, "Classic1782/Prefabs/309_Level37_Door", 2, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37KeyboardRight, "Classic1782/Prefabs/310_Level37_keyboard_right", 12, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Gear, "Classic1782/Prefabs/311_Level37_gear", 5, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37GunLun, "Classic1782/Prefabs/312_Level37_Gunlun", 7, 30);
-		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37KeyboardLeft, "Classic1782/Prefabs/310_Level37_keyboard_left", 11, 30);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Forward1Tile, "Classic1782/Prefabs/306_Level37_Forward", 83, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Frisbee, "Classic1782/Prefabs/306_Level37_Frisbee", 15, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Pan, "Classic1782/Prefabs/306_Level37_pan", 13, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Sound, "Classic1782/Prefabs/307_Level37_Sound", 15, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37RobotLeft, "Classic1782/Prefabs/308_Level37_Robot_Left", 11, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37RobotRight, "Classic1782/Prefabs/308_Level37_Robot_Right", 8, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Door, "Classic1782/Prefabs/309_Level37_Door", 2, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37KeyboardRight, "Classic1782/Prefabs/310_Level37_keyboard_right", 12, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37Gear, "Classic1782/Prefabs/311_Level37_gear", 20, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37GunLun, "Classic1782/Prefabs/312_Level37_Gunlun", 7, 30, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv37KeyboardLeft, "Classic1782/Prefabs/310_Level37_keyboard_left", 11, 30, 40);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40PyramidBack, "Classic1782/Prefabs/313_Level40PyramidBack", 9, 32, 33);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40PyramidRight, "Classic1782/Prefabs/315_Level40PyramidRight", 5, 32, 33);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40PyramidLeft, "Classic1782/Prefabs/316_Level40PyramidLeft", 6, 32, 33);
@@ -271,41 +325,46 @@ public partial class BufferManager
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40DownJumpFromR1, "Classic1782/Prefabs/340_Level40_One_RtoL", 2, 32);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40DownJumpFromL2, "Classic1782/Prefabs/341_Level40_Two_LtoR", 1, 32);
 		RegisterExpansionPrefab(buffers, PrefabType.Enemy, PrefabName.Classic1782EnemyLv40DownJumpFromR2, "Classic1782/Prefabs/342_Level40_Two_RtoL", 1, 32);
-		RegisterExpansionPrefab(buffers, PrefabType.Arrow, PrefabName.Classic1782ArrowMover, "Classic1782/Prefabs/01_moveArrow", 40, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Arrow, PrefabName.Classic1782ArrowMoverAuto, "Classic1782/Prefabs/02_moveAutoArrow", 50, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Heat, "Classic1782/Prefabs/3_heatExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782PortalStart, "Classic1782/Prefabs/2A_portalStartExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782PortalEnd, "Classic1782/Prefabs/4_laserExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupBig, "Classic1782/Prefabs/1A_pickupExplosion", 28, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupStar, "Classic1782/Prefabs/1A_pickupExplosion", 3, 24, 25, 26, 27);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupBox, "Classic1782/Prefabs/1A_boxExplosion", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupCrown, "Classic1782/Prefabs/1A_CrownExplosion", 3, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Arrow, PrefabName.Classic1782ArrowMover, "Classic1782/Prefabs/01_moveArrow", 40, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Arrow, PrefabName.Classic1782ArrowMoverAuto, "Classic1782/Prefabs/02_moveAutoArrow", 50, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Heat, "Classic1782/Prefabs/3_heatExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782PortalStart, "Classic1782/Prefabs/2A_portalStartExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782PortalEnd, "Classic1782/Prefabs/4_laserExplosion", 1, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupBig, "Classic1782/Prefabs/1A_pickupExplosion", 28, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupStar, "Classic1782/Prefabs/1A_pickupExplosion", 3, 24, 25, 26, 27, 34, 35, 36, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupBox, "Classic1782/Prefabs/1A_boxExplosion", 10, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Particles, PrefabName.Classic1782Particles_PickupCrown, "Classic1782/Prefabs/1A_CrownExplosion", 3, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40);
 		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782Block2, "Classic1782/Prefabs/midground2a", 60, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782Block4L, "Classic1782/Prefabs/midground4L", 20, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782Block4R, "Classic1782/Prefabs/midground4R", 20, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground11L, "Classic1782/Prefabs/midground11L", 40, 29);
 		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground11R, "Classic1782/Prefabs/midground11R", 40, 29);
-		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground16, "Classic1782/Prefabs/midground16", 40, 24, 25, 26, 27, 28, 30, 31, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782EnemyBigBean, "Classic1782/Prefabs/147_Level19_BigBean", 3, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv25Accelerate, "Classic1782/Prefabs/202_Level25jiasu", 5, 24, 25, 27);
+		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground13L, "Classic1782/Prefabs/midground13L", 40, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground13R, "Classic1782/Prefabs/midground13R", 40, 34);
+		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground16, "Classic1782/Prefabs/midground16", 40, 24, 25, 26, 27, 28, 30, 31, 32, 33, 36, 37, 38, 40);
+		RegisterExpansionPrefab(buffers, PrefabType.Midground, PrefabName.Classic1782midground19, "Classic1782/Prefabs/midground19", 40, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782EnemyBigBean, "Classic1782/Prefabs/147_Level19_BigBean", 15, 28, 35);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv25Accelerate, "Classic1782/Prefabs/202_Level25jiasu", 5, 24, 25, 27, 37);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv25Deceleration, "Classic1782/Prefabs/203_Level25jiansu", 5, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv25BrigdeUp, "Classic1782/Prefabs/195_Level25BrigdeUp", 1, 24);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv25BrigdeDown, "Classic1782/Prefabs/196_Level25BrigdeDwon", 1, 24);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782EnemyLv26FirePlace, "Classic1782/Prefabs/229_Level26fireplace", 48, 26, 33);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782EnemyLv26FirePlace, "Classic1782/Prefabs/229_Level26fireplace", 48, 26, 33, 36);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv28BouncePlate, "Classic1782/Prefabs/246_Level28_bounce", 13, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv28Net, "Classic1782/Prefabs/238_Level28_net", 3, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanSimulationNet, "Classic1782/Prefabs/249_Level28SimulationNet", 6, 25, 27);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv28Button, "Classic1782/Prefabs/250_Level28_Button", 3, 25, 27);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanJump10Tile, "Classic1782/Prefabs/261_Level30_Jump10Tile", 4, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanBack6Tile, "Classic1782/Prefabs/262_Level30_Back6Tile", 3, 28);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32StartReverse, "Classic1782/Prefabs/270_Level32_Revser", 1, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32EndReverse, "Classic1782/Prefabs/271_Level32_EndRevser", 1, 31);
-		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32Button, "Classic1782/Prefabs/274_Level32_Button", 5, 31);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanJump10Tile, "Classic1782/Prefabs/261_Level30_Jump10Tile", 17, 28, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanBack6Tile, "Classic1782/Prefabs/262_Level30_Back6Tile", 5, 28, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv30Cobweb, "Classic1782/Prefabs/265_Level30_Cobweb", 1, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanSimulationDeceleration, "Classic1782/Prefabs/266_Level30SimulationDeceleration", 2, 37);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32StartReverse, "Classic1782/Prefabs/270_Level32_Revser", 1, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32EndReverse, "Classic1782/Prefabs/271_Level32_EndRevser", 1, 31, 38);
+		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv32Button, "Classic1782/Prefabs/274_Level32_Button", 5, 31, 38);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782EnemyLv34Snow, "Classic1782/Prefabs/234_Level34Snow", 7, 28);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv40ShowButton, "Classic1782/Prefabs/335_level40_button", 1, 32, 33);
 		RegisterExpansionPrefab(buffers, PrefabType.Bean, PrefabName.Classic1782BeanLv40HideButton, "Classic1782/Prefabs/336_level40_Hide_Button", 5, 32, 33);
-		RegisterExpansionPrefab(buffers, PrefabType.BackwardQuery, PrefabName.Classic1782BackwardQueryLv26shunyiStart, "Classic1782/Prefabs/219_Level26shunyiStart", 5, 26);
-		RegisterExpansionPrefab(buffers, PrefabType.BackwardQuery, PrefabName.Classic1782BackwardQueryLv26shunyiEnd, "Classic1782/Prefabs/220_Level26shunyiEnd", 10, 26);
+		RegisterExpansionPrefab(buffers, PrefabType.BackwardQuery, PrefabName.Classic1782BackwardQueryLv26shunyiStart, "Classic1782/Prefabs/219_Level26shunyiStart", 5, 26, 36);
+		RegisterExpansionPrefab(buffers, PrefabType.BackwardQuery, PrefabName.Classic1782BackwardQueryLv26shunyiEnd, "Classic1782/Prefabs/220_Level26shunyiEnd", 10, 26, 36);
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Arrow, PrefabName.ArrowMover), new PrefabID(PrefabType.Arrow, PrefabName.Classic1782ArrowMover));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Arrow, PrefabName.ArrowMoverAuto), new PrefabID(PrefabType.Arrow, PrefabName.Classic1782ArrowMoverAuto));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.BackwardQuery, PrefabName.BackwardQueryLv26shunyiEnd), new PrefabID(PrefabType.BackwardQuery, PrefabName.Classic1782BackwardQueryLv26shunyiEnd));
@@ -319,11 +378,13 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv28BouncePlate), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv28BouncePlate));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv28Button), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv28Button));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv28Net), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv28Net));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv30Cobweb), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv30Cobweb));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv32Button), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv32Button));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv32EndReverse), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv32EndReverse));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv32StartReverse), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv32StartReverse));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv40HideButton), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv40HideButton));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanLv40ShowButton), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanLv40ShowButton));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanSimulationDeceleration), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanSimulationDeceleration));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.BeanSimulationNet), new PrefabID(PrefabType.Bean, PrefabName.Classic1782BeanSimulationNet));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.EnemyBigBean), new PrefabID(PrefabType.Bean, PrefabName.Classic1782EnemyBigBean));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Bean, PrefabName.EnemyLv26FirePlace), new PrefabID(PrefabType.Bean, PrefabName.Classic1782EnemyLv26FirePlace));
@@ -333,6 +394,7 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.BeanLv28BasketballStandsLeft), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782BeanLv28BasketballStandsLeft));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.BeanLv28BasketballStandsRight), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782BeanLv28BasketballStandsRight));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.BinaryMini), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782BinaryMini));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ChristmasManRoller), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782ChristmasManRoller));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ClassicBinaryMini), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782BinaryMini));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ClassicCrusher), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Crusher));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ClassicFloater), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Floater));
@@ -345,13 +407,21 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ClassicRiser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Riser));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.ClassicSpotlight), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Spotlight));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Crusher), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Crusher));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyBatSwarm), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyBatSwarm));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyBee), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyBee));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyDestroy1Left), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy1Left));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyDestroy1Right), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy1Right));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyDestroy2Left), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy2Left));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyDestroy2Right), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy2Right));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyDestroy3), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyDestroy3));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyExtendTile1), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile1));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyExtendTile2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile2));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyExtendTile3), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile3));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyExtendTile4), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyExtendTile4));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyFloaterAirFallGround), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyFloaterAirFallGround));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyGamePad), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyGamePad));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLevel23TileDown), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLevel23TileDown));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv10TakeBack), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv10TakeBack));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv25AirEye), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv25AirEye));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv25Brigde), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv25Brigde));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv25CocountTree), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv25CocountTree));
@@ -392,8 +462,21 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv28Tyre), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Tyre));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv28Wall), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Wall));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv28Wall2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv28Wall2));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Corpse), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Corpse));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Door), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Door));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Frankenstein), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Frankenstein));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30MoveAfterTile), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveAfterTile));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30MoveBeforeTile), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30MoveBeforeTile));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Pumpkin), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Pumpkin));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Pumpkin2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Pumpkin2));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30SkeletonHand), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SkeletonHand));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30SpiderDie), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SpiderDie));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30SpiderLife), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30SpiderLife));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Tombstone), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Tombstone));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Vampire), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Vampire));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30Vampire2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30Vampire2));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30WitchLeft), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30WitchLeft));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv30WitchRight), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv30WitchRight));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv32AirWheel), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv32AirWheel));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv32Cannon), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv32Cannon));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyLv32ColumnSlider), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyLv32ColumnSlider));
@@ -451,10 +534,14 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemySnakerLeftMove), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemySnakerLeftMove));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemySnakerRightMove), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemySnakerRightMove));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemySuccessiveJump), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemySuccessiveJump));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.EnemyVerticalCannon), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782EnemyVerticalCannon));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Fireworks), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Fireworks));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Floater), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Floater));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.GiftBallnoon), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782GiftBallnoon));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LV9_Floater), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782LV9_Floater));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Laser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Laser));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterLaser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Laser));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterLv9PillarLaser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv9PillarLaser));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterPyramidMid), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782PyramidMid));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterRiser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Riser));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterSpotlight), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Spotlight));
@@ -463,7 +550,12 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.LaterTreePalmAlt), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782TreePalmAlt));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv10Pillar), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv10Pillar));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv14UFO), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv14UFO));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv15Slasher), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv15Slasher));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv8TreeSmall2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv8TreeSmall2));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv8TreeTall), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv8TreeTall));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv9Pillar), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv9Pillar));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Lv9PillarLaser), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Lv9PillarLaser));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.OneBlockOffToInD), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782OneBlockOffToInD));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.PickDownLv25Cube), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782PickDownLv25Cube));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.PickDownLv25Cube1), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782PickDownLv25Cube1));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Pillar), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Pillar));
@@ -476,6 +568,7 @@ public partial class BufferManager
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.SuperJumper), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782SuperJumper));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.SuperJumperFictitious), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782SuperJumperFictitious));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Switcher), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Switcher));
+		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Them14Shinto), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Them14Shinto));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Them14TreeSmall2), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Them14TreeSmall2));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.TreePalmAlt), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782TreePalmAlt));
 		newerExpansionAliases.Add(new PrefabID(PrefabType.Enemy, PrefabName.Turret), new PrefabID(PrefabType.Enemy, PrefabName.Classic1782Turret));

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: Yinxing1
+  m_Shader: {fileID: 4800000, guid: 2adc405f3a0a08aa3878cced63183166, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: d20692d37d801d8164b4d63b751648d0, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats:
+    - first:
+        name: _Gloss
+      second: 0.5
+    - first:
+        name: _InvFade
+      second: 1.0
+    - first:
+        name: _Specular
+      second: 2.0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first:
+        name: _TintColor
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 0.501960813999176}

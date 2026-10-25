@@ -16,6 +16,8 @@ public static class ExpansionPrefabImport
     private const string SupplementRoot = "Assets/Classic1471/ExpansionSupplement/";
     private const string LaterRoot = "Assets/Classic1561/Expansion/";
     private const string NewerRoot = "Assets/Classic1782/Expansion/";
+    private const string CircusRoot = "Assets/Classic1792/Expansion/";
+    private const string SunnyRoot = "Assets/Classic325/Expansion/";
 
     [Serializable] public class Manifest : ClassicPrefabImport.Manifest
     {
@@ -81,6 +83,8 @@ public static class ExpansionPrefabImport
         ImportAndValidate();
         ImportLaterAndValidate();
         ImportNewerAndValidate();
+        ImportCircusAndValidate();
+        ImportSunnyAndValidate();
     }
 
     public static void ImportNewerAndValidate()
@@ -88,6 +92,29 @@ public static class ExpansionPrefabImport
         ImportSet(NewerRoot);
         ValidateSet(NewerRoot, "Expansion1782");
         ValidatePropsBinding(NewerRoot);
+    }
+
+    public static void ImportCircusAndValidate()
+    {
+        ImportSet(CircusRoot);
+        ValidateCircus();
+    }
+
+    public static void ValidateCircus()
+    {
+        ValidateSet(CircusRoot, "Expansion1792");
+        ValidatePropsBinding(CircusRoot);
+    }
+
+    public static void ImportSunnyAndValidate()
+    {
+        ImportSet(SunnyRoot);
+        ValidateSunny();
+    }
+
+    public static void ValidateSunny()
+    {
+        ValidateSet(SunnyRoot, "Expansion325");
     }
 
     private static void ImportSet(string root)
@@ -136,7 +163,7 @@ public static class ExpansionPrefabImport
             "Imported Props differs from the packaged donor material");
         Require(!(bool)AcceptedCheck("ShaderHasError", material.shader), "Props shader compiler error");
         Directory.CreateDirectory("Library");
-        File.WriteAllText("Library/" + (root == NewerRoot ? "Expansion1782" : "Expansion1561") + "-props-validation.json", JsonUtility.ToJson(record, true));
+        File.WriteAllText("Library/" + (root == CircusRoot ? "Expansion1792" : root == NewerRoot ? "Expansion1782" : "Expansion1561") + "-props-validation.json", JsonUtility.ToJson(record, true));
         Debug.Log("PASS: Resources.Load<Material>(" + record.resource + ") matches native packaged Props values and shader");
     }
 
@@ -270,7 +297,7 @@ public static class ExpansionPrefabImport
         }
     }
 
-    private static void CheckAudio(ClassicPrefabImport.AudioRecord record)
+    internal static void CheckAudio(ClassicPrefabImport.AudioRecord record)
     {
         CheckAudioSource(record);
         int frequency = record.frequency;
@@ -421,6 +448,12 @@ public static class ExpansionPrefabImport
             if (dependency.type == "Shader")
             {
                 Require(asset is Shader, "Wrong shader asset type: " + dependency.path);
+                if (root == SunnyRoot)
+                {
+                    Require(AssetImporter.GetAtPath(dependency.path) is ShaderImporter,
+                        "Sunny needs rebuildable shader source, not a platform-baked Shader asset: " + dependency.path);
+                    Require(((Shader)asset).isSupported, "Sunny shader has no supported GPU program: " + dependency.path);
+                }
                 shaders.Add((Shader)asset);
             }
         }

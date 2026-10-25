@@ -194,7 +194,7 @@ public class MidgroundManager : MonoBehaviour
 
 	private const string backgroundAltMaterialName = "_AltTex";
 
-	private static BlockData[] blockData = new BlockData[62]
+	private static BlockData[] blockData = new BlockData[74]
 	{
 		new BlockData(0, 5f, 15f, 0f, 12f, 4, PrefabName.Block1),
 		new BlockData(1, 8f, 15f, 2f, 7f, 2, PrefabName.Block2),
@@ -258,7 +258,19 @@ public class MidgroundManager : MonoBehaviour
 		new BlockData(58, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
 		new BlockData(59, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
 		new BlockData(60, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
-		new BlockData(61, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16)
+		new BlockData(61, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(62, 12f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground13L, PrefabName.Classic1782midground13R),
+		new BlockData(63, 12f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground13L, PrefabName.Classic1782midground13R),
+		new BlockData(64, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground19, PrefabName.Classic1782midground19),
+		new BlockData(65, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground19, PrefabName.Classic1782midground19),
+		new BlockData(66, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground19, PrefabName.Classic1782midground19),
+		new BlockData(67, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(68, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(69, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(70, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1792midground16),
+		new BlockData(71, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1792midground16),
+		new BlockData(72, 5f, 15f, 0f, 12f, 4, PrefabName.Classic325midground1a),
+		new BlockData(73, 8f, 12f, 2f, 12f, 6, PrefabName.Classic325midground16)
 	};
 
 	private static BlockData classicNeutralBlock = new BlockData(8, 8f, 15f, 2f, 7f, 2, PrefabName.ClassicMidground2);

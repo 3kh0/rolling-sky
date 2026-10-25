@@ -7,7 +7,7 @@ public static class ClassicCrownRandom
 	private static readonly System.Random random = new System.Random();
 	private static CrownType[] pool;
 	private static int nextIndex;
-	public static bool Enabled { get { return ExpansionGameplay.Enabled && (ExpansionGameplay.SourceNumber == 19 || ExpansionGameplay.SourceNumber == 21 || ExpansionGameplay.SourceNumber == 22); } }
+	public static bool Enabled { get { return ExpansionGameplay.Enabled && (ExpansionGameplay.SourceNumber == 18 || ExpansionGameplay.SourceNumber == 19 || ExpansionGameplay.SourceNumber == 20 || ExpansionGameplay.SourceNumber == 21 || ExpansionGameplay.SourceNumber == 22); } }
 
 	public static void StartRun()
 	{

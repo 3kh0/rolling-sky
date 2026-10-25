@@ -923,6 +923,7 @@ public partial class Ball : MonoBehaviour
 
 	private float GetJumpParabola()
 	{
+		if (ExpansionGameplay.Classic1782 && circusClownJump) return Get1792ClownParabola();
 		if (ExpansionGameplay.Classic1782) return Get1782JumpParabola();
 		float num = jumpEndPos - jumpStartPos;
 		float num2 = Position.y - jumpStartPos;
@@ -931,6 +932,7 @@ public partial class Ball : MonoBehaviour
 
 	public void EndJump()
 	{
+		circusClownJump = false;
 		if (ExpansionGameplay.Classic1782) Hide1782BasketballPowerup();
 		if (inSuperJump)
 		{
@@ -1066,7 +1068,7 @@ public partial class Ball : MonoBehaviour
 		{
 			return;
 		}
-		if (currentTile != null)
+		if (currentTile != null && !(ExpansionGameplay.Classic1782 && currentTile.TypeVal == (int)TileVal.BeanLv42ClownDown))
 		{
 			currentTile.PlayNewSound(AudioName.Jump);
 		}
@@ -1077,7 +1079,7 @@ public partial class Ball : MonoBehaviour
 			if (!shielded) return;
 		}
 		float num = 4f;
-		if (ExpansionGameplay.Classic1782) num = Start1782Jump(currentTile);
+		if (ExpansionGameplay.Classic1782) num = Start1792CompatibleJump(currentTile);
 		else if ((currentTile != null && currentTile.IsJump) || (ExpansionGameplay.Later && inSuccessiveJump))
 		{
 			if (!ExpansionGameplay.Later || !inSuccessiveJump) currentTile.Jump();

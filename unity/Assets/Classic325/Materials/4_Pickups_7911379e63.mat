@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: 4_Pickups
+  m_Shader: {fileID: 4800000, guid: e63e99493aae5280e740d49c6db5e874, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - first: _ReflectTex
+      second:
+        m_Texture: {fileID: 8900000, guid: 38fd1eae75d5faece5273b549ed08c25, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    - first: _RefractTex
+      second:
+        m_Texture: {fileID: 8900000, guid: b821bbe0df3b3610e201d5b416956e2c, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats:
+    - first: _AlphaMin
+      second: 0.75
+    - first: _Density
+      second: 0.0
+    - first: _Diffuse
+      second: 0.0
+    - first: _Gloss
+      second: 0.05000000074505806
+    - first: _Length
+      second: 8.0
+    - first: _Opacity
+      second: 0.9392857551574707
+    - first: _Refraction
+      second: 0.2678571343421936
+    - first: _Shine
+      second: 0.5535714030265808
+    - first: _Shininess
+      second: 0.5
+    - first: _Specular
+      second: 1.5
+    m_Colors:
+    - first: _Color
+      second: {r: 1.0, g: 1.0, b: 0.8705882430076599, a: 1.0}
+    - first: _ColorB
+      second: {r: 0.0, g: 0.0, b: 0.0, a: 1.0}
+    - first: _ColorD
+      second: {r: 1.0, g: 0.18431372940540314, b: 0.01568627543747425, a: 1.0}
+    - first: _ColorR
+      second: {r: 1.0, g: 0.18431372940540314, b: 0.01568627543747425, a: 1.0}
+    - first: _ColorS
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first: _ReflectColor
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 0.5}
+    - first: _SpecColor
+      second: {r: 1.0, g: 0.3970588445663452, b: 0.3970588445663452, a: 1.0}

@@ -21,9 +21,42 @@ public partial class Tile
 		if (!ExpansionGameplay.Classic1782) return false;
 		switch (dangerTypeUsed)
 		{
+		// Recovered 3.2.5 native Tile.ShouldKillBall (0x583c54).
+		case DangerType.Enemy_807_Level69_mofang:
+			kill = true;
+			break;
+		case DangerType.Enemy_808_Level69_yanjing:
+		case DangerType.Enemy_809_Level69_banyuanL:
+		case DangerType.Enemy_810_Level69_banyuanR:
+			kill = !ballJumping;
+			break;
+		case DangerType.EnemyLv42ThreeGlass:
+		case DangerType.EnemyLv42MonocycleRight:
+		case DangerType.EnemyLv42MonocycleLeft:
+		case DangerType.BeanLv42ClownDown:
+		case DangerType.EnemyLv42Circle:
+		case DangerType.SimulationAirKillBall:
+			kill = false;
+			break;
+		case DangerType.EnemyLv42ClownUp:
+		case DangerType.EnemyLv42PendulumLeft:
+		case DangerType.EnemyLv42PendulumRight:
+		case DangerType.EnemyLv42TrojanLeft:
+		case DangerType.EnemyLv42TrojanRight:
+			kill = true;
+			break;
+		case DangerType.EnemyLv42Column:
+		case DangerType.EnemyLv42Rise:
+		case DangerType.EnemyLv42FieryRings:
+			kill = !ballJumping;
+			break;
+		case DangerType.EnemyLv42Door:
+			kill = ballJumping;
+			break;
 		case DangerType.EnemyLv26DaDiShuLife:
 		case DangerType.EnemyLv34Snow:
 		case DangerType.EnemyLv28HatPlayer:
+		case DangerType.EnemyLv30Door:
 		case DangerType.EnemyLv30MoveAfterTile:
 		case DangerType.EnemyLv30MoveBeforeTile:
 		case DangerType.EnemyLv37Pan:
@@ -49,6 +82,10 @@ public partial class Tile
 		case DangerType.EnemyLv26Pillars2:
 		case DangerType.EnemyLv26God2:
 		case DangerType.EnemyLv26Tree:
+		case DangerType.EnemyLv30Frankenstein:
+		case DangerType.EnemyLv30Corpse:
+		case DangerType.EnemyLv30Tombstone:
+		case DangerType.EnemyLv30Vampire:
 		case DangerType.EnemyLv37Sound:
 		case DangerType.EnemyLv40Column2:
 		case DangerType.EnemyLv40Eye:
@@ -64,6 +101,10 @@ public partial class Tile
 		case DangerType.EnemyLv28PlayerLeft:
 		case DangerType.EnemyLv28PlayerRight:
 		case DangerType.EnemyLv28Tyre:
+		case DangerType.EnemyLv30SpiderDie:
+		case DangerType.EnemyLv30Pumpkin:
+		case DangerType.EnemyLv30Pumpkin2:
+		case DangerType.EnemyLv30Vampire2:
 		case DangerType.EnemyLv32VerticalLever:
 		case DangerType.EnemyLv32HorizontalLever:
 		case DangerType.EnemyLv34BigCane:
@@ -85,6 +126,9 @@ public partial class Tile
 		case DangerType.EnemyLv26Castle:
 		case DangerType.EnemyLv26Owl:
 		case DangerType.EnemyLv28Doors:
+		case DangerType.EnemyLv30WitchRight:
+		case DangerType.EnemyLv30WitchLeft:
+		case DangerType.EnemyLv30SpiderLife:
 		case DangerType.EnemyLv32AirWheel:
 		case DangerType.EnemyLv40Door:
 
@@ -127,12 +171,29 @@ public partial class Tile
 		if (!ExpansionGameplay.Classic1782) return false;
 		switch (TypeVal)
 		{
+		// Signed Mono 1.7.9.2 Tile.EatBean:8089-8117. Circle occupies
+		// the opposite half of the aerial trigger on its adjacent lane.
+		case (int)TileVal.SimulationAirKillBall:
+		{
+			if (GameManager.theBall.IsJumping)
+			{
+				MathUtils.IntTrio previous = new MathUtils.IntTrio(SegmentIndex, RowIndex, TileIndex - 1);
+				bool circleOnLeft = GameManager.TileBoard.IsValid(previous) && GameManager.TileBoard[previous] != null &&
+					GameManager.TileBoard[previous].TypeVal == (int)TileVal.EnemyLv42Circle;
+				if (circleOnLeft ? Ball.Position.x <= TileIndex + 0.5f : TileIndex + 0.5f <= Ball.Position.x)
+					GameManager.KillBall(DangerType.EnemyLv42Door);
+			}
+			isEat = true;
+			return true;
+		}
 		case (int)TileVal.BeanLv25Accelerate:
 			GameManager.theBall.mBallSpeedcoefficient = 2f;
 			if (UserSettings.IsSoundOn() && !GameManager.DisableSounds) GameManager.theBall.AccelerateSound.Play();
 			isEat = true;
 			break;
 		case (int)TileVal.BeanLv25Deceleration:
+		case (int)TileVal.BeanLv30Cobweb:
+		case (int)TileVal.BeanSimulationDeceleration:
 			GameManager.theBall.mBallSpeedcoefficient = 0.5f;
 			if (UserSettings.IsSoundOn() && !GameManager.DisableSounds) GameManager.theBall.DecelerationSound.Play();
 			isEat = true;

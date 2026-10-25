@@ -8,9 +8,12 @@ public partial class BufferManager
 	private static readonly Dictionary<PrefabID, PrefabID> earlierExpansionAliases = new Dictionary<PrefabID, PrefabID>();
 	private static readonly Dictionary<PrefabID, PrefabID> laterExpansionAliases = new Dictionary<PrefabID, PrefabID>();
 	private static readonly Dictionary<PrefabID, PrefabID> newerExpansionAliases = new Dictionary<PrefabID, PrefabID>();
+	private static readonly Dictionary<PrefabID, PrefabID> circusExpansionAliases = new Dictionary<PrefabID, PrefabID>();
+	private static readonly Dictionary<PrefabID, PrefabID> sunnyExpansionAliases = new Dictionary<PrefabID, PrefabID>();
 	private static readonly Dictionary<Transform, PrefabID> originalGeoIDs = new Dictionary<Transform, PrefabID>();
 	private static Material laterPropsMaterial;
 	private static Material newerPropsMaterial;
+	private static Material circusPropsMaterial;
 
 	private static void RegisterExpansionPrefabs()
 	{
@@ -18,6 +21,8 @@ public partial class BufferManager
 		RegisterExpansion1471(buffers);
 		RegisterExpansion1561(buffers);
 		RegisterExpansion1782(buffers);
+		RegisterExpansion1792(buffers);
+		RegisterExpansion325(buffers);
 		geoBuffers = buffers.ToArray();
 	}
 
@@ -63,7 +68,8 @@ public partial class BufferManager
 	public static PrefabID ResolveExpansionPrefab(PrefabID id)
 	{
 		if (GameManager.WorldNum < 9 || id.IsNull) return id;
-		Dictionary<PrefabID, PrefabID> aliases = ExpansionGameplay.Classic1782 ? newerExpansionAliases : LevelCatalog.Get(GameManager.WorldNum).SourceNumber >= 21
+		string root = LevelCatalog.Get(GameManager.WorldNum).ResourceRoot;
+		Dictionary<PrefabID, PrefabID> aliases = root == "Classic325" ? sunnyExpansionAliases : root == "Classic1792" ? circusExpansionAliases : root == "Classic1782" ? newerExpansionAliases : LevelCatalog.Get(GameManager.WorldNum).SourceNumber >= 21
 			? laterExpansionAliases : earlierExpansionAliases;
 		PrefabID resolved;
 		return aliases.TryGetValue(id, out resolved) ? resolved : id;
@@ -102,6 +108,19 @@ public partial class BufferManager
 				renderer.sharedMaterial = newerPropsMaterial;
 			}
 		}
+		if (path.StartsWith("Classic1792/", StringComparison.Ordinal))
+		{
+			foreach (Renderer renderer in prefab.GetComponentsInChildren<Renderer>(true))
+			{
+				Material material = renderer.sharedMaterial;
+				if (material == null || !(material.name == "15_mogu" || material.name == "15_mogu_6f8006d1de" ||
+					material.name == "15_mogu_55f7c15e10")) continue;
+				if (circusPropsMaterial == null)
+					circusPropsMaterial = Resources.Load<Material>("Classic1792/Materials/15_mogu");
+				if (circusPropsMaterial == null) throw new InvalidOperationException("Missing original 1.7.9.2 Props material");
+				renderer.sharedMaterial = circusPropsMaterial;
+			}
+		}
 		Prefabs[id.prefabType][id.prefabName] = prefab;
 		return prefab;
 	}
@@ -119,7 +138,9 @@ public partial class BufferManager
 				string nativeName;
 				if (!earlierAnimationNames.TryGetValue(state.name, out nativeName) &&
 					!laterAnimationNames.TryGetValue(state.name, out nativeName) &&
-					!newerAnimationNames.TryGetValue(state.name, out nativeName)) continue;
+					!newerAnimationNames.TryGetValue(state.name, out nativeName) &&
+					!circusAnimationNames.TryGetValue(state.name, out nativeName) &&
+					!sunnyAnimationNames.TryGetValue(state.name, out nativeName)) continue;
 				AnimationState existing = animation[nativeName];
 				if (existing != null && existing != state)
 					throw new InvalidOperationException("Ambiguous native animation state: " + nativeName);

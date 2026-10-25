@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: 3A_Mover
+  m_Shader: {fileID: 4800000, guid: 343d5b76a460469cbd678a482abd6156, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - first: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats: {}
+    m_Colors:
+    - first: _Color
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first: _ColorB
+      second: {r: 1.0, g: 0.9450980424880981, b: 0.18431372940540314, a: 1.0}
+    - first: _ColorF
+      second: {r: 0.9058823585510254, g: 0.48627451062202454, b: 0.4470588266849518, a: 1.0}
+    - first: _ColorG
+      second: {r: 0.9803921580314636, g: 0.5058823823928833, b: 0.1882352977991104, a: 1.0}
+    - first: _ColorR
+      second: {r: 0.9764705896377563, g: 0.7176470756530762, b: 0.30980393290519714, a: 1.0}
+    - first: _ColrA
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first: _ColrB
+      second: {r: 0.8104705810546875, g: 0.5956470370292664, b: 0.257137268781662, a: 1.0}
+    - first: _ColrG
+      second: {r: 0.9803921580314636, g: 0.5058823823928833, b: 0.1882352977991104, a: 1.0}
+    - first: _ColrR
+      second: {r: 0.9764705896377563, g: 0.7176470756530762, b: 0.30980393290519714, a: 1.0}

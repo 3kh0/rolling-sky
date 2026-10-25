@@ -17,9 +17,12 @@ public partial class Ball
 	private static readonly int[] successiveJumpDistance = { 4, 5, 4, 5 };
 	private bool isJumperAnimtorStart;
 	private int jumperState;
+	// Native 1.7.9.2's Clown6Tile jump state is local to this trajectory.
+	private bool circusClownJump;
 
 	private void ResetLaterPower()
 	{
+		circusClownJump = false;
 		coefficientNum = -1;
 		mBallSpeedcoefficient = 1f;
 		inSuccessiveJump = isJumperAnimtorStart = false;
@@ -36,7 +39,12 @@ public partial class Ball
 		if (mBallSpeedcoefficient != 1f)
 		{
 			velocity *= mBallSpeedcoefficient;
-			if (coefficientNum == -1) coefficientNum = TilePosition.y + (mBallSpeedcoefficient > 1f ? 40 : 20);
+			if (coefficientNum == -1)
+			{
+				int theme = LevelDesigner.CurrentDonorThemeNumber;
+				bool midnight = ExpansionGameplay.Classic1782 && (theme == 47 || theme == 48 || theme == 49);
+				coefficientNum = TilePosition.y + (mBallSpeedcoefficient > 1f ? 40 : midnight ? 10 : 20);
+			}
 			if (TilePosition.y >= coefficientNum) { coefficientNum = -1; mBallSpeedcoefficient = 1f; }
 		}
 		if (isJumperAnimtorStart) UpdateSuccessiveSquash();
@@ -60,6 +68,26 @@ public partial class Ball
 		}
 		return position;
 	}
+	private float Start1792CompatibleJump(Tile tile)
+	{
+		// Native Ball:1670-1675 gives an active successive jump priority.
+		circusClownJump = tile != null && tile.TypeVal == (int)TileVal.BeanLv42ClownDown && !inSuccessiveJump;
+		float distance = Start1782Jump(tile);
+		if (!circusClownJump) return distance;
+		ballPowerupSuperJump.Show();
+		SuperJumpPowerupGroup.gameObject.SetActive(true);
+		inSuperJump = true;
+		ballWingAngle.ForceSetTarget(0f);
+		return 6f;
+	}
+
+	private float Get1792ClownParabola()
+	{
+		float distance = jumpEndPos - jumpStartPos;
+		float progress = Position.y - jumpStartPos;
+		return 2.5f - 10f / Mathf.Pow(distance, 2f) * Mathf.Pow(progress - distance / 2f, 2f);
+	}
+
 	private float StartSuccessiveJump()
 	{
 		if (!successiveJumpBound)

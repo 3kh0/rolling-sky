@@ -3,6 +3,30 @@ using UnityEngine;
 // Ported from the Mono 1.7.8.2 source; selected by resource identity, not slot.
 public partial class LevelConstructor
 {
+	// Signed Mono 1.7.9.2 LevelConstructor.cs:1188-1214.
+	private static Tile Decide1792Type(int tileTypeVal, float segmentOffset, int segmentNum, int rowNum, int tileNum, bool tileFlipped)
+	{
+		switch ((TileVal)tileTypeVal)
+		{
+		case TileVal.EnemyLv42ThreeGlass: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42ThreeGlass);
+		case TileVal.EnemyLv42Column: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42Column);
+		case TileVal.EnemyLv42Rise: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42Rise);
+		case TileVal.EnemyLv42FieryRings: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42FieryRings);
+		case TileVal.EnemyLv42PendulumLeft: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42PendulumLeft);
+		case TileVal.EnemyLv42PendulumRight: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42PendulumRight);
+		case TileVal.EnemyLv42MonocycleRight: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42MonocycleRight);
+		case TileVal.EnemyLv42MonocycleLeft: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42MonocycleLeft);
+		case TileVal.EnemyLv42ClownUp: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42ClownUp);
+		case TileVal.BeanLv42ClownDown: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Bean, Tile.DangerType.BeanLv42ClownDown);
+		case TileVal.EnemyLv42TrojanLeft: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42TrojanLeft);
+		case TileVal.EnemyLv42TrojanRight: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42TrojanRight);
+		case TileVal.EnemyLv42Door: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42Door);
+		case TileVal.SimulationAirKillBall: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Bean, Tile.DangerType.SimulationAirKillBall);
+		case TileVal.EnemyLv42Circle: return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv42Circle);
+		default: return null;
+		}
+	}
+
 	private static bool Setup1782Tile()
 	{
 		if ((TileVal)currentTile.TypeVal == TileVal.BeanLv34Jump1Tile)
@@ -11,7 +35,7 @@ public partial class LevelConstructor
 			return true;
 		}
 		if (currentTile.IsGeoHidden && ((currentTile.type == Tile.Type.Enemy && currentTile.dangerType >= Tile.DangerType.BackwardQueryLv26shunyiStart) ||
-			currentTile.dangerType == Tile.DangerType.BeanBack6Tile))
+			currentTile.dangerType == Tile.DangerType.BeanBack6Tile || currentTile.dangerType == Tile.DangerType.BeanLv42ClownDown))
 		{
 			currentTile.CreateEmptyTile();
 			return true;
@@ -21,9 +45,47 @@ public partial class LevelConstructor
 
 	private static Tile Decide1782Type(int tileTypeVal, float segmentOffset, int segmentNum, int rowNum, int tileNum, bool tileFlipped)
 	{
-		Tile tile;
+		Tile tile = Decide1792Type(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped);
+		if (tile != null) return tile;
 		switch (tileTypeVal)
 		{
+		// Recovered 3.2.5 native LevelConstructor.DecideType (0x8b58b8).
+		case (int)TileVal.Enemy_807_Level69_mofang:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.Enemy_807_Level69_mofang);
+		case (int)TileVal.Enemy_808_Level69_yanjing:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.Enemy_808_Level69_yanjing);
+		case (int)TileVal.Enemy_809_Level69_banyuanL:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.Enemy_809_Level69_banyuanL);
+		case (int)TileVal.Enemy_810_Level69_banyuanR:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.Enemy_810_Level69_banyuanR);
+		case (int)TileVal.EnemyLv30Frankenstein:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Frankenstein);
+		case (int)TileVal.EnemyLv30Corpse:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Corpse);
+		case (int)TileVal.EnemyLv30WitchRight:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30WitchRight);
+		case (int)TileVal.EnemyLv30WitchLeft:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30WitchLeft);
+		case (int)TileVal.EnemyLv30SpiderDie:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30SpiderDie);
+		case (int)TileVal.EnemyLv30SpiderLife:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30SpiderLife);
+		case (int)TileVal.EnemyLv30Pumpkin:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Pumpkin);
+		case (int)TileVal.EnemyLv30Tombstone:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Tombstone);
+		case (int)TileVal.EnemyLv30Vampire:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Vampire);
+		case (int)TileVal.EnemyLv30Door:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Door);
+		case (int)TileVal.EnemyLv30Pumpkin2:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Pumpkin2);
+		case (int)TileVal.EnemyLv30Vampire2:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.EnemyLv30Vampire2);
+		case (int)TileVal.BeanLv30Cobweb:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Bean, Tile.DangerType.BeanLv30Cobweb);
+		case (int)TileVal.BeanSimulationDeceleration:
+			return MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Bean);
 		case (int)TileVal.EnemyLv40DownTile:
 
 				tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Ground, Tile.GroundType.Standard);

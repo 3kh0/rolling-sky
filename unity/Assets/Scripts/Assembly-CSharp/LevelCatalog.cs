@@ -17,23 +17,22 @@ public static class LevelCatalog
 		{
 			get
 			{
-				return IsExpansion && (SourceNumber == 16 || SourceNumber == 17 || SourceNumber == 19 ||
-					(SourceNumber >= 21 && SourceNumber <= 25) || SourceNumber == 27 || SourceNumber == 28 ||
-					SourceNumber == 29 || SourceNumber == 37 || SourceNumber == 38 || SourceNumber == 40) ? 3 : 0;
+				return IsExpansion && ((SourceNumber >= 16 && SourceNumber <= 30) || SourceNumber == 32 ||
+					(SourceNumber >= 37 && SourceNumber <= 40) || SourceNumber == 42) ? 3 : 0;
 			}
 		}
 
-		public Level(int worldNumber, int sourceNumber, string title, int maxGems)
+		public Level(int worldNumber, int sourceNumber, string title, int maxGems, string resourceRoot = null)
 		{
 			WorldNumber = worldNumber;
 			SourceNumber = sourceNumber;
-			ResourceRoot = sourceNumber <= 20 ? "Classic1471" : sourceNumber <= 25 ? "Classic1561" : "Classic1782";
+			ResourceRoot = resourceRoot ?? (sourceNumber <= 20 ? "Classic1471" : sourceNumber <= 25 ? "Classic1561" : "Classic1782");
 			Title = title;
 			MaxGems = maxGems;
 		}
 	}
 
-	public const int Count = 33;
+	public const int Count = 41;
 
 	private static readonly Level[] levels =
 	{
@@ -70,19 +69,27 @@ public static class LevelCatalog
 		new Level(30, 37, "Neon", 10),
 		new Level(31, 38, "Laser", 10),
 		new Level(32, 40, "Egypt", 10),
-		new Level(33, 41, "The Eye of Horus", 10)
+		new Level(33, 41, "The Eye of Horus", 10),
+		new Level(34, 18, "Candy", 10, "Classic1782"),
+		new Level(35, 20, "8Bits", 10, "Classic1782"),
+		new Level(36, 26, "Relics", 10),
+		new Level(37, 30, "Midnight Carnival", 10),
+		new Level(38, 32, "Ignite", 10),
+		new Level(39, 42, "Circus", 10, "Classic1792"),
+		new Level(40, 39, "Dazzle", 10),
+		new Level(41, 70, "Sunny", 20, "Classic325")
 	};
 
 	// https://rolling-sky.fandom.com/wiki/Level (revision 148880), easy to hard.
 	// Use our classic variants: Cloud B, Massif B, Illusion B, Forest B,
-	// Hoop Dream A (not the 2026 extended B), and Monody A.
+	// Sunny A, Hoop Dream A (not the 2026 extended B), and Monody A.
 	private static readonly int[] menuOrder =
 	{
-		29, 27, 28, 1, 33, 20, // 1 star
-		2, 31, 24, 26, 23, // 2 stars
-		21, 3, 12, 4, 15, 22, // 3 stars
-		5, 6, 7, 8, 19, 25, // 4 stars
-		32, 11, 10, 18, 13, 9, 14, 30, 17, // 5 stars
+		41, 29, 27, 28, 1, 33, 20, // 1 star
+		2, 31, 24, 26, 35, 23, 40, // 2 stars
+		21, 3, 12, 4, 34, 15, 22, // 3 stars
+		5, 38, 6, 7, 8, 39, 19, 36, 25, // 4 stars
+		32, 11, 10, 18, 13, 37, 9, 14, 30, 17, // 5 stars
 		16 // 6 stars
 	};
 

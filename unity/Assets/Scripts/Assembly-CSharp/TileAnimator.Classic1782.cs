@@ -8,6 +8,68 @@ public partial class TileAnimator
 		if (!ExpansionGameplay.Classic1782) return false;
 		switch (animatedRows[animRowNum][animTileNum].animType)
 		{
+		// Native Sunny70 thresholds and clip (3.2.5 AnimateTile, 0x8cf8ec).
+		case Tile.AnimType.Enemy_807_Level69_mofang:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 8f, -15f, "Take 001", false);
+			break;
+		case Tile.AnimType.Enemy_808_Level69_yanjing:
+		case Tile.AnimType.Enemy_809_Level69_banyuanL:
+		case Tile.AnimType.Enemy_810_Level69_banyuanR:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 9f, -15f, "Take 001", false);
+			break;
+		// Signed Mono 1.7.9.2 TileAnimator:1293-1351.
+		case Tile.AnimType.EnemyLv42ThreeGlass:
+		case Tile.AnimType.EnemyLv42Rise:
+		case Tile.AnimType.EnemyLv42PendulumLeft:
+		case Tile.AnimType.EnemyLv42PendulumRight:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 8f, -15f, "anim1", false);
+			break;
+		case Tile.AnimType.EnemyLv42TrojanLeft:
+		case Tile.AnimType.EnemyLv42TrojanRight:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 8f, -15f, "anim1", false, Tile.AnimType.EnemyLv32Cannon);
+			break;
+		case Tile.AnimType.EnemyLv42ClownUp:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 8f, -15f, "anim1", true);
+			break;
+		case Tile.AnimType.EnemyLv42Circle:
+			Native1782NoAnimation(animRowNum, animTileNum, 18f, -5f, -5f);
+			break;
+		case Tile.AnimType.EnemyLv42Column:
+		case Tile.AnimType.EnemyLv42FieryRings:
+			break;
+		case Tile.AnimType.EnemyLv42Door:
+			Native1792Door(animRowNum, animTileNum);
+			break;
+		case Tile.AnimType.EnemyLv42MonocycleLeft:
+		case Tile.AnimType.EnemyLv42MonocycleRight:
+			Native1792Monocycle(animRowNum, animTileNum);
+			break;
+		case Tile.AnimType.BeanLv42ClownDown:
+			Native1792Clown(animRowNum, animTileNum);
+			break;
+		case Tile.AnimType.EnemyLv30Frankenstein:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 15f, -15f, "anim1", false);
+			break;
+		case Tile.AnimType.EnemyLv30Corpse:
+		case Tile.AnimType.EnemyLv30WitchRight:
+		case Tile.AnimType.EnemyLv30WitchLeft:
+		case Tile.AnimType.EnemyLv30Pumpkin:
+		case Tile.AnimType.EnemyLv30Tombstone:
+		case Tile.AnimType.EnemyLv30Vampire:
+		case Tile.AnimType.EnemyLv30Pumpkin2:
+		case Tile.AnimType.EnemyLv30Vampire2:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 10f, -15f, "anim1", false);
+			break;
+		case Tile.AnimType.EnemyLv30SpiderDie:
+		case Tile.AnimType.EnemyLv30SpiderLife:
+			Native1782AnimatorPlayCreatReset(animRowNum, animTileNum, 18f, -3f, 10f, -15f, "anim1", false);
+			break;
+		case Tile.AnimType.EnemyLv30Door:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 10f, -15f, "anim1", true);
+			break;
+		case Tile.AnimType.BeanLv30Cobweb:
+			Native1782AnimatorPlay(animRowNum, animTileNum, 18f, -3f, 8f, -15f, "anim1", false);
+			break;
 		case Tile.AnimType.GroundTileLeft:
 
 				Native1782MoveJumpTileLeft(animRowNum, animTileNum);
@@ -343,6 +405,113 @@ public partial class TileAnimator
 		}
 		return true;
 	}
+	// Native custom phases use per-tile counters, not the shared row's IsPlayed.
+	private static void Native1792Door(int row, int col)
+	{
+		float distance = animatedRows[row].Distance;
+		if (distance > 15f || distance < -15f) return;
+		AnimatedTile animated = animatedRows[row][col];
+		Tile tile = GameManager.TileBoard[animated.index];
+		if (animated.circusRecordCount <= 0)
+		{
+			tile.newAnimTrasFromAnimation.gameObject.SetActive(true);
+			tile.AnimParticleSystem.gameObject.SetActive(true);
+			tile.AnimParticleSystem.Stop();
+			tile.AnimParticleSystem.Play();
+			animated.circusRecordCount++;
+		}
+		else if (distance > 8f && animated.circusRecordCount <= 1)
+		{
+			tile.newAnimTrasFromAnimation.Play("anim1");
+			tile.AnimParticleSystem.GetComponent<UGUI.UTweenScale>().PlayForward();
+			animated.circusRecordCount++;
+		}
+		else if (animated.circusRecordCount <= 2 && distance < -10f)
+		{
+			tile.newAnimTrasFromAnimation.gameObject.SetActive(false);
+		}
+	}
+
+	private static void Native1792Monocycle(int row, int col)
+	{
+		float distance = animatedRows[row].Distance;
+		float start = LevelCatalog.Get(GameManager.WorldNum).SourceNumber == 42 ? 15f : 12f;
+		AnimatedTile animated = animatedRows[row][col];
+		Tile tile = GameManager.TileBoard[animated.index];
+		if (distance > start || distance <= 0f)
+		{
+			if (distance <= -5f && animated.circusRecordCount == 2)
+			{
+				TransformUtils.SetX(tile.newAnimTrasFromAnimation, 0f, true);
+				tile.AdditionTransform.gameObject.SetActive(false);
+				completedTiles.Add(col);
+				animated.circusRecordCount++;
+			}
+			return;
+		}
+		float progress = distance / start;
+		float movement = 0f;
+		if (progress < 1f && progress >= 0.5f)
+		{
+			if (animated.circusRecordCount == 0)
+			{
+				tile.AdditionTransform.gameObject.SetActive(true);
+				TransformUtils.SetX(tile.newAnimTrasFromAnimation, 0f, true);
+				tile.newAnimTrasFromAnimation.Play("anim1");
+				animated.circusRecordCount++;
+			}
+			movement = (1f - progress) * 2f;
+		}
+		else if (progress < 0.5f)
+		{
+			if (animated.circusRecordCount == 1)
+			{
+				tile.newAnimTrasFromAnimation.Play("anim2");
+				animated.circusRecordCount++;
+			}
+			movement = (1f - progress) * 2f;
+		}
+		// Native MoveLv42Monocycle ignores isMoveToLeft: both variants move -X.
+		TransformUtils.SetX(tile.newAnimTrasFromAnimation, -movement, true);
+	}
+
+	private static void Native1792Clown(int row, int col)
+	{
+		float distance = animatedRows[row].Distance;
+		AnimatedTile animated = animatedRows[row][col];
+		Tile tile = GameManager.TileBoard[animated.index];
+		if (distance > 12f || distance <= 2f)
+		{
+			if (animated.circusRecordCount == 0)
+			{
+				tile.AdditionTransform.gameObject.SetActive(true);
+				tile.AnimTransform.eulerAngles = new Vector3(90f, 180f, 0f);
+				TransformUtils.SetZ(tile.AnimTransform, -3.5f, true);
+				animated.circusRecordCount++;
+			}
+			if (distance <= 2f && animated.circusRecordCount == 2)
+			{
+				tile.AnimTransform.Find("level_42_xiaochou02").GetComponent<Animation>().Play("anim1");
+				animated.circusRecordCount++;
+			}
+			if (distance <= -5f && animated.circusRecordCount == 3)
+			{
+				tile.AdditionTransform.gameObject.SetActive(false);
+				completedTiles.Add(col);
+				animated.circusRecordCount++;
+			}
+		}
+		else
+		{
+			if (distance <= 6f && animated.circusRecordCount == 1)
+			{
+				tile.PlaySound();
+				animated.circusRecordCount++;
+			}
+			TransformUtils.SetZ(tile.AnimTransform, -(distance - 2f) / 10f * 3f - 0.5f, true);
+		}
+	}
+
 	private static AnimatedRow native1782Row;
 	private static float native1782Distance;
 	private static Animation native1782Animation;

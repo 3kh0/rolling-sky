@@ -65,6 +65,42 @@ public partial class Tile
 		if (!ExpansionGameplay.Classic1782) return false;
 		switch (dangerType)
 		{
+		// Recovered 3.2.5 native Tile.ConfigureEnemy (0x563f08).
+		case DangerType.Enemy_807_Level69_mofang: ExpansionRig(PrefabName.Classic325Enemy_807_Level69_mofang, AnimType.Enemy_807_Level69_mofang, false); break;
+		case DangerType.Enemy_808_Level69_yanjing: ExpansionRig(PrefabName.Classic325Enemy_808_Level69_yanjing, AnimType.Enemy_808_Level69_yanjing, false); break;
+		case DangerType.Enemy_809_Level69_banyuanL: ExpansionRig(PrefabName.Classic325Enemy_809_Level69_banyuanL, AnimType.Enemy_809_Level69_banyuanL, false); break;
+		case DangerType.Enemy_810_Level69_banyuanR: ExpansionRig(PrefabName.Classic325Enemy_810_Level69_banyuanR, AnimType.Enemy_810_Level69_banyuanR, false); break;
+		// Signed Mono 1.7.9.2 Tile.ConfigureEnemy:3958-4036.
+		case DangerType.EnemyLv42ThreeGlass: ExpansionRig(PrefabName.EnemyLv42ThreeGlass, AnimType.EnemyLv42ThreeGlass, false); break;
+		case DangerType.EnemyLv42Column: ExpansionRig(PrefabName.EnemyLv42Column, AnimType.EnemyLv42Column, false); break;
+		case DangerType.EnemyLv42Rise: ExpansionRig(PrefabName.EnemyLv42Rise, AnimType.EnemyLv42Rise, false); break;
+		case DangerType.EnemyLv42FieryRings: ExpansionRig(PrefabName.EnemyLv42FieryRings, AnimType.EnemyLv42FieryRings, false); break;
+		case DangerType.EnemyLv42PendulumLeft: ExpansionRig(PrefabName.EnemyLv42PendulumLeft, AnimType.EnemyLv42PendulumLeft, false); break;
+		case DangerType.EnemyLv42PendulumRight: ExpansionRig(PrefabName.EnemyLv42PendulumRight, AnimType.EnemyLv42PendulumRight, false); break;
+		case DangerType.EnemyLv42MonocycleRight: ExpansionRig(PrefabName.EnemyLv42MonocycleRight, AnimType.EnemyLv42MonocycleRight, false); break;
+		case DangerType.EnemyLv42MonocycleLeft: ExpansionRig(PrefabName.EnemyLv42MonocycleLeft, AnimType.EnemyLv42MonocycleLeft, false); break;
+		case DangerType.EnemyLv42TrojanLeft: ExpansionRig(PrefabName.EnemyLv42TrojanLeft, AnimType.EnemyLv42TrojanLeft, false); break;
+		case DangerType.EnemyLv42TrojanRight: ExpansionRig(PrefabName.EnemyLv42TrojanRight, AnimType.EnemyLv42TrojanRight, false); break;
+		case DangerType.EnemyLv42Door: ExpansionRig(PrefabName.EnemyLv42Door, AnimType.EnemyLv42Door, false); break;
+		case DangerType.EnemyLv42Circle: ExpansionRig(PrefabName.EnemyLv42Circle, AnimType.EnemyLv42Circle, false); break;
+		case DangerType.EnemyLv42ClownUp:
+			ExpansionRig(PrefabName.EnemyLv42ClownUp, AnimType.EnemyLv42ClownUp, true);
+			HasAltAudio = true;
+			break;
+		// Native Tile.ConfigureEnemy: 3465-3536. SpiderLife is an overhead
+		// hazard, not a jump pad; the Midnight bounce pad is BeanBack6Tile.
+		case DangerType.EnemyLv30Frankenstein: ExpansionRig(PrefabName.EnemyLv30Frankenstein, AnimType.EnemyLv30Frankenstein, false); break;
+		case DangerType.EnemyLv30Corpse: ExpansionRig(PrefabName.EnemyLv30Corpse, AnimType.EnemyLv30Corpse, false); break;
+		case DangerType.EnemyLv30WitchRight: ExpansionRig(PrefabName.EnemyLv30WitchRight, AnimType.EnemyLv30WitchRight, false); break;
+		case DangerType.EnemyLv30WitchLeft: ExpansionRig(PrefabName.EnemyLv30WitchLeft, AnimType.EnemyLv30WitchLeft, false); break;
+		case DangerType.EnemyLv30SpiderDie: ExpansionRig(PrefabName.EnemyLv30SpiderDie, AnimType.EnemyLv30SpiderDie, false); break;
+		case DangerType.EnemyLv30SpiderLife: ExpansionRig(PrefabName.EnemyLv30SpiderLife, AnimType.EnemyLv30SpiderLife, false); break;
+		case DangerType.EnemyLv30Pumpkin: ExpansionRig(PrefabName.EnemyLv30Pumpkin, AnimType.EnemyLv30Pumpkin, false); break;
+		case DangerType.EnemyLv30Tombstone: ExpansionRig(PrefabName.EnemyLv30Tombstone, AnimType.EnemyLv30Tombstone, false); break;
+		case DangerType.EnemyLv30Vampire: ExpansionRig(PrefabName.EnemyLv30Vampire, AnimType.EnemyLv30Vampire, false); break;
+		case DangerType.EnemyLv30Pumpkin2: ExpansionRig(PrefabName.EnemyLv30Pumpkin2, AnimType.EnemyLv30Pumpkin2, false); break;
+		case DangerType.EnemyLv30Door: ExpansionRig(PrefabName.EnemyLv30Door, AnimType.EnemyLv30Door, true); break;
+		case DangerType.EnemyLv30Vampire2: ExpansionRig(PrefabName.EnemyLv30Vampire2, AnimType.EnemyLv30Vampire2, false); break;
 		case DangerType.EnemyLv26Door:
 
 			animType = AnimType.EnemyLv26Door;
@@ -573,6 +609,29 @@ public partial class Tile
 		HasAddition = true;
 		switch (TypeVal)
 		{
+		// Signed Mono 1.7.9.2 Tile.ConfigureBean:4372-4384.
+		case (int)TileVal.BeanLv42ClownDown:
+			IsGeoHidden = true;
+			animType = AnimType.BeanLv42ClownDown;
+			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.BeanLv42ClownDown);
+			IsJump = true;
+			HasAudio = true;
+			HasAltAudio = false;
+			break;
+		case (int)TileVal.SimulationAirKillBall:
+			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.SimulationAirKillBall);
+			HasAudio = true;
+			HasAltAudio = false;
+			break;
+		case (int)TileVal.BeanLv30Cobweb:
+			animType = AnimType.BeanLv30Cobweb;
+			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.BeanLv30Cobweb);
+			HasAudio = HasAltAudio = false;
+			break;
+		case (int)TileVal.BeanSimulationDeceleration:
+			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.BeanSimulationDeceleration);
+			HasAudio = HasAltAudio = false;
+			break;
 		case (int)TileVal.EnemyLv26FirePlace:
 
 			animType = AnimType.EnemyLv26FirePlace;
