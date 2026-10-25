@@ -15,6 +15,7 @@ public static class ExpansionPrefabImport
     private const string Root = "Assets/Classic1471/Expansion/";
     private const string SupplementRoot = "Assets/Classic1471/ExpansionSupplement/";
     private const string LaterRoot = "Assets/Classic1561/Expansion/";
+    private const string NewerRoot = "Assets/Classic1782/Expansion/";
 
     [Serializable] public class Manifest : ClassicPrefabImport.Manifest
     {
@@ -79,6 +80,13 @@ public static class ExpansionPrefabImport
     {
         ImportAndValidate();
         ImportLaterAndValidate();
+        ImportNewerAndValidate();
+    }
+
+    public static void ImportNewerAndValidate()
+    {
+        ImportSet(NewerRoot);
+        ValidateSet(NewerRoot, "Expansion1782");
     }
 
     private static void ImportSet(string root)
@@ -331,7 +339,10 @@ public static class ExpansionPrefabImport
                     }
                     else
                     {
-                        Object expected = reference.localId != 0 ? objects[reference.localId] : AssetDatabase.LoadMainAssetAtPath(reference.path);
+                        Object expected = reference.localId != 0 ? objects[reference.localId] :
+                            reference.path == "builtin:Cube.fbx" ? Resources.GetBuiltinResource<Mesh>("Cube.fbx") :
+                            reference.path == "builtin:Plane.fbx" ? Resources.GetBuiltinResource<Mesh>("Plane.fbx") :
+                            AssetDatabase.LoadMainAssetAtPath(reference.path);
                         Require(expected != null && actual == expected,
                             record.path + " reference changed: " + reference.field + " -> " + reference.path);
                     }

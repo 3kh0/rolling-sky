@@ -20,7 +20,8 @@ public static class LevelCatalog
 			get
 			{
 				return IsExpansion && (SourceNumber == 16 || SourceNumber == 17 || SourceNumber == 19 ||
-					(SourceNumber >= 21 && SourceNumber <= 25)) ? 3 : 0;
+					(SourceNumber >= 21 && SourceNumber <= 25) || SourceNumber == 27 || SourceNumber == 28 ||
+					SourceNumber == 29 || SourceNumber == 37 || SourceNumber == 38 || SourceNumber == 40) ? 3 : 0;
 			}
 		}
 
@@ -28,14 +29,14 @@ public static class LevelCatalog
 		{
 			WorldNumber = worldNumber;
 			SourceNumber = sourceNumber;
-			ResourceRoot = sourceNumber <= 20 ? "Classic1471" : "Classic1561";
+			ResourceRoot = sourceNumber <= 20 ? "Classic1471" : sourceNumber <= 25 ? "Classic1561" : "Classic1782";
 			Title = title;
 			MaxGems = maxGems;
 			UnlockParentWorldNumber = unlockParentWorldNumber;
 		}
 	}
 
-	public const int Count = 23;
+	public const int Count = 33;
 
 	private static readonly Level[] levels =
 	{
@@ -61,7 +62,18 @@ public static class LevelCatalog
 		new Level(20, 13, "Illusion", 20, 1),
 		new Level(21, 16, "Monody", 10, 2),
 		new Level(22, 22, "Matrix", 10, 17),
-		new Level(23, 24, "Joker", 10, 18)
+		new Level(23, 24, "Joker", 10, 18),
+		// Native resource IDs differ from the historical main/bonus numbering.
+		new Level(24, 27, "Mental Rave", 10),
+		new Level(25, 28, "Street Basketball", 10),
+		new Level(26, 29, "Fairy Tale", 10),
+		new Level(27, 33, "Hoop Dream", 10),
+		new Level(28, 35, "The Winter", 10),
+		new Level(29, 36, "Cloud", 10),
+		new Level(30, 37, "Neon", 10),
+		new Level(31, 38, "Laser", 10),
+		new Level(32, 40, "Egypt", 10),
+		new Level(33, 41, "The Eye of Horus", 10)
 	};
 
 	public static Level Get(int worldNumber)

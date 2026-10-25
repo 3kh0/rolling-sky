@@ -143,6 +143,11 @@ public partial class LevelConstructor : MonoBehaviour
 		Tile tile = null;
 		try
 		{
+			if (ExpansionGameplay.Classic1782)
+			{
+				tile = Decide1782Type(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped);
+				if (tile != null) return tile;
+			}
 			if (ExpansionGameplay.Later)
 			{
 				tile = DecideLaterType(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped);
@@ -504,6 +509,7 @@ public partial class LevelConstructor : MonoBehaviour
 
 	private static void SetupCurrentTile()
 	{
+		if (ExpansionGameplay.Classic1782 && Setup1782Tile()) return;
 		if (currentTile.IsDangerSpreader)
 		{
 			segmentHasDangerSpreaders = true;
@@ -678,6 +684,7 @@ public partial class LevelConstructor : MonoBehaviour
 		}
 		float prefabRotations;
 		PrefabName prefabName2 = ChooseCurrentPrefabName(out prefabRotations);
+		if (ExpansionGameplay.Classic1782 && currentTile.Is1782MovingGround) prefabName2 = PrefabName.TileO;
 		if (ExpansionGameplay.Enabled && currentTile.IsNeedRotation) prefabName2 = PrefabName.TileLv10;
 		PrefabType prefabType;
 		MaterialName materialName;

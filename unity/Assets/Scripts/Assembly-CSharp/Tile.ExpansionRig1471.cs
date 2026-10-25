@@ -96,12 +96,13 @@ public partial class Tile
 		return true;
 	}
 
-	private void SetAppointTileDanger(int y, int z)
+	private void SetAppointTileDanger(int y, int z, DangerType hazard = DangerType.Danger)
 	{
 		MathUtils.IntTrio index = new MathUtils.IntTrio(Index.x, y, z);
-		if (y >= 0 && z >= 0 && z <= 4 && GameManager.TileBoard[index] != null)
+		if (y >= 0 && z >= 0 && z <= 4 && GameManager.TileBoard[index] != null &&
+			(!ExpansionGameplay.Classic1782 || !GameManager.TileBoard[index].IsHidden))
 		{
-			GameManager.TileBoard[index].dangerType = DangerType.Danger;
+			GameManager.TileBoard[index].dangerType = hazard;
 			GameManager.TileBoard[index].IsDangerous = true;
 		}
 	}

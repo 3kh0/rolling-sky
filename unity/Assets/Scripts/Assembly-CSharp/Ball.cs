@@ -20,7 +20,12 @@ public partial class Ball : MonoBehaviour
 		Ended = 13,
 		BrideUp,
 		BrideRolling,
-		BrideDown
+		BrideDown,
+		TeleportingStart,
+		Teleportinging,
+		TeleportingEnd,
+		BackJump,
+		ShootBall
 	}
 
 	public enum VelocityState
@@ -320,7 +325,7 @@ public partial class Ball : MonoBehaviour
 
 	private float jumpEndPos;
 
-	private bool inSuperJump;
+	public bool inSuperJump;
 
 	private Elastic.Single ballWingAngle = new Elastic.Single(12f, 0f, 0f, 0.01f);
 
@@ -794,6 +799,7 @@ public partial class Ball : MonoBehaviour
 		else
 		{
 			zero = Position + vector;
+			if (ExpansionGameplay.Classic1782) zero = Apply1782Motion(vector, zero);
 			if (state == State.Ending)
 			{
 				zero = UpdateEnding(vector, zero);
@@ -817,6 +823,7 @@ public partial class Ball : MonoBehaviour
 			}
 		}
 		if (ExpansionGameplay.Enabled) UpdateExpansionPower();
+		Update1782Floor();
 		Vector3 currentBallPosition;
 		if (animateWithFakeBallPos)
 		{
@@ -908,6 +915,7 @@ public partial class Ball : MonoBehaviour
 			if (inSuperJump)
 			{
 				ballPowerupSuperJump.GetRoot().Rotate(Vector3.up * 7.5f);
+				if (ExpansionGameplay.Classic1782) ShootBallJumpPowerupGroup.Rotate(Vector3.up * 7.5f);
 			}
 			if (ExpansionGameplay.Later && inSuccessiveJump) ballSuccessiveJump.GetRoot().Rotate(Vector3.up * 7.5f);
 		}
@@ -916,13 +924,15 @@ public partial class Ball : MonoBehaviour
 
 	private float GetJumpParabola()
 	{
+		if (ExpansionGameplay.Classic1782) return Get1782JumpParabola();
 		float num = jumpEndPos - jumpStartPos;
 		float num2 = Position.y - jumpStartPos;
 		return 2f - 8f / Mathf.Pow(num, 2f) * Mathf.Pow(num2 - num / 2f, 2f);
 	}
 
-	private void EndJump()
+	public void EndJump()
 	{
+		if (ExpansionGameplay.Classic1782 && ShootBallJumpPowerupGroup != null) ShootBallJumpPowerupGroup.gameObject.SetActive(false);
 		if (inSuperJump)
 		{
 			ballPowerupSuperJump.Hide();
@@ -1066,7 +1076,8 @@ public partial class Ball : MonoBehaviour
 			if (!shielded) return;
 		}
 		float num = 4f;
-		if ((currentTile != null && currentTile.IsJump) || (ExpansionGameplay.Later && inSuccessiveJump))
+		if (ExpansionGameplay.Classic1782) num = Start1782Jump(currentTile);
+		else if ((currentTile != null && currentTile.IsJump) || (ExpansionGameplay.Later && inSuccessiveJump))
 		{
 			if (!ExpansionGameplay.Later || !inSuccessiveJump) currentTile.Jump();
 			if (currentTile.IsSuperJump)
@@ -1189,6 +1200,12 @@ public partial class Ball : MonoBehaviour
 
 	public bool CanFall(Tile currentTile)
 	{
+		if (ExpansionGameplay.Classic1782)
+		{
+			if (currentTile != null && currentTile.IsHidden) currentTile = null;
+			if (currentTile != null && currentTile.type == Tile.Type.BackwardQuery && !currentTile.isQuery) currentTile.QueryEnd();
+			if (currentTile == null && Check1782OutsideWall()) return false;
+		}
 		bool result = false;
 		this.currentTile = currentTile;
 		if (IsAlive)

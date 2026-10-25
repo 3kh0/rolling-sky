@@ -16,6 +16,7 @@ public partial class Ball
 	private void ResetExpansionPower()
 	{
 		ResetLaterPower();
+		Reset1782Power();
 		// Freshly attached donor shields start visible in the prefab. Native
 		// Ball.Initialize hides them, after the new Ball bindings exist.
 		HideShield();

@@ -194,7 +194,7 @@ public class MidgroundManager : MonoBehaviour
 
 	private const string backgroundAltMaterialName = "_AltTex";
 
-	private static BlockData[] blockData = new BlockData[44]
+	private static BlockData[] blockData = new BlockData[62]
 	{
 		new BlockData(0, 5f, 15f, 0f, 12f, 4, PrefabName.Block1),
 		new BlockData(1, 8f, 15f, 2f, 7f, 2, PrefabName.Block2),
@@ -240,7 +240,25 @@ public class MidgroundManager : MonoBehaviour
 		new BlockData(40, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1561Midground10L, PrefabName.Classic1561Midground10R),
 		new BlockData(41, 5f, 15f, 0f, 12f, 4, PrefabName.Classic1561Midground1),
 		new BlockData(42, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1561Midground16),
-		new BlockData(43, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1561Midground16)
+		new BlockData(43, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1561Midground16),
+		new BlockData(44, 8f, 15f, 2f, 7f, 2, PrefabName.Classic1782Block2),
+		new BlockData(45, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground11L, PrefabName.Classic1782midground11R),
+		new BlockData(46, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(47, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(48, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(49, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(50, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(51, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(52, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(53, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(54, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(55, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(56, 7.75f, 21f, 0f, 10f, 12, PrefabName.Classic1782Block4L, PrefabName.Classic1782Block4R),
+		new BlockData(57, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(58, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(59, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(60, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16),
+		new BlockData(61, 8f, 12f, 2f, 12f, 6, PrefabName.Classic1782midground16)
 	};
 
 	private static BlockData classicNeutralBlock = new BlockData(8, 8f, 15f, 2f, 7f, 2, PrefabName.ClassicMidground2);

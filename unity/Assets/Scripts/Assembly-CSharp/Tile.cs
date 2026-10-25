@@ -13,7 +13,8 @@ public partial class Tile : MonoBehaviour
 		MoverAuto = 6,
 		LaserTrigger = 7,
 		Rotation = 8,
-		Bean = 9
+		Bean = 9,
+		BackwardQuery = 10
 	}
 
 	public enum GroundType
@@ -185,7 +186,25 @@ public partial class Tile : MonoBehaviour
 		EnemySoldierLeft, EnemySoldierRight, PickDownLv25Cube, PickDownLv25Cube1, EnemyLv25Brigde, SimulationJumpTitle,
 		EnemyLv25Sound, EnemyLv25SoundLeft, EnemyLv25SoundRight, EnemyLv25AirEye, EnemyLv25Sound3, EnemyLv25CocountTree,
 		EnemyLv25XiaoBianLeft, EnemyLv25XiaoBianRight, EnemyLv25Tape, EnemyLv25CubeLive, EnemyLv25CubeDie,
-		EnemyLv25MoveDici, EnemyLv25DownLightning, EnemyLv25Gyroscope, SuperJumperFictitious, EnemyLv25Spring
+		EnemyLv25MoveDici, EnemyLv25DownLightning, EnemyLv25Gyroscope, SuperJumperFictitious, EnemyLv25Spring,
+		BackwardQueryLv26shunyiStart, BackwardQueryLv26shunyiEnd,
+		EnemyLv26Door, EnemyLv26Pillars1, EnemyLv26Pillars2, EnemyLv26God1, EnemyLv26God2,
+		EnemyLv26FirePlace, EnemyLv26Castle, EnemyLv26Dici, EnemyLv26DaDiShuLife, EnemyLv26DaDiShuDie, EnemyLv26Owl, EnemyLv26Tree,
+		EnemyLv34Snow, EnemyLv28Wall, EnemyLv28Wall2, BeanLv28BouncePlate,
+		BeanLv28BasketballStandsLeft, BeanLv28BasketballStandsRight, BeanLv28BasketballStandsCenter,
+		EnemyLv28BlackPlayer, EnemyLv28PlayerLeft, EnemyLv28PlayerRight, EnemyLv28HatPlayer, EnemyLv28Tyre,
+		EnemyLv28Doors, EnemyLv28Doors2, EnemyLv28NetDie, EnemySimulationDie, BeanLv28Button, BeanJump10Tile, BeanBack6Tile,
+		EnemyLv30MoveAfterTile, EnemyLv30MoveBeforeTile, BeanLv32StartReverse, BeanLv32EndReverse,
+		EnemyLv32HorizontalLever, EnemyLv32VerticalLever, EnemyLv32Door, EnemyLv32AirWheel, EnemyLv32LightLeft, EnemyLv32LightRight, EnemyLv32Cannon,
+		EnemyLv34BigCane, EnemyLv34Tree1,
+		EnemyLv37Forward1Tile, EnemyLv37Forward2Tile, EnemyLv37Forward3Tile, EnemyLv37Forward4Tile, EnemyLv37Forward5Tile,
+		EnemyLv37Frisbee, EnemyLv37Pan, EnemyLv37Sound, EnemyLv37RobotLeft, EnemyLv37RobotRight, EnemyLv37Door,
+		EnemyLv37KeyboardLeft, EnemyLv37KeyboardRight, EnemyLv37Gear,
+		EnemyLv40PyramidBack, EnemyLv40PyramidLeft, EnemyLv40PyramidRight, EnemyLv40Bug, EnemyLv40Door,
+		EnemyLv40Column1, EnemyLv40Column2, EnemyLv40Eye, EnemyLv40BackTriangle, EnemyLv40Triangle, EnemyLv40Snake,
+		EnemyLv40LeftWall, EnemyLv40RightWall, EnemyLv40_5TileLeft, EnemyLv40_5TileRight,
+		EnemyLv40_4TileLeft, EnemyLv40_4TileRight, EnemyLv40_3TileLeft, EnemyLv40_3TileRight, EnemyLv40_2TileLeft, EnemyLv40_2TileRight,
+		BeanLv40ShowButton, BeanLv40HideButton, EnemyLv40_CrossLeft, EnemyLv40_CrossRight
 	}
 
 	public enum AnimType
@@ -342,7 +361,26 @@ public partial class Tile : MonoBehaviour
 		EnemySoldierLeft, EnemySoldierRight, PickDownLv25Cube, PickDownLv25Cube1, EnemyLv25Brigde, BeanLv25BrigdeUp, BeanLv25BrigdeDown,
 		EnemyLv25Sound, EnemyLv25SoundLeft, EnemyLv25SoundRight, EnemyLv25AirEye, EnemyLv25Sound3, EnemyLv25CocountTree,
 		EnemyLv25XiaoBianLeft, EnemyLv25XiaoBianRight, EnemyLv25Tape, EnemyLv25CubeLive, EnemyLv25CubeDie,
-		EnemyLv25MoveDici, EnemyLv25DownLightning, EnemyLv25Gyroscope, EnemyLv25Spring
+		EnemyLv25MoveDici, EnemyLv25DownLightning, EnemyLv25Gyroscope, EnemyLv25Spring,
+		BackwardQueryLv26shunyiStart, BackwardQueryLv26shunyiEnd,
+		EnemyLv26Door, EnemyLv26Pillars1, EnemyLv26Pillars2, EnemyLv26God1, EnemyLv26God2,
+		EnemyLv26FirePlace, EnemyLv26Castle, EnemyLv26Dici, EnemyLv26DaDiShuLife, EnemyLv26DaDiShuDie, EnemyLv26Owl, EnemyLv26Tree,
+		EnemyLv34Snow, EnemyLv28Wall, EnemyLv28Wall2, BeanLv28BouncePlate,
+		BeanLv28BasketballStandsLeft, BeanLv28BasketballStandsRight, BeanLv28BasketballStandsCenter,
+		EnemyLv28BlackPlayer, EnemyLv28PlayerLeft, EnemyLv28PlayerRight, EnemyLv28HatPlayer, EnemyLv28Tyre,
+		EnemyLv28Doors, EnemyLv28Doors2, EnemyLv28NetDie, BeanLv28Button, BeanJump10Tile, BeanBack6Tile,
+		EnemyLv30MoveAfterTile, EnemyLv30MoveBeforeTile, BeanLv32StartReverse, BeanLv32EndReverse,
+		EnemyLv32HorizontalLever, EnemyLv32VerticalLever, EnemyLv32Door, EnemyLv32AirWheel, EnemyLv32LightLeft, EnemyLv32LightRight, EnemyLv32Cannon,
+		EnemyLv34BigCane, EnemyLv34Tree1,
+		EnemyLv37Forward1Tile, EnemyLv37Forward2Tile, EnemyLv37Forward3Tile, EnemyLv37Forward4Tile, EnemyLv37Forward5Tile,
+		EnemyLv37Frisbee, EnemyLv37Pan, EnemyLv37Sound, EnemyLv37RobotLeft, EnemyLv37RobotRight, EnemyLv37Door,
+		EnemyLv37KeyboardLeft, EnemyLv37KeyboardRight, EnemyLv37Gear,
+		EnemyLv40PyramidBack, EnemyLv40PyramidLeft, EnemyLv40PyramidRight, EnemyLv40Bug, EnemyLv40Door,
+		EnemyLv40Column1, EnemyLv40Column2, EnemyLv40Eye, EnemyLv40BackTriangle, EnemyLv40Triangle, EnemyLv40Snake,
+		EnemyLv40LeftWall, EnemyLv40RightWall, EnemyLv40_5TileLeft, EnemyLv40_5TileRight,
+		EnemyLv40_4TileLeft, EnemyLv40_4TileRight, EnemyLv40_3TileLeft, EnemyLv40_3TileRight, EnemyLv40_2TileLeft, EnemyLv40_2TileRight,
+		BeanLv40ShowButton, BeanLv40HideButton, EnemyLv40_CrossLeft, EnemyLv40_CrossRight,
+		GroundTileLeft, GroundTileRight, GroundTileBefore, GroundTileAfter
 	}
 
 	public enum Edge
@@ -1050,6 +1088,9 @@ public partial class Tile : MonoBehaviour
 		case Type.Bean:
 			ConfigureExpansionTrigger();
 			break;
+		case Type.BackwardQuery:
+			Configure1782Query();
+			break;
 		}
 		if (pickupType != PickupType.Null && IsNotDangerous)
 		{
@@ -1074,7 +1115,7 @@ public partial class Tile : MonoBehaviour
 		HasAdditionBase = false;
 		HasAudio = true;
 		HasAltAudio = false;
-		if (!ConfigureLaterEnemy() && !ConfigureExpansionEnemy() && !ConfigureClassicEnemy())
+		if (!Configure1782Enemy() && !ConfigureLaterEnemy() && !ConfigureExpansionEnemy() && !ConfigureClassicEnemy())
 		{
 			ConfigureBaselineEnemy();
 		}
@@ -2274,7 +2315,7 @@ public partial class Tile : MonoBehaviour
 			}
 			break;
 		default:
-			if (!CreateLaterAnimator() && !CreateExpansionAnimator() && !CreateClassicAnimator())
+			if (!Create1782Animator() && !CreateLaterAnimator() && !CreateExpansionAnimator() && !CreateClassicAnimator())
 			{
 				Debug.LogError(string.Format("TILE: ERROR: Unexpected AnimType of {0} for tile {1} - please extend function CreateAnimator to allow for {0} type Animations", animType, ToString()));
 			}
@@ -2376,6 +2417,7 @@ public partial class Tile : MonoBehaviour
 
 	public void Jump()
 	{
+		if (ExpansionGameplay.Classic1782 && (TileVal)TypeVal == TileVal.BeanLv34Jump1Tile) return;
 		if (ExpansionGameplay.Enabled && (IsSuperJump || IsSuccessiveJump))
 		{
 			SwitchAddition();
@@ -2697,6 +2739,8 @@ public partial class Tile : MonoBehaviour
 	{
 		bool flag = false;
 		dangerTypeUsed = ((!fakeDangerType.HasValue) ? dangerType : fakeDangerType.Value);
+		if (ExpansionGameplay.Classic1782 && IsHidden) return false;
+		if (Try1782KillBall(dangerTypeUsed, ballJumping, ballPos, out flag)) return flag;
 		if (ExpansionGameplay.Enabled && (TryLaterKillBall(dangerTypeUsed, ballJumping, ballPos, out flag) || TryExpansionKillBall(dangerTypeUsed, ballJumping, ballPos, out flag)))
 		{
 			return flag;

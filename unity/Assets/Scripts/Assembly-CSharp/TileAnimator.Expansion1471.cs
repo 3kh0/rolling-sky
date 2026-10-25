@@ -5,6 +5,7 @@ public partial class TileAnimator
 	private static bool AnimateExpansionTile(int row, int col)
 	{
 		if (!ExpansionGameplay.Enabled) return false;
+		if (Animate1782Tile(row, col)) return true;
 		if (AnimateLaterTile(row, col)) return true;
 		Tile tile = GameManager.TileBoard[animatedRows[row][col].index];
 		float distance = animatedRows[row].Distance;

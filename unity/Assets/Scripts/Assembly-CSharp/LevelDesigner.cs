@@ -686,7 +686,7 @@ public class LevelDesigner : MonoBehaviour
 
 	public static MathUtils.Range GlobalVelocityRange = new MathUtils.Range(3.75f, 8f);
 
-	private static WorldData[] worldData = new WorldData[23]
+	private static WorldData[] worldData = new WorldData[33]
 	{
 		new WorldData("1", 500, 0.525f, 0.525f, 1f, 6f),
 		new WorldData("2", 650, 0.625f, 0.625f, 1f, 7f),
@@ -710,10 +710,21 @@ public class LevelDesigner : MonoBehaviour
 		new WorldData("20", 650, 0.625f, 0.625f, 1f, 7f), // Native 13.
 		new WorldData("21", 1035, 0.725f, 0.8f, 1f, 5f), // Native 16.
 		new WorldData("22", 1070, 0.725f, 0.8f, 1f, 7f), // Native 22, 1.5.6.1.
-		new WorldData("23", 1040, 0.725f, 0.8f, 1f, 7f) // Native 24, 1.5.6.1.
+		new WorldData("23", 1040, 0.725f, 0.8f, 1f, 7f), // Native 24, 1.5.6.1.
+		// Native 27/28/29/33/35/36/37/38/40/41, 1.7.8.2.
+		new WorldData("24", 1130, 0.8f, 0.8f, 0.85f, 6f),
+		new WorldData("25", 1142, 0.87f, 1f, 1f, 7f),
+		new WorldData("26", 1050, 0.725f, 0.8f, 0.85f, 6f),
+		new WorldData("27", 712, 0.6f, 0.7f, 1f, 7f),
+		new WorldData("28", 728, 0.625f, 0.7f, 1f, 7f),
+		new WorldData("29", 456, 0.45f, 0.625f, 1f, 7f),
+		new WorldData("30", 1118, 0.87f, 0.9f, 0.9f, 6f),
+		new WorldData("31", 944, 0.625f, 0.625f, 1f, 7f),
+		new WorldData("32", 1100, 0.8f, 1f, 1f, 7f),
+		new WorldData("33", 845, 0.525f, 0.7f, 1f, 7f)
 	};
 
-	private static WorldRhythm[] worldRhythms = new WorldRhythm[23]
+	private static WorldRhythm[] worldRhythms = new WorldRhythm[33]
 	{
 		new WorldRhythm(new Period(100, SegmentType.Level)),
 		new WorldRhythm(new Period(100, SegmentType.Level)),
@@ -737,10 +748,21 @@ public class LevelDesigner : MonoBehaviour
 		new WorldRhythm(new Period(100, SegmentType.Level)),
 		new WorldRhythm(new Period(100, SegmentType.Level)),
 		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		// The 1.7.8.2 donor uses a single Level period for each added world.
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
+		new WorldRhythm(new Period(100, SegmentType.Level)),
 		new WorldRhythm(new Period(100, SegmentType.Level))
 	};
 
-	private static WorldTheme[] worldThemes = new WorldTheme[23]
+	private static WorldTheme[] worldThemes = new WorldTheme[33]
 	{
 		new WorldTheme(new Theme(0, 1, 1f), new Theme(105, 2, 1f), new Theme(207, 3, 1f, true), new Theme(312, 9, 1f, false, false, false, false, false, false), new Theme(415, 1, 1f)),
 		new WorldTheme(new Theme(0, 2, 1f), new Theme(123, 5, 1f, false, true, true), new Theme(306, 4, 1f), new Theme(551, 2, 1f)),
@@ -766,19 +788,47 @@ public class LevelDesigner : MonoBehaviour
 		new WorldTheme(new Theme(0, 9, 1f, false, false, false, false, false, false), new Theme(166, 37, 1f, false, false, false, false, false, false), new Theme(292, 9, 1f, false, false, false, false, false, false), new Theme(398, 37, 1f), new Theme(479, 9, 1f, false, false, false, false, false, false)),
 		new WorldTheme(new Theme(0, 31, 1f, false, false, false, false, true, true, true, false, false, true, false, false, false, false), new Theme(197, 31, 1f, false, false, false, false, true, true, true, true, false, false, false, false, false, false), new Theme(345, 38, 1f, true), new Theme(510, 31, 1f, false, false, false, false, true, true, true, true, false, true, false, false, false, false), new Theme(725, 38, 1f, true), new Theme(897, 31, 1f, false, false, false, false, true, false, true, false, false, true, false, false)),
 		new WorldTheme(new Theme(0, 39, 1f, false, false, false, false, false, true), new Theme(282, 40, 1f, false, false, false, false, false, true), new Theme(440, 39, 1f, false, false, false, false, false, true), new Theme(601, 40, 1f, false, false, false, false, false, true), new Theme(761, 39, 1f, false, false, false, false, false, true), new Theme(921, 40, 1f, false, false, false, false, false, true)),
-		new WorldTheme(new Theme(0, 42, 1f, false, false, false, false, false, true), new Theme(141, 41, 1f, false, false, false, false, false, true), new Theme(281, 42, 1f, false, false, false, false, false, true), new Theme(431, 41, 1f, false, false, false, false, false, true), new Theme(571, 42, 1f, false, false, false, false, false, true), new Theme(716, 41, 1f, false, false, false, false, false, true), new Theme(850, 42, 1f, false, false, false, false, false, true), new Theme(1000, 41, 1f, false, false, false, false, false, true))
+		new WorldTheme(new Theme(0, 42, 1f, false, false, false, false, false, true), new Theme(141, 41, 1f, false, false, false, false, false, true), new Theme(281, 42, 1f, false, false, false, false, false, true), new Theme(431, 41, 1f, false, false, false, false, false, true), new Theme(571, 42, 1f, false, false, false, false, false, true), new Theme(716, 41, 1f, false, false, false, false, false, true), new Theme(850, 42, 1f, false, false, false, false, false, true), new Theme(1000, 41, 1f, false, false, false, false, false, true)),
+		// Exact 1.7.8.2 schedules, using separate runtime palette slots 45..62.
+		new WorldTheme(new Theme(0, 48, 1f, false, false, false, false, false, true), new Theme(156, 47, 1f, false, false, false, false, false, true), new Theme(352, 48, 1f, false, false, false, false, false, true), new Theme(444, 47, 1f, false, false, false, false, false, true), new Theme(513, 48, 1f, false, false, false, false, false, true), new Theme(705, 47, 1f, false, false, false, false, false, true), new Theme(859, 48, 1f, false, false, false, false, false, true), new Theme(975, 47, 1f, false, false, false, false, false, true)),
+		new WorldTheme(new Theme(0, 51, 1f, false, false, false, false, false, true), new Theme(103, 51, 1f, false, false, false, false, false, true), new Theme(558, 52, 1f, false, false, false, false, false, true), new Theme(885, 51, 1f, false, false, false, false, false, true), new Theme(1000, 51, 1f, false, false, false, false, false, true)),
+		new WorldTheme(new Theme(0, 50, 1f, false, false, false, false, false, true), new Theme(168, 49, 1f, false, false, false, false, false, true), new Theme(294, 50, 1f, false, false, false, false, false, true), new Theme(411, 49, 1f, false, false, false, false, false, true), new Theme(641, 50, 1f, false, false, false, false, false, true), new Theme(791, 49, 1f, false, false, false, false, false, true), new Theme(874, 50, 1f, false, false, false, false, false, true), new Theme(1009, 49, 1f, false, false, false, false, false, true)),
+		new WorldTheme(new Theme(0, 52, 1f, false, false, false, false, false, true), new Theme(321, 51, 1f, false, false, false, false, false, true)),
+		new WorldTheme(new Theme(0, 55, 1f, false, false, true, false, false, true), new Theme(162, 56, 1f, false, false, true, false, false, true), new Theme(327, 55, 1f, false, false, true, false, false, true), new Theme(401, 56, 1f, false, false, true, false, false, true), new Theme(557, 55, 1f, false, false, true, false, false, true)),
+		new WorldTheme(new Theme(0, 57, 1f), new Theme(145, 45, 1f), new Theme(238, 46, 1f), new Theme(339, 57, 1f)),
+		CreateNeonTheme(),
+		new WorldTheme(new Theme(0, 54, 1f, false, false, false, false, false, true), new Theme(186, 53, 1f, false, false, false, false, false, true), new Theme(414, 54, 1f, false, false, false, false, false, true), new Theme(527, 53, 1f, false, false, false, false, false, true)),
+		new WorldTheme(new Theme(0, 61, 1f, false, false, true, false, false, true), new Theme(133, 62, 1f, false, false, true, false, false, true), new Theme(256, 61, 1f, false, false, true, false, false, true), new Theme(478, 62, 1f, false, false, true, false, false, true), new Theme(621, 61, 1f, false, false, true, false, false, true), new Theme(844, 62, 1f, false, false, true, false, false, true), new Theme(1003, 61, 1f, false, false, true, false, false, true)),
+		new WorldTheme(new Theme(0, 62, 1f, false, false, true, false, false, true), new Theme(174, 61, 1f, false, false, true, false, false, true), new Theme(290, 62, 1f, false, false, true, false, false, true), new Theme(468, 61, 1f, false, false, true, false, false, true), new Theme(651, 62, 1f, false, false, true, false, false, true))
 	};
+
+	private static WorldTheme CreateNeonTheme()
+	{
+		// Native level 37 has a denser beat-flash schedule at High quality.
+		int[] rows = DeviceQualityChecker.QualityIsHigh()
+			? new int[] { 0, 141, 144, 147, 150, 153, 157, 159, 161, 164, 167, 170, 173, 176, 179, 193, 256, 291, 302, 326, 330, 334, 339, 398, 401, 418, 556, 628, 660, 695, 730, 772, 834 }
+			: new int[] { 0, 141, 256, 398, 628, 772, 834 };
+		Theme[] themes = new Theme[rows.Length];
+		for (int i = 0; i < rows.Length; i++)
+		{
+			int theme = i == 0 || i == rows.Length - 1 ? 60 : i % 2 == 1 ? 59 : 58;
+			themes[i] = new Theme(rows[i], theme, 1f, false, false, false, true, true, true, true,
+				false, false, true, false, i != rows.Length - 1, false, false);
+		}
+		return new WorldTheme(themes);
+	}
 
 	// Runtime theme slots 17 onward, in order. Donor 2/3 get separate slots:
 	// their 1.4.7.1 palettes differ from the accepted baseline worlds 2/3.
 	// Slots 39..44 contain 1.5.6.1 donor themes 37..42 in a distinct resource root.
 	private static readonly int[] expansionDonorThemes = { 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 34, 35, 36, 2, 3, 37, 38, 39, 40, 41, 42 };
-	public static int ClassicThemeCount { get { return 16 + expansionDonorThemes.Length; } }
+	private static readonly int[] newerDonorThemes = { 2, 16, 41, 42, 43, 44, 45, 46, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 };
+	public static int ClassicThemeCount { get { return 44 + newerDonorThemes.Length; } }
 	public static bool IsClassicWorld { get { return GameManager.WorldIndex >= 5; } }
 
 	public static string ClassicThemeResourceRoot(int runtimeThemeNumber)
 	{
-		return runtimeThemeNumber >= 39 ? "Classic1561" : "Classic1471";
+		return runtimeThemeNumber >= 45 ? "Classic1782" : runtimeThemeNumber >= 39 ? "Classic1561" : "Classic1471";
 	}
 
 	public static bool HasWorldData(int worldNumber)
@@ -813,7 +863,8 @@ public class LevelDesigner : MonoBehaviour
 	{
 		if (runtimeThemeNumber == 9) return 6;
 		if (runtimeThemeNumber >= 10 && runtimeThemeNumber <= 16) return runtimeThemeNumber - 2;
-		if (runtimeThemeNumber >= 17 && runtimeThemeNumber <= ClassicThemeCount) return expansionDonorThemes[runtimeThemeNumber - 17];
+		if (runtimeThemeNumber >= 17 && runtimeThemeNumber <= 44) return expansionDonorThemes[runtimeThemeNumber - 17];
+		if (runtimeThemeNumber >= 45 && runtimeThemeNumber <= ClassicThemeCount) return newerDonorThemes[runtimeThemeNumber - 45];
 		return runtimeThemeNumber;
 	}
 

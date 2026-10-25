@@ -52,7 +52,7 @@ public partial class Ball
 		if (state == State.BrideDown)
 		{
 			Vector3 target = position; target.z = -0.5f;
-			position = Vector3.MoveTowards(position, target, Time.deltaTime * 4f);
+			position = ExpansionGameplay.Classic1782 ? target : Vector3.MoveTowards(position, target, Time.deltaTime * 4f);
 			// Native changes to Rolling immediately, not on arrival.
 			state = State.Rolling;
 		}

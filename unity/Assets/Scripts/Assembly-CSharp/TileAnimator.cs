@@ -51,6 +51,7 @@ public partial class TileAnimator : MonoBehaviour
 		private float? distance;
 
 		public bool IsPlayed;
+		public bool IsReset;
 
 		public int SegmentNum { get; private set; }
 
@@ -159,6 +160,7 @@ public partial class TileAnimator : MonoBehaviour
 				distance = null;
 			}
 			IsPlayed = false;
+			IsReset = false;
 		}
 
 		public bool JustSwitchedCycle(int tileNum, bool newCycle)

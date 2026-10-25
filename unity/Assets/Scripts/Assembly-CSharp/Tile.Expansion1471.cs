@@ -18,6 +18,7 @@ public partial class Tile
 	private void ResetExpansionVariables()
 	{
 		isTrigger = isEat = IsStarJumpSlider = IsNeedRotation = rotationParentApplied = yAngleIsInit = isBroken = false;
+		IsHidden = IsShootBall = isQuery = false;
 		IsSuccessiveJump = IsSimulationJump = false;
 		CrownIndex = 0;
 		yAngle = null;
@@ -41,6 +42,7 @@ public partial class Tile
 
 	private void ConfigureExpansionTrigger()
 	{
+		if (Configure1782Bean()) return;
 		if (ConfigureLaterBean()) return;
 		HasAddition = true;
 		HasAudio = true;
@@ -283,6 +285,7 @@ public partial class Tile
 	}
 	public void EatBean()
 	{
+		if (Eat1782Bean()) return;
 		if (EatLaterBean()) return;
 		if ((TileVal)TypeVal == TileVal.EnemyBigBean)
 		{
