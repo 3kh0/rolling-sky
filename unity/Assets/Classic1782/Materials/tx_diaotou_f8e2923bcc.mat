@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: tx_diaotou
+  m_Shader: {fileID: 4800000, guid: a3fa737dcf5df28d9fe6ff383cd8377b, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: ac972309f0c96275b2659ce45d35b946, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats:
+    - first:
+        name: _AllPower
+      second: 3.5999999046325684
+    - first:
+        name: _AlphaPower
+      second: 1.0800000429153442
+    - first:
+        name: _BumpScale
+      second: 1.0
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1.0
+    - first:
+        name: _DstBlend
+      second: 0.0
+    - first:
+        name: _Gloss
+      second: 0.8799999952316284
+    - first:
+        name: _GlossMapScale
+      second: 1.0
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1.0
+    - first:
+        name: _InnerColorPower
+      second: 0.7850000262260437
+    - first:
+        name: _InvFade
+      second: 1.0
+    - first:
+        name: _Metallic
+      second: 0.0
+    - first:
+        name: _Mode
+      second: 0.0
+    - first:
+        name: _OcclusionStrength
+      second: 1.0
+    - first:
+        name: _Parallax
+      second: 0.019999999552965164
+    - first:
+        name: _RimPower
+      second: 4.610000133514404
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0.0
+    - first:
+        name: _Specular
+      second: -0.17000000178813934
+    - first:
+        name: _SpecularHighlights
+      second: 1.0
+    - first:
+        name: _SrcBlend
+      second: 1.0
+    - first:
+        name: _UVSec
+      second: 0.0
+    - first:
+        name: _ZWrite
+      second: 1.0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.524340808391571, g: 1.0, b: 0.4852941036224365, a: 1.0}
+    - first:
+        name: _EmissionColor
+      second: {r: 0.0, g: 0.0, b: 0.0, a: 1.0}
+    - first:
+        name: _InnerColor
+      second: {r: 0.0, g: 1.0, b: 0.5448274612426758, a: 0.5}
+    - first:
+        name: _RimColor
+      second: {r: 0.0, g: 1.0, b: 0.08965516090393066, a: 0.5}
+    - first:
+        name: _TintColor
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: 14_Box
+  m_Shader: {fileID: 4800000, guid: b161f72fad1d1cc4e8cf8a14ff55a961, type: 3}
+  m_ShaderKeywords: ''
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 9148344ebca6b5f403dd2cbfac92bbb6, type: 2}
+        m_Scale: {x: 1.0, y: 1.0}
+        m_Offset: {x: 0.0, y: 0.0}
+    m_Floats:
+    - first:
+        name: _Alpha
+      second: 1.0
+    - first:
+        name: _Boost
+      second: 5.0
+    - first:
+        name: _Gloss
+      second: 0.10000000149011612
+    - first:
+        name: _Length
+      second: 8.0
+    - first:
+        name: _Shininess
+      second: 1.0
+    - first:
+        name: _Specular
+      second: 0.30000001192092896
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first:
+        name: _ColorB
+      second: {r: 0.6218562126159668, g: 0.6057385802268982, b: 0.5739738345146179, a: 1.0}
+    - first:
+        name: _ColorF
+      second: {r: 0.9058823585510254, g: 0.48627451062202454, b: 0.4470588266849518, a: 1.0}
+    - first:
+        name: _ColorG
+      second: {r: 0.1882352977991104, g: 0.9372549057006836, b: 0.9725490212440491, a: 1.0}
+    - first:
+        name: _ColorR
+      second: {r: 0.6235294342041016, g: 0.6039215922355652, b: 0.572549045085907, a: 1.0}
+    - first:
+        name: _ColorS
+      second: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+    - first:
+        name: _ColrB
+      second: {r: 1.0, g: 0.6313725709915161, b: 0.33725491166114807, a: 1.0}
+    - first:
+        name: _ColrG
+      second: {r: 0.1882352977991104, g: 0.9372549057006836, b: 0.9725490212440491, a: 1.0}
+    - first:
+        name: _ColrR
+      second: {r: 0.6235294342041016, g: 0.6000000238418579, b: 0.5647059082984924, a: 1.0}

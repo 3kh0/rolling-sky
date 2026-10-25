@@ -16,6 +16,22 @@ public static class ClassicContentValidation
 	public static void Validate()
 	{
 		Require(Application.unityVersion == "2017.4.40f1", "Wrong editor version");
+		for (int difficulty = 0; difficulty < 26; difficulty++)
+			Require(new SegmentID(SegmentType.Level, difficulty).DifficultyChar == ((char)('A' + difficulty)).ToString(),
+				"Changed original segment label " + difficulty);
+		Require(new SegmentID(SegmentType.Level, 26).ToString() == "LevelAA" &&
+			new SegmentTracker.SegmentID(1, SegmentType.Level, 32, 7, 10).ToString() == "Level AG7",
+			"Extended segment labels cannot describe the added worlds");
+		GameObject recycledRoot = new GameObject("Hidden tile reset validation");
+		try
+		{
+			Tile tile = recycledRoot.AddComponent<Tile>();
+			tile.HideRoot(true);
+			Require(tile.IsHidden && !recycledRoot.activeSelf, "Hidden tile did not hide its root");
+			tile.ResetVariables();
+			Require(!tile.IsHidden && recycledRoot.activeSelf, "Recycled hidden tile remained inactive");
+		}
+		finally { UnityEngine.Object.DestroyImmediate(recycledRoot); }
 		int checkedCells = 0;
 		foreach (SegmentType type in new SegmentType[] { SegmentType.Level, SegmentType.End })
 		{

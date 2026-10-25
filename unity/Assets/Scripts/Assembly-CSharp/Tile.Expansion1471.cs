@@ -18,6 +18,7 @@ public partial class Tile
 	private void ResetExpansionVariables()
 	{
 		isTrigger = isEat = IsStarJumpSlider = IsNeedRotation = rotationParentApplied = yAngleIsInit = isBroken = false;
+		if (IsHidden) HideRoot(false);
 		IsHidden = IsShootBall = isQuery = false;
 		IsSuccessiveJump = IsSimulationJump = false;
 		CrownIndex = 0;

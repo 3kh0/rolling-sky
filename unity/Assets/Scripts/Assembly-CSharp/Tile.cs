@@ -1120,7 +1120,8 @@ public partial class Tile : MonoBehaviour
 			ConfigureBaselineEnemy();
 		}
 		if (ExpansionGameplay.Enabled) ConfigureExpansionSharedEnemy();
-		if (LevelDesigner.IsClassicWorld)
+		if (ExpansionGameplay.Classic1782) Configure1782SharedEnemy();
+		if (LevelDesigner.IsClassicWorld && !ExpansionGameplay.Classic1782)
 		{
 			AdditionPrefabID = new PrefabID(AdditionPrefabID.prefabType, ClassicPrefab(AdditionPrefabID.prefabName));
 			AdditionPrefabID = BufferManager.ClassicPrefabID(AdditionPrefabID);
@@ -1729,7 +1730,8 @@ public partial class Tile : MonoBehaviour
 			HasPickup = true;
 			CanHaveMiniPickup = false;
 		}
-		else if (AdditionPrefabID.prefabType != PrefabType.Enemy && AdditionPrefabID.prefabType != PrefabType.Arrow)
+		else if (AdditionPrefabID.prefabType != PrefabType.Enemy && AdditionPrefabID.prefabType != PrefabType.Arrow &&
+			!(ExpansionGameplay.Classic1782 && (type == Type.Bean || type == Type.LaserTrigger || type == Type.BackwardQuery)))
 		{
 			Debug.LogError(string.Format("TILE: ERROR: Attempt to add unexpected addition of {0} to Tile {1} - check Tile.AddAdditionPrefabToTile() function's logic", AdditionPrefabID, ToString()));
 		}
@@ -2071,6 +2073,8 @@ public partial class Tile : MonoBehaviour
 			geo.localPosition = Vector3.zero;
 			AudioSource component = geo.GetComponent<AudioSource>();
 			component.clip = GameManager.Sounds[soundName];
+			if (ExpansionGameplay.Classic1782 && soundName == AudioName.Jump)
+				component.volume = (TileVal)TypeVal == TileVal.BeanLv34Jump1Tile ? 0.25f : 0.6f;
 			component.Play();
 		}
 	}
@@ -2417,7 +2421,6 @@ public partial class Tile : MonoBehaviour
 
 	public void Jump()
 	{
-		if (ExpansionGameplay.Classic1782 && (TileVal)TypeVal == TileVal.BeanLv34Jump1Tile) return;
 		if (ExpansionGameplay.Enabled && (IsSuperJump || IsSuccessiveJump))
 		{
 			SwitchAddition();
@@ -2504,6 +2507,7 @@ public partial class Tile : MonoBehaviour
 			for (int i = 0; i < length; i++)
 			{
 				MathUtils.IntTrio intTrio = tileSection[i];
+				if (ExpansionGameplay.Classic1782 && GameManager.TileBoard[intTrio].IsHidden) continue;
 				if (MathUtils.IntTrio.AreNotEqual(intTrio, Index))
 				{
 					GameManager.TileBoard[intTrio].GeoTransform.parent = GeoTransform;

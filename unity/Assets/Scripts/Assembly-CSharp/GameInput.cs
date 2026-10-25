@@ -188,6 +188,7 @@ public class GameInput : MonoBehaviour
 		if (inputState != InputState.None && inputState != InputState.Depressed)
 		{
 			float x = Input.mousePosition.x;
+			if (ExpansionGameplay.Classic1782 && Ball.Classic1782ReverseInput) x = screenWidth - x;
 			switch (inputState)
 			{
 			case InputState.FirstPress:
@@ -287,6 +288,7 @@ public class GameInput : MonoBehaviour
 		{
 			// Only the steering target changes. OnPress still starts the run, and
 			// Ball keeps its original smoothing, forward movement and collisions.
+			if (ExpansionGameplay.Classic1782 && Ball.Classic1782ReverseInput) mousePosition = 1f - mousePosition;
 			GameManager.OnInput(mousePosition * 5f);
 		}
 		if (isSmartDepressing)

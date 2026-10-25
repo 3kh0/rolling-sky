@@ -80,6 +80,7 @@ public partial class LevelConstructor : MonoBehaviour
 		segmentHasDangerSpreaders = false;
 		if (segmentsTravelled == 0)
 		{
+			Ball.Classic1782OutsideWalls.Clear();
 			if (worldParent != null)
 			{
 				worldParent.name += "OLD";

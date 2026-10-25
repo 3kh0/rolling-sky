@@ -3,6 +3,63 @@ using UnityEngine;
 // Ported from the Mono 1.7.8.2 source; selected by resource identity, not slot.
 public partial class Tile
 {
+	// Native theme-dependent variants of hazards shared with earlier donors.
+	// Keep native names until BufferManager resolves the typed1782 alias.
+	private void Configure1782SharedEnemy()
+	{
+		int theme = LevelDesigner.GeneratingDonorThemeNumber;
+		bool laser = theme == 50 || theme == 51;
+		bool winter = theme == 52 || theme == 53;
+		bool neon = theme == 55 || theme == 56 || theme == 57;
+		bool egypt = theme == 58 || theme == 59;
+		bool halloween = theme == 47 || theme == 48 || theme == 49;
+		PrefabName prefab = AdditionPrefabID.prefabName;
+		switch (dangerType)
+		{
+		case DangerType.Riser:
+		case DangerType.RiserSlider:
+			if (!LevelDesigner.GenerateTrees && !LevelDesigner.GeneratePyramids)
+			{
+				if (laser) prefab = PrefabName.EnemyLv32ColumnSlider;
+				else if (winter) prefab = PrefabName.EnemyLv34ColumnSlider;
+			}
+			break;
+		case DangerType.TallTree:
+		case DangerType.TallTreeSlider:
+			if (!LevelDesigner.GenerateTowers && !LevelDesigner.GenerateTeslas && !LevelDesigner.GenerateBuildings)
+			{
+				if (laser) prefab = PrefabName.EnemyLv32LongColumnSlider;
+				else if (winter) prefab = PrefabName.EnemyLv34Tree2;
+			}
+			break;
+		case DangerType.Roller:
+			if (theme == 45 || theme == 46) prefab = PrefabName.EnemyLv28GunLun;
+			else if (laser) prefab = PrefabName.EnemyLv32GunLun;
+			else if (winter) prefab = PrefabName.EnemyLv34GunLun;
+			else if (neon) prefab = PrefabName.EnemyLv37GunLun;
+			break;
+		case DangerType.Pillar:
+		case DangerType.PillarSafe:
+		case DangerType.PillarSlider:
+		case DangerType.PillarSafeSlider:
+			if (egypt) prefab = PrefabName.Lv9Pillar;
+			else if (halloween || winter || neon) prefab = PrefabName.Lv10Pillar;
+			break;
+		case DangerType.PillarLaser:
+			if (halloween || winter) prefab = PrefabName.Lv9PillarLaser;
+			break;
+		case DangerType.Switcher:
+			if (halloween || winter || neon) prefab = PrefabName.Lv10Pillar;
+			break;
+		case DangerType.EnemyJumpFromL1: if (egypt) prefab = PrefabName.EnemyLv40DownJumpFromL1; break;
+		case DangerType.EnemyJumpFromR1: if (egypt) prefab = PrefabName.EnemyLv40DownJumpFromR1; break;
+		case DangerType.EnemyJumpFromL2: if (egypt) prefab = PrefabName.EnemyLv40DownJumpFromL2; break;
+		case DangerType.EnemyJumpFromR2: if (egypt) prefab = PrefabName.EnemyLv40DownJumpFromR2; break;
+		case DangerType.EnemySkeletonHand: if (halloween) prefab = PrefabName.EnemyLv30SkeletonHand; break;
+		}
+		AdditionPrefabID = new PrefabID(AdditionPrefabID.prefabType, prefab);
+	}
+
 	private bool Configure1782Enemy()
 	{
 		if (!ExpansionGameplay.Classic1782) return false;
@@ -652,7 +709,7 @@ public partial class Tile
 		case (int)TileVal.BackwardQueryLv26shunyiStart:
 
 			animType = AnimType.BackwardQueryLv26shunyiStart;
-			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.BackwardQueryLv26shunyiStart);
+			AdditionPrefabID = new PrefabID(PrefabType.BackwardQuery, PrefabName.BackwardQueryLv26shunyiStart);
 			IsAdditionSwitchable = false;
 			HasAudio = false;
 			HasAltAudio = false;
@@ -660,7 +717,7 @@ public partial class Tile
 		case (int)TileVal.BackwardQueryLv26shunyiEnd:
 
 			animType = AnimType.BackwardQueryLv26shunyiStart;
-			AdditionPrefabID = new PrefabID(PrefabType.Bean, PrefabName.BackwardQueryLv26shunyiEnd);
+			AdditionPrefabID = new PrefabID(PrefabType.BackwardQuery, PrefabName.BackwardQueryLv26shunyiEnd);
 			IsAdditionSwitchable = false;
 			HasAudio = false;
 			HasAltAudio = false;

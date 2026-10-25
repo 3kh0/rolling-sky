@@ -52,13 +52,20 @@ public partial class LevelConstructor
 				tile.HideRoot(true);
 				return tile;
 		case (int)TileVal.EnemyLv40DownPickupStarGround:
-			tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Ground, Tile.PickupType.Star);
-			tile.HideRoot(true);
-			return tile;
 		case (int)TileVal.EnemyLv40DownPickupStarJump:
-			tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Jump, Tile.PickupType.Star);
+		{
+			Tile.Type type = tileTypeVal == (int)TileVal.EnemyLv40DownPickupStarGround ? Tile.Type.Ground : Tile.Type.Jump;
+			int index = 0;
+			if (ClassicCrownRandom.Enabled && ClassicCrownRandom.GetCrownTypeOnCreate(ref index) == ClassicCrownRandom.CrownType.NOTHING)
+				tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, type);
+			else
+			{
+				tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, type, Tile.PickupType.Star);
+				tile.CrownIndex = index;
+			}
 			tile.HideRoot(true);
 			return tile;
+		}
 		case (int)TileVal.EnemyLv40DownPillar1:
 
 				tile = MakeAsset(tileTypeVal, segmentOffset, segmentNum, rowNum, tileNum, tileFlipped, Tile.Type.Enemy, Tile.DangerType.Pillar, 1f);

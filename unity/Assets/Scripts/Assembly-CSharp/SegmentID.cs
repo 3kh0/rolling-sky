@@ -32,7 +32,15 @@ public struct SegmentID
 	{
 		get
 		{
-			return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Difficulty].ToString();
+			int value = Difficulty;
+			string label = string.Empty;
+			do
+			{
+				label = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[value % 26] + label;
+				value = value / 26 - 1;
+			}
+			while (value >= 0);
+			return label;
 		}
 	}
 

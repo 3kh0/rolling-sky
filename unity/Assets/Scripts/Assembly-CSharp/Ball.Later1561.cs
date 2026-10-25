@@ -3,6 +3,8 @@ using UnityEngine;
 public partial class Ball
 {
 	public Transform SuccessiveJumpGroup;
+	internal Transform Classic1561SuccessiveJumpGroup;
+	internal Transform Classic1782SuccessiveJumpGroup;
 	public AudioSource SuccessiveJumperSound;
 	public AudioSource AccelerateSound;
 	public AudioSource DecelerationSound;
@@ -84,7 +86,11 @@ public partial class Ball
 		{
 			if (successiveJumpIndex <= successiveJumpDistance.Length && currentTile != null) Jump(currentTile, false, false);
 		}
-		else state = State.Landing;
+		else
+		{
+			state = State.Landing;
+			if (ExpansionGameplay.Classic1782) mJumpState = JumpState.Normal;
+		}
 	}
 	private void UpdateSuccessiveSquash()
 	{

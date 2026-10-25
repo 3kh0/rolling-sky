@@ -124,9 +124,27 @@ public partial class Tile
 	}
 	private bool Eat1782Bean()
 	{
-		if (!ExpansionGameplay.Classic1782 || TypeVal < 2000) return false;
+		if (!ExpansionGameplay.Classic1782) return false;
 		switch (TypeVal)
 		{
+		case (int)TileVal.BeanLv25Accelerate:
+			GameManager.theBall.mBallSpeedcoefficient = 2f;
+			if (UserSettings.IsSoundOn() && !GameManager.DisableSounds) GameManager.theBall.AccelerateSound.Play();
+			isEat = true;
+			break;
+		case (int)TileVal.BeanLv25Deceleration:
+			GameManager.theBall.mBallSpeedcoefficient = 0.5f;
+			if (UserSettings.IsSoundOn() && !GameManager.DisableSounds) GameManager.theBall.DecelerationSound.Play();
+			isEat = true;
+			break;
+		case (int)TileVal.BeanLv25BrigdeUp:
+			GameManager.theBall.state = Ball.State.BrideUp;
+			isEat = true;
+			break;
+		case (int)TileVal.BeanLv25BrigdeDown:
+			GameManager.theBall.state = Ball.State.BrideDown;
+			isEat = true;
+			break;
 		case (int)TileVal.BeanLv28BouncePlate:
 
 			if (GameManager.theBall.state != Ball.State.Jumping)

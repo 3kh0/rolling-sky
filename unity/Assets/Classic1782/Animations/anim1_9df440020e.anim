@@ -1,0 +1,718 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Name: anim1
+  m_Legacy: 1
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.7071068286895752, y: 0.0, z: -0.0, w: 0.7071068286895752}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_2
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.76220703125, z: 0.0}
+        inSlope: {x: -0.0, y: 8.881783349968305e-15, z: -0.0}
+        outSlope: {x: -0.0, y: 8.881783349968305e-15, z: -0.0}
+      - time: 0.1666666716337204
+        value: {x: -0.0, y: 0.76220703125, z: 0.0}
+        inSlope: {x: -0.0, y: 3.806479244083732e-15, z: -0.0}
+        outSlope: {x: -0.0, y: 3.3351655019941973e-06, z: -0.0}
+      - time: 0.5
+        value: {x: -0.0, y: 2.4321417808532715, z: 0.0}
+        inSlope: {x: -0.0, y: 1.9758224487304688, z: -0.0}
+        outSlope: {x: -0.0, y: 1.9757845401763916, z: -0.0}
+      - time: 0.6333333253860474
+        value: {x: -0.0, y: 2.4321417808532715, z: 0.0}
+        inSlope: {x: -0.0, y: -5.140735083841719e-06, z: -0.0}
+        outSlope: {x: -0.0, y: 5.3290661136294257e-14, z: -0.0}
+      - time: 2.299999952316284
+        value: {x: -0.0, y: 2.4321417808532715, z: 0.0}
+        inSlope: {x: -0.0, y: 2.2838896640326074e-14, z: -0.0}
+        outSlope: {x: -0.0, y: 5.329075600398435e-14, z: -0.0}
+      - time: 2.633333444595337
+        value: {x: -0.0, y: 2.4321417808532715, z: 0.0}
+        inSlope: {x: -0.0, y: 2.28387340100002e-14, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0010267875622957945, z: -0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.0, y: 0.76220703125, z: 0.0}
+        inSlope: {x: -0.0, y: 0.0007061765063554049, z: -0.0}
+        outSlope: {x: -0.0, y: 0.0007061765063554049, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 0.1666666716337204
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: 1.7307631878793472e-06, z: -0.0}
+      - time: 0.20000000298023224
+        value: {x: -0.0, y: 0.03304252400994301, z: 0.0}
+        inSlope: {x: -0.0, y: 1.850999116897583, z: -0.0}
+        outSlope: {x: -0.0, y: 1.8510035276412964, z: -0.0}
+      - time: 0.23333333432674408
+        value: {x: -0.0, y: 0.12339986860752106, z: 0.0}
+        inSlope: {x: -0.0, y: 3.3733296394348145, z: -0.0}
+        outSlope: {x: -0.0, y: 3.373321056365967, z: -0.0}
+      - time: 0.4333333373069763
+        value: {x: -0.0, y: 1.1340183019638062, z: 0.0}
+        inSlope: {x: -0.0, y: 4.2410759925842285, z: -0.0}
+        outSlope: {x: -0.0, y: 4.241096496582031, z: -0.0}
+      - time: 0.5333333611488342
+        value: {x: -0.0, y: 1.3626959323883057, z: 0.0}
+        inSlope: {x: -0.0, y: 0.36202874779701233, z: -0.0}
+        outSlope: {x: -0.0, y: 0.3620373010635376, z: -0.0}
+      - time: 0.6666666865348816
+        value: {x: -0.0, y: 1.3345669507980347, z: 0.0}
+        inSlope: {x: -0.0, y: -8.467243787890766e-06, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.3333332538604736
+        value: {x: -0.0, y: 1.3345669507980347, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0, z: -0.0}
+      - time: 2.633333444595337
+        value: {x: -0.0, y: 1.3345669507980347, z: 0.0}
+        inSlope: {x: -0.0, y: -0.0, z: -0.0}
+        outSlope: {x: -0.0, y: -0.0007857263553887606, z: -0.0}
+      - time: 2.6666667461395264
+        value: {x: -0.0, y: 0.0, z: 0.0}
+        inSlope: {x: -0.0, y: 0.0005848411237820983, z: -0.0}
+        outSlope: {x: -0.0, y: 0.0005848411237820983, z: -0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_2
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.6666667461395264
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.6666667461395264
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.0
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      - time: 2.6666667461395264
+        value: {x: 1.0, y: 1.0, z: 1.0}
+        inSlope: {x: 0.0, y: 0.0, z: 0.0}
+        outSlope: {x: 0.0, y: 0.0, z: 0.0}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: level_26_zhuzi01_2
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 30.0
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0.0, y: 0.9580893516540527, z: 0.0}
+    m_Extent: {x: 0.5, y: 1.7786900997161865, z: 0.5000000596046448}
+  m_MuscleClipSize: 0
+  m_MuscleClip:
+    serializedVersion: 2
+    m_DeltaPose:
+      m_RootX:
+        t:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        q:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+        s:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+      m_LookAtPosition:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      m_LookAtWeight:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 0.0
+      m_GoalArray:
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      - m_X:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_WeightT: 0.0
+        m_WeightR: 0.0
+        m_HintT:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        m_HintWeightT: 0.0
+      m_LeftHandPose:
+        m_GrabX:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_DoFArray:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        m_Override: 0.0
+        m_CloseOpen: 0.0
+        m_InOut: 0.0
+        m_Grab: 0.0
+      m_RightHandPose:
+        m_GrabX:
+          t:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+          q:
+            x: 0.0
+            y: 0.0
+            z: 0.0
+            w: 1.0
+          s:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+        m_DoFArray:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        m_Override: 0.0
+        m_CloseOpen: 0.0
+        m_InOut: 0.0
+        m_Grab: 0.0
+      m_DoFArray:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      m_TDoFArray:
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+      - x: 0.0
+        y: 0.0
+        z: 0.0
+    m_StartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_LeftFootStartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_RightFootStartX:
+      t:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      q:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      s:
+        x: 1.0
+        y: 1.0
+        z: 1.0
+    m_AverageSpeed:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    m_Clip:
+      data:
+        m_StreamedClip:
+          data: []
+          curveCount: 0
+        m_DenseClip:
+          m_FrameCount: 0
+          m_CurveCount: 0
+          m_SampleRate: 0.0
+          m_BeginTime: 0.0
+          m_SampleArray: []
+        m_ConstantClip:
+          data: []
+        m_Binding:
+          data:
+            m_ValueArray: []
+    m_StartTime: 0.0
+    m_StopTime: 1.0
+    m_OrientationOffsetY: 0.0
+    m_Level: 0.0
+    m_CycleOffset: 0.0
+    m_AverageAngularSpeed: 0.0
+    m_IndexArray:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    m_ValueArrayDelta: []
+    m_ValueArrayReferencePose: []
+    m_Mirror: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_Events: []

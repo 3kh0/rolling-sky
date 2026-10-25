@@ -20,20 +20,38 @@ public partial class Ball
 	public static bool IsLv4OHiddenMode;
 	public static readonly List<Vector3> Classic1782OutsideWalls = new List<Vector3>();
 	private int classic1782LastRevealRow = -1;
+	private FrameAnim.Frame ballPowerupShootBallJump;
+	private bool shootBallJumpBound;
+	private bool classic1782WasInitialized;
 
 	private void Reset1782Power()
 	{
+		bool current1782 = ExpansionGameplay.Classic1782;
+		if (current1782 || classic1782WasInitialized)
+		{
+			// Teleport scaling and jump-effect activation must not leak into
+			// the original worlds, whose FrameAnim.Show only moves the object.
+			GeoGroup.localScale = Vector3.one;
+			SuperJumpPowerupGroup.gameObject.SetActive(true);
+		}
+		classic1782WasInitialized = current1782;
 		mJumpState = JumpState.Normal;
 		mBackTileNumber = mChangeBallXPostion = mChangeBallYPostion = 0f;
 		mTempTime = 0.1f;
 		m_tempBallPos = Vector3.zero;
 		mIsBackJumping = Classic1782ReverseInput = IsLv4OHiddenMode = false;
 		mRevserBallNumber = classic1782LastRevealRow = -1;
-		if (ShootBallJumpPowerupGroup != null) ShootBallJumpPowerupGroup.gameObject.SetActive(false);
+		if (ShootBallJumpPowerupGroup != null)
+		{
+			ballPowerupShootBallJump = new FrameAnim.Frame(ShootBallJumpPowerupGroup);
+			shootBallJumpBound = true;
+			ballPowerupShootBallJump.Hide();
+		}
 		if (XunYunGroup != null) XunYunGroup.gameObject.SetActive(false);
 	}
 
 	public void ShowXunYunEffects(bool show) { XunYunGroup.gameObject.SetActive(show); }
+	private void Hide1782BasketballPowerup() { if (shootBallJumpBound) ballPowerupShootBallJump.Hide(); }
 
 	private float Start1782Jump(Tile tile)
 	{
@@ -57,7 +75,7 @@ public partial class Ball
 		case JumpState.SuperJump:
 		case JumpState.SuperJumperFictitious:
 		case JumpState.Jump10Tile:
-			ShootBallJumpPowerupGroup.gameObject.SetActive(false);
+			Hide1782BasketballPowerup();
 			ballPowerupSuperJump.Show();
 			SuperJumpPowerupGroup.gameObject.SetActive(true);
 			inSuperJump = true;
@@ -66,11 +84,11 @@ public partial class Ball
 		case JumpState.ShootBasketball:
 			inSuperJump = true;
 			SuperJumpPowerupGroup.gameObject.SetActive(false);
-			ShootBallJumpPowerupGroup.gameObject.SetActive(true);
+			ballPowerupShootBallJump.Show();
 			return 8f;
 		case JumpState.TripleJump: return StartSuccessiveJump();
 		default:
-			ShootBallJumpPowerupGroup.gameObject.SetActive(false);
+			Hide1782BasketballPowerup();
 			SuperJumpPowerupGroup.gameObject.SetActive(false);
 			return 4f;
 		}
@@ -164,8 +182,8 @@ public partial class Ball
 		return position;
 	}
 
-	// Called after the ball's position has advanced, before collision queries.
-	private void Update1782Floor()
+	// Native reveal runs on forward row transitions, before collision queries.
+	public void Update1782Floor()
 	{
 		if (!ExpansionGameplay.Classic1782 || GameManager.BallRowNum == classic1782LastRevealRow) return;
 		classic1782LastRevealRow = GameManager.BallRowNum;

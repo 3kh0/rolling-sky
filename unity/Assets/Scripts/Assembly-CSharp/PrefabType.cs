@@ -14,5 +14,6 @@ public enum PrefabType
 	Debug = 11,
 	Null = 12,
 	LaserTrigger = 13,
-	Bean = 14
+	Bean = 14,
+	BackwardQuery = 15
 }

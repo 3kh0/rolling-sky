@@ -7,14 +7,17 @@ public partial class BufferManager
 	private static readonly Dictionary<PrefabID, string> expansionPrefabPaths = new Dictionary<PrefabID, string>();
 	private static readonly Dictionary<PrefabID, PrefabID> earlierExpansionAliases = new Dictionary<PrefabID, PrefabID>();
 	private static readonly Dictionary<PrefabID, PrefabID> laterExpansionAliases = new Dictionary<PrefabID, PrefabID>();
+	private static readonly Dictionary<PrefabID, PrefabID> newerExpansionAliases = new Dictionary<PrefabID, PrefabID>();
 	private static readonly Dictionary<Transform, PrefabID> originalGeoIDs = new Dictionary<Transform, PrefabID>();
 	private static Material laterPropsMaterial;
+	private static Material newerPropsMaterial;
 
 	private static void RegisterExpansionPrefabs()
 	{
 		List<GeoBuffer> buffers = new List<GeoBuffer>(geoBuffers);
 		RegisterExpansion1471(buffers);
 		RegisterExpansion1561(buffers);
+		RegisterExpansion1782(buffers);
 		geoBuffers = buffers.ToArray();
 	}
 
@@ -60,7 +63,7 @@ public partial class BufferManager
 	public static PrefabID ResolveExpansionPrefab(PrefabID id)
 	{
 		if (GameManager.WorldNum < 9 || id.IsNull) return id;
-		Dictionary<PrefabID, PrefabID> aliases = LevelCatalog.Get(GameManager.WorldNum).SourceNumber >= 21
+		Dictionary<PrefabID, PrefabID> aliases = ExpansionGameplay.Classic1782 ? newerExpansionAliases : LevelCatalog.Get(GameManager.WorldNum).SourceNumber >= 21
 			? laterExpansionAliases : earlierExpansionAliases;
 		PrefabID resolved;
 		return aliases.TryGetValue(id, out resolved) ? resolved : id;
@@ -86,6 +89,19 @@ public partial class BufferManager
 				renderer.sharedMaterial = laterPropsMaterial;
 			}
 		}
+		if (path.StartsWith("Classic1782/", StringComparison.Ordinal))
+		{
+			foreach (Renderer renderer in prefab.GetComponentsInChildren<Renderer>(true))
+			{
+				Material material = renderer.sharedMaterial;
+				if (material == null || !(material.name == "15_mogu" || material.name == "15_mogu_6f8006d1de" ||
+					material.name == "15_mogu_55f7c15e10" || material.name == "15_mogu_d2f52d6eae")) continue;
+				if (newerPropsMaterial == null)
+					newerPropsMaterial = Resources.Load<Material>("Classic1782/Materials/15_mogu");
+				if (newerPropsMaterial == null) throw new InvalidOperationException("Missing original 1.7.8.2 Props material");
+				renderer.sharedMaterial = newerPropsMaterial;
+			}
+		}
 		Prefabs[id.prefabType][id.prefabName] = prefab;
 		return prefab;
 	}
@@ -102,7 +118,8 @@ public partial class BufferManager
 			{
 				string nativeName;
 				if (!earlierAnimationNames.TryGetValue(state.name, out nativeName) &&
-					!laterAnimationNames.TryGetValue(state.name, out nativeName)) continue;
+					!laterAnimationNames.TryGetValue(state.name, out nativeName) &&
+					!newerAnimationNames.TryGetValue(state.name, out nativeName)) continue;
 				AnimationState existing = animation[nativeName];
 				if (existing != null && existing != state)
 					throw new InvalidOperationException("Ambiguous native animation state: " + nativeName);

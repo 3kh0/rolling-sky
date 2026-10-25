@@ -823,7 +823,6 @@ public partial class Ball : MonoBehaviour
 			}
 		}
 		if (ExpansionGameplay.Enabled) UpdateExpansionPower();
-		Update1782Floor();
 		Vector3 currentBallPosition;
 		if (animateWithFakeBallPos)
 		{
@@ -932,15 +931,17 @@ public partial class Ball : MonoBehaviour
 
 	public void EndJump()
 	{
-		if (ExpansionGameplay.Classic1782 && ShootBallJumpPowerupGroup != null) ShootBallJumpPowerupGroup.gameObject.SetActive(false);
+		if (ExpansionGameplay.Classic1782) Hide1782BasketballPowerup();
 		if (inSuperJump)
 		{
+			if (ExpansionGameplay.Classic1782) SuperJumpPowerupGroup.gameObject.SetActive(false);
 			ballPowerupSuperJump.Hide();
 			inSuperJump = false;
 		}
 		if (state == State.EndingJumping)
 		{
 			state = State.Ending;
+			if (ExpansionGameplay.Classic1782) mJumpState = JumpState.Normal;
 		}
 		else if (ExpansionGameplay.Later) EndLaterJump();
 		else if (currentTile != null && currentTile.IsJump)

@@ -87,6 +87,7 @@ public static class ExpansionPrefabImport
     {
         ImportSet(NewerRoot);
         ValidateSet(NewerRoot, "Expansion1782");
+        ValidatePropsBinding(NewerRoot);
     }
 
     private static void ImportSet(string root)
@@ -114,7 +115,12 @@ public static class ExpansionPrefabImport
 
     public static void ValidatePropsBinding()
     {
-        PropsBinding record = JsonUtility.FromJson<PropsBinding>(File.ReadAllText(LaterRoot + "PropsBinding.json"));
+        ValidatePropsBinding(LaterRoot);
+    }
+
+    private static void ValidatePropsBinding(string root)
+    {
+        PropsBinding record = JsonUtility.FromJson<PropsBinding>(File.ReadAllText(root + "PropsBinding.json"));
         Require(Application.unityVersion == "2017.4.40f1", "Props check requires Unity 2017.4.40f1");
         Material material = Resources.Load<Material>(record.resource);
         Material canonical = AssetDatabase.LoadAssetAtPath<Material>(record.canonicalPath);
@@ -130,7 +136,7 @@ public static class ExpansionPrefabImport
             "Imported Props differs from the packaged donor material");
         Require(!(bool)AcceptedCheck("ShaderHasError", material.shader), "Props shader compiler error");
         Directory.CreateDirectory("Library");
-        File.WriteAllText("Library/Expansion1561-props-validation.json", JsonUtility.ToJson(record, true));
+        File.WriteAllText("Library/" + (root == NewerRoot ? "Expansion1782" : "Expansion1561") + "-props-validation.json", JsonUtility.ToJson(record, true));
         Debug.Log("PASS: Resources.Load<Material>(" + record.resource + ") matches native packaged Props values and shader");
     }
 
@@ -341,7 +347,8 @@ public static class ExpansionPrefabImport
                     {
                         Object expected = reference.localId != 0 ? objects[reference.localId] :
                             reference.path == "builtin:Cube.fbx" ? Resources.GetBuiltinResource<Mesh>("Cube.fbx") :
-                            reference.path == "builtin:Plane.fbx" ? Resources.GetBuiltinResource<Mesh>("Plane.fbx") :
+                            reference.path == "builtin:New-Plane.fbx" ? Resources.GetBuiltinResource<Mesh>("New-Plane.fbx") :
+                            reference.path == "builtin:Quad.fbx" ? Resources.GetBuiltinResource<Mesh>("Quad.fbx") :
                             AssetDatabase.LoadMainAssetAtPath(reference.path);
                         Require(expected != null && actual == expected,
                             record.path + " reference changed: " + reference.field + " -> " + reference.path);

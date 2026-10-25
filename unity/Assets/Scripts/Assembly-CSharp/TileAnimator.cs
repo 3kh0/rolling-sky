@@ -257,6 +257,8 @@ public partial class TileAnimator : MonoBehaviour
 
 	private static void AnimateTile(int animRowNum, int animTileNum)
 	{
+		if (ExpansionGameplay.Classic1782 && GameManager.TileBoard[animatedRows[animRowNum][animTileNum].index] != null &&
+			GameManager.TileBoard[animatedRows[animRowNum][animTileNum].index].IsHidden) return;
 		if (GameManager.TileBoard.IsNotNull(animatedRows[animRowNum][animTileNum].index) && GameManager.TileBoard[animatedRows[animRowNum][animTileNum].index].IsInUse)
 		{
 			if (AnimateExpansionTile(animRowNum, animTileNum)) return;

@@ -1430,7 +1430,10 @@ public class GameManager : MonoBehaviour
 	private static void UpdateCurrentTile()
 	{
 		currentTile = null;
-		if (BallRowNum != lastBallRowNum)
+		int theme = LevelDesigner.CurrentDonorThemeNumber;
+		bool movingBackward = ExpansionGameplay.Classic1782 && BallRowNum < lastBallRowNum &&
+			((theme >= 45 && theme <= 49) || theme == 52 || theme == 53);
+		if (BallRowNum != lastBallRowNum && !movingBackward)
 		{
 			lastBallRowNum = BallRowNum;
 			OnMovedToNextTile();
@@ -1438,6 +1441,7 @@ public class GameManager : MonoBehaviour
 		if (IsValidMapIndex(BallTilePosition.y, BallTilePosition.x))
 		{
 			currentTile = TileBoard[BallTilePosition.y, BallTilePosition.x];
+			if (ExpansionGameplay.Classic1782 && currentTile != null && currentTile.IsHidden) currentTile = null;
 		}
 		else
 		{
@@ -1811,6 +1815,7 @@ public class GameManager : MonoBehaviour
 			EndWorldTransition();
 		}
 		SegmentTracker.OnMoveForward();
+		theBall.Update1782Floor();
 	}
 
 	public static bool TileIsSolid(int rowIndex, int tileIndex)

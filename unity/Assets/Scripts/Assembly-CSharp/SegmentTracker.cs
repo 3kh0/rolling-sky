@@ -25,7 +25,7 @@ public class SegmentTracker : MonoBehaviour
 
 		public override string ToString()
 		{
-			return string.Format("{2} {0}{1}", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Difficulty], BucketNumber, Type);
+			return string.Format("{2} {0}{1}", new global::SegmentID(Type, Difficulty).DifficultyChar, BucketNumber, Type);
 		}
 	}
 

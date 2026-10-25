@@ -21,17 +21,32 @@ public static class ExpansionBallAssets
 		if (ball.CrownSound == null) ball.CrownSound = Required<AudioSource>(Attach("Classic1471/Prefabs/Crown", sounds));
 		if (ball.BoxSound == null) ball.BoxSound = Required<AudioSource>(Attach("Classic1471/Prefabs/Box", sounds));
 		if (!ExpansionGameplay.Later) return;
+		if (ball.SuccessiveJumpGroup != null) ball.SuccessiveJumpGroup.gameObject.SetActive(false);
+		ball.SuccessiveJumpGroup = ExpansionGameplay.Classic1782 ? ball.Classic1782SuccessiveJumpGroup : ball.Classic1561SuccessiveJumpGroup;
 		if (ball.SuccessiveJumpGroup == null)
 		{
 			// The source has this additional identity-transform parent between
 			// DisplayGroup and the exported TwistJumper subtree.
 			Transform twist = new GameObject("TwistJump").transform;
 			twist.SetParent(ball.DisplayGroup, false);
-			ball.SuccessiveJumpGroup = Attach("Classic1561/Prefabs/TwistJumper", twist);
+			ball.SuccessiveJumpGroup = Attach((ExpansionGameplay.Classic1782 ? "Classic1782" : "Classic1561") + "/Prefabs/TwistJumper", twist);
+			if (ExpansionGameplay.Classic1782) ball.Classic1782SuccessiveJumpGroup = ball.SuccessiveJumpGroup;
+			else ball.Classic1561SuccessiveJumpGroup = ball.SuccessiveJumpGroup;
 		}
+		ball.SuccessiveJumpGroup.gameObject.SetActive(true);
+		// These three native1782 component trees and referenced audio files
+		// were compared with1561 and are identical. TwistJumper is not: its
+		// 0C_BallTrail material alpha changed, so it has a separate binding.
 		if (ball.SuccessiveJumperSound == null) ball.SuccessiveJumperSound = Required<AudioSource>(Attach("Classic1561/Prefabs/SuccessiveJumperSound", sounds));
 		if (ball.AccelerateSound == null) ball.AccelerateSound = Required<AudioSource>(Attach("Classic1561/Prefabs/AccelerateSound", sounds));
 		if (ball.DecelerationSound == null) ball.DecelerationSound = Required<AudioSource>(Attach("Classic1561/Prefabs/DecelerationSound", sounds));
+		if (!ExpansionGameplay.Classic1782) return;
+		// Native1782 Ball Transform88 belongs to Powerups; Transform74 belongs
+		// to DisplayGroup. Attach preserves their serialized local TRS.
+		if (ball.ShootBallJumpPowerupGroup == null) ball.ShootBallJumpPowerupGroup = Attach("Classic1782/Prefabs/ShootballJump", ball.PowerupsGroup);
+		if (ball.XunYunGroup == null) ball.XunYunGroup = Attach("Classic1782/Prefabs/Tx_xuanyun", ball.DisplayGroup);
+		if (ball.TeleportingSound == null) ball.TeleportingSound = Required<AudioSource>(Attach("Classic1782/Prefabs/TeleportingSound", sounds));
+		if (ball.SuperJumpSound == null) ball.SuperJumpSound = Required<AudioSource>(Attach("Classic1782/Prefabs/superjump", sounds));
 	}
 
 	private static Transform Attach(string path, Transform parent)
